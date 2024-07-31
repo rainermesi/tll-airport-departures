@@ -1,5 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
+from datetime import datetime
+import csv
 
 url = "https://airport.ee/lennuinfo/"
 
@@ -17,7 +19,9 @@ soup = BeautifulSoup(response.text, 'html.parser')
 
 flights_list_items = soup.find_all('li', class_='flights-list__item departures-today')
 
-# Extract the required data from each li element
+# Extract and save info from each list item to a list object
+departures_list = []
+
 for li in flights_list_items:
     flight_numbers = li.find('span', class_='card-flight__flight-numbers')
     service_providers = li.find('span', class_='card-flight__service-providers')
@@ -29,16 +33,25 @@ for li in flights_list_items:
         flight_title = 'N/A'
     flight_numbers_text = flight_numbers.get_text(strip=True) if flight_numbers else 'N/A'
     flight_time_text = flight_time.get_text(strip=True) if flight_time else 'N/A'
-    depart_time_text = depart_time.get_text(strip=True) if depart_time else 'N/A'
+    depart_time_text = depart_time.get_text(strip=True).split(' ')[1] if depart_time else 'N/A'
     service_providers_text = service_providers.get_text(strip=True) if service_providers else 'N/A'
     try:
         flight_title_text = flight_title.get_text(strip=True)
     except:
         flight_title_text = 'N/A'
 
-    print(f"Flight Numbers: {flight_numbers_text}")
-    print(f"Flight Time: {flight_time_text}")
-    print(f"Depart Time: {depart_time_text}")
-    print(f"Service Providers: {service_providers_text}")
-    print(f"Flight Title: {flight_title_text}")
-    print("----------")
+    departures_list.append([
+        flight_numbers_text,
+        flight_title_text,
+        service_providers_text,
+        flight_time_text,
+        depart_time_text,
+        datetime.now().strftime('%Y-%m-%d')
+        ])
+
+
+with open('departures_storage.csv', 'w', newline='') as csvfile:
+    csvwriter = csv.writer(csvfile)
+    #only for initial run, to create headers
+    #csvwriter.writerow(['flight_number','flight_title','service_provider_name','scheduled_time','departure_time','date'])
+    csvwriter.writerows(departures_list)
