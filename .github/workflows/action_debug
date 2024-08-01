@@ -1,0 +1,25 @@
+name: Test PAT Setup
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-pat:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Debugging step
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN_TLL }}
+        run: |
+          echo "GitHub repository: ${{ github.repository }}"
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git
+          echo "Testing push access"
+          git push origin HEAD:${{ github.ref }}
