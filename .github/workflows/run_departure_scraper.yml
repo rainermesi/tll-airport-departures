@@ -32,6 +32,7 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git remote set-url origin https://x-access-token:${GH_TOKEN_TLL}@github.com/${{ github.repository }}.git
           git add departures_storage.csv
           git commit -m 'Update departure info'
-          git push https://x-access-token:${GH_TOKEN_TLL}@github.com/${{ github.repository }}.git HEAD:${{ github.ref }}
+          git push origin HEAD:${{ github.ref }}
