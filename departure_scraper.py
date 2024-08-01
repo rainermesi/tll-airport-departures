@@ -21,6 +21,7 @@ flights_list_items = soup.find_all('li', class_='flights-list__item departures-t
 
 # Extract and save info from each list item to a list object
 departures_list = []
+log_date = datetime.now().strftime('%Y-%m-%d')
 
 for li in flights_list_items:
     flight_numbers = li.find('span', class_='card-flight__flight-numbers')
@@ -46,12 +47,11 @@ for li in flights_list_items:
         service_providers_text,
         flight_time_text,
         depart_time_text,
-        datetime.now().strftime('%Y-%m-%d')
+        log_date
         ])
 
 
-with open('departures_storage.csv', 'w', newline='') as csvfile:
+with open(f'data/departures_log_{log_date}.csv', 'w', newline='') as csvfile:
     csvwriter = csv.writer(csvfile)
-    #only for initial run, to create headers
-    #csvwriter.writerow(['flight_number','flight_title','service_provider_name','scheduled_time','departure_time','date'])
+    csvwriter.writerow(['flight_number','flight_title','service_provider_name','scheduled_time','departure_time','date'])
     csvwriter.writerows(departures_list)
