@@ -1,38 +1,30 @@
 name: Scrape Flights Info
-
 on:
   schedule:
     - cron: '00 12 * * *'
   push:
     branches:
       - main
-
 jobs:
   scrape:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
-
       - name: Install dependencies
-        run: pip install requests beautifulsoup4
-
+        run: pip install requests beautifulsoup4 pandas
       - name: Run scrape script
-        run: python departure_scraper.py
-
+        run: python scrape_flights.py
       - name: Commit and push changes
         env:
-          GH_TOKEN_TLL: ${{ secrets.GH_TOKEN_TLL }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git remote set-url origin https://x-access-token:${GH_TOKEN_TLL}@github.com/${{ github.repository }}.git
           git add departures_storage.csv
           git commit -m 'Update departure info'
-          git push origin HEAD:${{ github.ref }}
+          git push
