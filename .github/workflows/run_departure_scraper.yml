@@ -18,7 +18,7 @@ jobs:
       - name: Install dependencies
         run: pip install requests beautifulsoup4 pandas
       - name: Run scrape script
-        run: python scrape_flights.py
+        run: python departure_scraper.py
       - name: Commit and push changes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
