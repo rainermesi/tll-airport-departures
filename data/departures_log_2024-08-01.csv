@@ -1,7 +1,7 @@
 flight_number,flight_title,service_provider_name,scheduled_time,departure_time,date
 BT 871,London (Gatwick),Air Baltic Corporation,N/A,N/A,2024-08-01
 FR 736,Viin,Ryanair,N/A,N/A,2024-08-01
-SK 1745,Stockholm (Arlanda),Scandinavian Airlines System (SAS),16:35,N/A,2024-08-01
+SK 1745,Stockholm (Arlanda),Scandinavian Airlines System (SAS),N/A,N/A,2024-08-01
 AY 1022,Helsingi,Finnair,N/A,N/A,2024-08-01
 OJ 225,Kärdla,Nyxair,17:00,N/A,2024-08-01
 AY 1024,Helsingi,Finnair,17:20,N/A,2024-08-01
