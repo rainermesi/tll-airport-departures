@@ -2,9 +2,11 @@ name: Scrape Flights Info
 on:
   schedule:
     - cron: '01 00 * * *'
-  push:
-    branches:
-      - main
+  #push:
+  # branches:
+  #   - main
+  workflow_dispatch:
+  
 jobs:
   scrape:
     runs-on: ubuntu-latest
