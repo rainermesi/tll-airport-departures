@@ -37,7 +37,7 @@ def main():
         'line_values': chart_counts
     }
 
-    generate_readme('/workspaces/tll-airport-departures/readme_template.yml', chart_data, '/workspaces/tll-airport-departures/README.md')
+    generate_readme('readme_template.yml', chart_data, 'README.md')
 
 if __name__ == "__main__":
     main()
