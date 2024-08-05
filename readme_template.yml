@@ -1,0 +1,13 @@
+# tll-airport-departures
+
+Tracking departures from Tallinn Airport
+
+## Trend of Daily Departures
+
+```mermaid
+xychart-beta
+    title "{title}"
+    x-axis [{x_axis}]
+    y-axis "{y_axis}"
+    bar {bar_values}
+```
