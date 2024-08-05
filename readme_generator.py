@@ -2,7 +2,7 @@ from pathlib import Path
 import pandas as pd
 
 def get_data_path():
-    data_path = Path('/workspaces/tll-airport-departures/data')
+    data_path = Path('/data')
     csv_list = list(data_path.glob('*.csv'))
     return csv_list
 
