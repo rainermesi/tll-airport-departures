@@ -1,5 +1,7 @@
 from pathlib import Path
 import pandas as pd
+import math
+import re
 
 def get_data_path():
     data_path = Path('./data')
@@ -12,8 +14,19 @@ def merge_csv_files(csv_files):
     return merged_df
 
 def get_chart_values(merged_df):
-    result = merged_df.groupby(merged_df['date']).size().reset_index(name='count')
-    return result
+    result_1 = merged_df.groupby(merged_df['date']).agg(
+        count = ('date','size'),
+        unique_destinations = ('flight_title','nunique')
+    ).reset_index()
+
+    result_2 = merged_df.groupby(merged_df['flight_title']).size().reset_index(name='count')
+    result_2.insert(0,'source','Tallinn')
+    result_2['flight_title'] = result_2['flight_title'].str.replace('õ', 'o', flags=re.IGNORECASE, regex=True)
+    result_2['flight_title'] = result_2['flight_title'].str.replace('ä', 'a', flags=re.IGNORECASE, regex=True)
+    result_2['flight_title'] = result_2['flight_title'].str.replace('ö', 'o', flags=re.IGNORECASE, regex=True)
+    result_2['flight_title'] = result_2['flight_title'].str.replace('ü', 'u', flags=re.IGNORECASE, regex=True)
+
+    return result_1, result_2
 
 def generate_readme(template_path, data, output_path):
     with open(template_path,'r') as template_file:
@@ -25,16 +38,21 @@ def generate_readme(template_path, data, output_path):
         output_file.write(readme_content)
 
 def main():
-    chart_values_df = get_chart_values(merge_csv_files(get_data_path()))
+    chart_values_df, sankey_values_df = get_chart_values(merge_csv_files(get_data_path()))
     chart_dates = ', '.join(f'"{date}"' for date in chart_values_df['date'])
     chart_counts = chart_values_df['count'].to_list()
+    chart_unique_destinations = chart_values_df['unique_destinations'].to_list()
+    chart_ymax = max(chart_counts) + math.ceil(max(chart_counts) / 10)
+    sankey_csv = sankey_values_df.to_csv(index=False, header=False)
 
     chart_data = {
         'title': 'Departures by day',
         'x_axis': chart_dates,
         'y_axis': '# departures',
         'bar_values': chart_counts,
-        'line_values': chart_counts
+        'line_values': chart_unique_destinations,
+        'ymax': chart_ymax,
+        'sankey_data': sankey_csv
     }
 
     generate_readme('readme_template.yml', chart_data, 'README.md')
