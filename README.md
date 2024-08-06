@@ -15,8 +15,12 @@ xychart-beta
     line [12, 27, 22, 29, 32, 21]
 ```
 
-## Unique destinations and total departures
 
+## Unique destinations and departures
+
+All destinations flown to from Tallinn. More departures = bigger node.
+Note that multiple airports in same city are counted separately (to be aggregated)
+Also, umlauts don't seem to be supported in Mermaid Sankey Diagrams (experimental diagram)
 
 ```mermaid
 sankey-beta
