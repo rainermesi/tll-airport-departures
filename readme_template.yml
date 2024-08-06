@@ -4,10 +4,23 @@ Tracking departures from Tallinn Airport. Data and graphs are updated daily.
 
 ## Trend of Daily Departures
 
+Bars for total number of departures. Line for unique destinations.
+
 ```mermaid
 xychart-beta
     title "{title}"
     x-axis [{x_axis}]
-    y-axis "{y_axis}"
+    y-axis "{y_axis}" 0 --> {ymax}
     bar {bar_values}
+    line {line_values}
+```
+
+## Unique destinations and total departures
+
+
+```mermaid
+sankey-beta
+%% source,target,value
+{sankey_data}
+
 ```
