@@ -11,6 +11,7 @@ def get_data_path():
 def merge_csv_files(csv_files):
     dataframes = [pd.read_csv(file) for file in csv_files]
     merged_df = pd.concat(dataframes, ignore_index=True)
+    merged_df['flight_title'] = merged_df['flight_title'].str.replace(r' \(.+\)', '', regex=True)
     return merged_df
 
 def get_chart_values(merged_df):
