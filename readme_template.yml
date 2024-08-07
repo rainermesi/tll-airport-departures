@@ -19,8 +19,7 @@ xychart-beta
 ## Unique destinations and departures
 
 All destinations flown to from Tallinn. More departures = bigger node.
-Note that multiple airports in same city are counted separately (to be aggregated)
-Also, umlauts don't seem to be supported in Mermaid Sankey Diagrams (experimental diagram)
+Note that umlauts don't seem to be supported in Mermaid Sankey Diagrams (experimental diagram).
 
 ```mermaid
 ---
