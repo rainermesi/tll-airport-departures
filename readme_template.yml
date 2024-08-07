@@ -23,6 +23,13 @@ Note that multiple airports in same city are counted separately (to be aggregate
 Also, umlauts don't seem to be supported in Mermaid Sankey Diagrams (experimental diagram)
 
 ```mermaid
+---
+config:
+  sankey:
+    showValues: false
+    width: 800
+    height: 1000
+---
 sankey-beta
 %% source,target,value
 {sankey_data}
