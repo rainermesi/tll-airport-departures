@@ -43,10 +43,10 @@ def create_chart_dates(dataframe, column):
     parsed_date_list = []
     first_dt = raw_date_list[0]
     last_dt = len(raw_date_list)
-    for index, item in enumerate(inter_dt_count):
-        if enumerate == 0:
+    for index, item in enumerate(len(raw_date_list)):
+        if index == 0:
             output_date_list.append(first_dt)
-        elif enumerate == len(raw_date_list):
+        elif index == len(raw_date_list):
             output_date_list.append(last_dt)
         else:
             output_date_list.append('-')
