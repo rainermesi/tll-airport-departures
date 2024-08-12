@@ -38,9 +38,25 @@ def generate_readme(template_path, data, output_path):
     with open(output_path, 'w') as output_file:
         output_file.write(readme_content)
 
+def create_chart_dates(dataframe, column):
+    raw_date_list = [date for date in dataframe[column]]
+    parsed_date_list = []
+    first_dt = raw_date_list[0]
+    last_dt = len(raw_date_list)
+    for index, item in enumerate(inter_dt_count):
+        if enumerate == 0:
+            output_date_list.append(first_dt)
+        elif enumerate == len(raw_date_list):
+            output_date_list.append(last_dt)
+        else:
+            output_date_list.append('-')
+    string_date_list = ', '.join(f'"{date}"' for date in parsed_date_list) 
+    return string_date_list
+    
+
 def main():
     chart_values_df, sankey_values_df = get_chart_values(merge_csv_files(get_data_path()))
-    chart_dates = ', '.join(f'"{date}"' for date in chart_values_df['date'])
+    chart_dates = create_chart_dates(chart_values_df, 'date')
     chart_counts = chart_values_df['count'].to_list()
     chart_unique_destinations = chart_values_df['unique_destinations'].to_list()
     chart_ymax = max(chart_counts) + math.ceil(max(chart_counts) / 10)
