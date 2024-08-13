@@ -40,17 +40,7 @@ def generate_readme(template_path, data, output_path):
 
 def create_chart_dates(dataframe, column):
     raw_date_list = [date for date in dataframe[column]]
-    parsed_date_list = []
-    first_dt = raw_date_list[0]
-    last_dt = raw_date_list[len(raw_date_list) - 1]
-    for index, item in enumerate(raw_date_list):
-        if index == 0:
-            parsed_date_list.append(first_dt)
-        elif index != (len(raw_date_list) - 1):
-            parsed_date_list.append('-')
-        elif index == (len(raw_date_list) - 1):
-            parsed_date_list.append(last_dt)
-    string_date_list = ', '.join(f'"{date}"' for date in parsed_date_list) 
+    string_date_list = ', '.join(f'"{date}"' for date in raw_date_list) 
     return string_date_list
     
 
