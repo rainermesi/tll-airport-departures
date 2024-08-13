@@ -12,6 +12,11 @@ I created this repo to:
 Bars for total number of departures. Line for unique destinations.
 
 ```mermaid
+---
+xyChart:
+    xAxis:
+      labelFontSize: 8
+---
 xychart-beta
     title "Departures by day"
     x-axis ["2024-08-01", "2024-08-02", "2024-08-03", "2024-08-04", "2024-08-05", "2024-08-06", "2024-08-07", "2024-08-08", "2024-08-09", "2024-08-10", "2024-08-11", "2024-08-12", "2024-08-13"]
