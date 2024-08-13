@@ -12,6 +12,11 @@ I created this repo to:
 Bars for total number of departures. Line for unique destinations.
 
 ```mermaid
+---
+xyChart:
+    xAxis:
+      labelFontSize: 8
+---
 xychart-beta
     title "{title}"
     x-axis [{x_axis}]
