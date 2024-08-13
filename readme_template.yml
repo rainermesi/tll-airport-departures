@@ -2,6 +2,11 @@
 
 Tracking departures from Tallinn Airport. Data and graphs are updated daily.
 
+I created this repo to:
+- Test how to use Mermaid charting functions for basic reporting
+- Test how to use Github Actions for scheudling basic data pipelines and transformations
+- Find out where we can fly to from Tallinn
+
 ## Trend of Daily Departures
 
 Bars for total number of departures. Line for unique destinations.
