@@ -19,10 +19,10 @@ xyChart:
 ---
 xychart-beta
     title "Departures by day"
-    x-axis ["2024-08-01", "2024-08-02", "2024-08-03", "2024-08-04", "2024-08-05", "2024-08-06", "2024-08-07", "2024-08-08", "2024-08-09", "2024-08-10", "2024-08-11", "2024-08-12", "2024-08-13", "2024-08-14", "2024-08-15", "2024-08-16", "2024-08-17", "2024-08-18"]
+    x-axis ["2024-08-01", "2024-08-02", "2024-08-03", "2024-08-04", "2024-08-05", "2024-08-06", "2024-08-07", "2024-08-08", "2024-08-09", "2024-08-10", "2024-08-11", "2024-08-12", "2024-08-13", "2024-08-14", "2024-08-15", "2024-08-16", "2024-08-17", "2024-08-18", "2024-08-19"]
     y-axis "# departures" 0 --> 62
-    bar [16, 51, 46, 50, 54, 46, 51, 52, 50, 44, 54, 55, 47, 56, 56, 52, 42, 55]
-    line [12, 25, 21, 26, 30, 21, 26, 28, 24, 21, 26, 29, 21, 25, 28, 24, 21, 26]
+    bar [16, 51, 46, 50, 54, 46, 51, 52, 50, 44, 54, 55, 47, 56, 56, 52, 42, 55, 54]
+    line [12, 25, 21, 26, 30, 21, 26, 28, 24, 21, 26, 29, 21, 25, 28, 24, 21, 26, 30]
 ```
 
 
@@ -41,49 +41,49 @@ config:
 ---
 sankey-beta
 %% source,target,value
-Tallinn,Amsterdam,17
-Tallinn,Antalya,27
+Tallinn,Amsterdam,18
+Tallinn,Antalya,29
 Tallinn,Ateena,3
-Tallinn,Barcelona,5
-Tallinn,Berliin,20
-Tallinn,Billund,10
-Tallinn,Brussel,10
+Tallinn,Barcelona,6
+Tallinn,Berliin,21
+Tallinn,Billund,11
+Tallinn,Brussel,11
 Tallinn,Burgas,8
-Tallinn,Dublin,5
+Tallinn,Dublin,6
 Tallinn,Dubrovnik,5
-Tallinn,Frankfurt,47
+Tallinn,Frankfurt,50
 Tallinn,Goteborg,1
-Tallinn,Helsingi,165
+Tallinn,Helsingi,174
 Tallinn,Heraklion,10
-Tallinn,Istanbul,16
+Tallinn,Istanbul,17
 Tallinn,Kerkira,2
-Tallinn,Kopenhaagen,19
-Tallinn,Kuressaare,29
-Tallinn,Kardla,29
-Tallinn,London,35
+Tallinn,Kopenhaagen,20
+Tallinn,Kuressaare,31
+Tallinn,Kardla,31
+Tallinn,London,37
 Tallinn,Malaga,7
 Tallinn,Malta,3
-Tallinn,Milano,19
-Tallinn,Munchen,25
+Tallinn,Milano,21
+Tallinn,Munchen,26
 Tallinn,Nice,5
-Tallinn,Oslo,17
-Tallinn,Palma De Mallorca,2
-Tallinn,Paphos,4
-Tallinn,Pariis,18
-Tallinn,Praha,9
-Tallinn,Rhodos,5
-Tallinn,Riia,69
-Tallinn,Rooma,8
-Tallinn,Split,5
-Tallinn,Stockholm,105
+Tallinn,Oslo,18
+Tallinn,Palma De Mallorca,3
+Tallinn,Paphos,5
+Tallinn,Pariis,19
+Tallinn,Praha,10
+Tallinn,Rhodos,6
+Tallinn,Riia,73
+Tallinn,Rooma,9
+Tallinn,Split,6
+Tallinn,Stockholm,110
 Tallinn,Tampere,2
 Tallinn,Tirana,2
-Tallinn,Tivat,7
-Tallinn,Varssavi,56
+Tallinn,Tivat,8
+Tallinn,Varssavi,59
 Tallinn,Veneetsia-Treviso,5
 Tallinn,Viin,8
-Tallinn,Vilnius,19
-Tallinn,Zurich,14
+Tallinn,Vilnius,20
+Tallinn,Zurich,15
 
 
 ```
