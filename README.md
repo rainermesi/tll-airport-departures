@@ -19,10 +19,10 @@ xyChart:
 ---
 xychart-beta
     title "Departures by day"
-    x-axis ["2024-08-01", "2024-08-02", "2024-08-03", "2024-08-04", "2024-08-05", "2024-08-06", "2024-08-07", "2024-08-08", "2024-08-09", "2024-08-10", "2024-08-11", "2024-08-12", "2024-08-13", "2024-08-14", "2024-08-15", "2024-08-16", "2024-08-17", "2024-08-18", "2024-08-19", "2024-08-20", "2024-08-21", "2024-08-22", "2024-08-23", "2024-08-24", "2024-08-25", "2024-08-26", "2024-08-27", "2024-08-28", "2024-08-29", "2024-08-30", "2024-08-31", "2024-09-01", "2024-09-02", "2024-09-03"]
+    x-axis ["2024-08-01", "2024-08-02", "2024-08-03", "2024-08-04", "2024-08-05", "2024-08-06", "2024-08-07", "2024-08-08", "2024-08-09", "2024-08-10", "2024-08-11", "2024-08-12", "2024-08-13", "2024-08-14", "2024-08-15", "2024-08-16", "2024-08-17", "2024-08-18", "2024-08-19", "2024-08-20", "2024-08-21", "2024-08-22", "2024-08-23", "2024-08-24", "2024-08-25", "2024-08-26", "2024-08-27", "2024-08-28", "2024-08-29", "2024-08-30", "2024-08-31", "2024-09-01", "2024-09-02", "2024-09-03", "2024-09-04"]
     y-axis "# departures" 0 --> 64
-    bar [16, 51, 46, 50, 54, 46, 51, 52, 50, 44, 54, 55, 47, 56, 56, 52, 42, 55, 54, 46, 55, 56, 53, 44, 54, 58, 49, 55, 55, 52, 45, 54, 55, 47]
-    line [12, 25, 21, 26, 30, 21, 26, 28, 24, 21, 26, 29, 21, 25, 28, 24, 21, 26, 30, 21, 25, 28, 25, 22, 25, 30, 21, 24, 28, 24, 22, 26, 29, 20]
+    bar [16, 51, 46, 50, 54, 46, 51, 52, 50, 44, 54, 55, 47, 56, 56, 52, 42, 55, 54, 46, 55, 56, 53, 44, 54, 58, 49, 55, 55, 52, 45, 54, 55, 47, 57]
+    line [12, 25, 21, 26, 30, 21, 26, 28, 24, 21, 26, 29, 21, 25, 28, 24, 21, 26, 30, 21, 25, 28, 25, 22, 25, 30, 21, 24, 28, 24, 22, 26, 29, 20, 25]
 ```
 
 
@@ -41,48 +41,49 @@ config:
 ---
 sankey-beta
 %% source,target,value
-Tallinn,Amsterdam,33
-Tallinn,Antalya,53
-Tallinn,Ateena,5
+Tallinn,Amsterdam,34
+Tallinn,Antalya,55
+Tallinn,Ateena,6
 Tallinn,Barcelona,10
-Tallinn,Berliin,37
+Tallinn,Berliin,39
 Tallinn,Billund,19
-Tallinn,Brussel,19
-Tallinn,Burgas,14
+Tallinn,Brussel,20
+Tallinn,Burgas,15
 Tallinn,Dublin,10
 Tallinn,Dubrovnik,10
-Tallinn,Frankfurt,91
+Tallinn,Frankfurt,94
 Tallinn,Goteborg,1
-Tallinn,Helsingi,320
-Tallinn,Heraklion,19
-Tallinn,Istanbul,30
+Tallinn,Helsingi,330
+Tallinn,Heraklion,20
+Tallinn,Istanbul,31
 Tallinn,Kerkira,4
-Tallinn,Kopenhaagen,37
-Tallinn,Kuressaare,57
-Tallinn,Kardla,57
-Tallinn,London,66
+Tallinn,Kopenhaagen,38
+Tallinn,Kuressaare,59
+Tallinn,Kardla,59
+Tallinn,Lamezia,1
+Tallinn,London,69
 Tallinn,Malaga,14
 Tallinn,Malta,5
-Tallinn,Milano,37
-Tallinn,Munchen,48
-Tallinn,Nice,9
-Tallinn,Oslo,36
+Tallinn,Milano,39
+Tallinn,Munchen,49
+Tallinn,Nice,10
+Tallinn,Oslo,37
 Tallinn,Palma De Mallorca,5
 Tallinn,Paphos,9
-Tallinn,Pariis,34
-Tallinn,Praha,18
+Tallinn,Pariis,35
+Tallinn,Praha,19
 Tallinn,Rhodos,10
-Tallinn,Riia,133
+Tallinn,Riia,137
 Tallinn,Rooma,15
 Tallinn,Split,10
-Tallinn,Stockholm,214
+Tallinn,Stockholm,223
 Tallinn,Tampere,4
 Tallinn,Tirana,4
 Tallinn,Tivat,14
-Tallinn,Varssavi,108
+Tallinn,Varssavi,111
 Tallinn,Veneetsia-Treviso,10
 Tallinn,Viin,15
-Tallinn,Vilnius,37
+Tallinn,Vilnius,39
 Tallinn,Zurich,28
 
 
