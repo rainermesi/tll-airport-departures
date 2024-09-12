@@ -19,10 +19,10 @@ xyChart:
 ---
 xychart-beta
     title "Departures by day"
-    x-axis ["2024-08-01", "2024-08-02", "2024-08-03", "2024-08-04", "2024-08-05", "2024-08-06", "2024-08-07", "2024-08-08", "2024-08-09", "2024-08-10", "2024-08-11", "2024-08-12", "2024-08-13", "2024-08-14", "2024-08-15", "2024-08-16", "2024-08-17", "2024-08-18", "2024-08-19", "2024-08-20", "2024-08-21", "2024-08-22", "2024-08-23", "2024-08-24", "2024-08-25", "2024-08-26", "2024-08-27", "2024-08-28", "2024-08-29", "2024-08-30", "2024-08-31", "2024-09-01", "2024-09-02", "2024-09-03", "2024-09-04", "2024-09-05", "2024-09-06", "2024-09-07", "2024-09-08", "2024-09-09", "2024-09-10", "2024-09-11"]
-    y-axis "# departures" 0 --> 64
-    bar [16, 51, 46, 50, 54, 46, 51, 52, 50, 44, 54, 55, 47, 56, 56, 52, 42, 55, 54, 46, 55, 56, 53, 44, 54, 58, 49, 55, 55, 52, 45, 54, 55, 47, 57, 56, 52, 45, 58, 55, 46, 58]
-    line [12, 25, 21, 26, 30, 21, 26, 28, 24, 21, 26, 29, 21, 25, 28, 24, 21, 26, 30, 21, 25, 28, 25, 22, 25, 30, 21, 24, 28, 24, 22, 26, 29, 20, 25, 28, 25, 23, 30, 29, 19, 26]
+    x-axis ["2024-08-01", "2024-08-02", "2024-08-03", "2024-08-04", "2024-08-05", "2024-08-06", "2024-08-07", "2024-08-08", "2024-08-09", "2024-08-10", "2024-08-11", "2024-08-12", "2024-08-13", "2024-08-14", "2024-08-15", "2024-08-16", "2024-08-17", "2024-08-18", "2024-08-19", "2024-08-20", "2024-08-21", "2024-08-22", "2024-08-23", "2024-08-24", "2024-08-25", "2024-08-26", "2024-08-27", "2024-08-28", "2024-08-29", "2024-08-30", "2024-08-31", "2024-09-01", "2024-09-02", "2024-09-03", "2024-09-04", "2024-09-05", "2024-09-06", "2024-09-07", "2024-09-08", "2024-09-09", "2024-09-10", "2024-09-11", "2024-09-12"]
+    y-axis "# departures" 0 --> 65
+    bar [16, 51, 46, 50, 54, 46, 51, 52, 50, 44, 54, 55, 47, 56, 56, 52, 42, 55, 54, 46, 55, 56, 53, 44, 54, 58, 49, 55, 55, 52, 45, 54, 55, 47, 57, 56, 52, 45, 58, 55, 46, 58, 59]
+    line [12, 25, 21, 26, 30, 21, 26, 28, 24, 21, 26, 29, 21, 25, 28, 24, 21, 26, 30, 21, 25, 28, 25, 22, 25, 30, 21, 24, 28, 24, 22, 26, 29, 20, 25, 28, 25, 23, 30, 29, 19, 26, 27]
 ```
 
 
@@ -41,53 +41,53 @@ config:
 ---
 sankey-beta
 %% source,target,value
-Tallinn,Amsterdam,41
-Tallinn,Antalya,66
+Tallinn,Amsterdam,42
+Tallinn,Antalya,70
 Tallinn,Ateena,8
-Tallinn,Barcelona,12
-Tallinn,Berliin,47
-Tallinn,Billund,23
+Tallinn,Barcelona,13
+Tallinn,Berliin,48
+Tallinn,Billund,24
 Tallinn,Bodrum,1
 Tallinn,Brussel,24
 Tallinn,Burgas,18
 Tallinn,Catania,1
 Tallinn,Dublin,12
 Tallinn,Dubrovnik,12
-Tallinn,Frankfurt,113
+Tallinn,Frankfurt,116
 Tallinn,Goteborg,1
-Tallinn,Helsingi,397
+Tallinn,Helsingi,407
 Tallinn,Heraklion,24
-Tallinn,Istanbul,38
+Tallinn,Istanbul,40
 Tallinn,Kerkira,4
-Tallinn,Kopenhaagen,46
+Tallinn,Kopenhaagen,47
 Tallinn,Košice,1
-Tallinn,Kuressaare,71
-Tallinn,Kardla,71
+Tallinn,Kuressaare,73
+Tallinn,Kardla,73
 Tallinn,Lamezia,1
-Tallinn,London,81
-Tallinn,Malaga,17
+Tallinn,London,82
+Tallinn,Malaga,18
 Tallinn,Malta,6
-Tallinn,Milano,48
-Tallinn,Munchen,59
+Tallinn,Milano,49
+Tallinn,Munchen,61
 Tallinn,Nice,12
-Tallinn,Oslo,46
-Tallinn,Palma De Mallorca,6
-Tallinn,Paphos,11
+Tallinn,Oslo,48
+Tallinn,Palma De Mallorca,7
+Tallinn,Paphos,12
 Tallinn,Pariis,42
-Tallinn,Praha,23
+Tallinn,Praha,24
 Tallinn,Rhodos,13
-Tallinn,Riia,165
+Tallinn,Riia,169
 Tallinn,Rooma,18
 Tallinn,Split,12
-Tallinn,Stockholm,272
-Tallinn,Tampere,6
+Tallinn,Stockholm,280
+Tallinn,Tampere,7
 Tallinn,Tirana,6
-Tallinn,Tivat,17
-Tallinn,Varssavi,134
+Tallinn,Tivat,18
+Tallinn,Varssavi,137
 Tallinn,Veneetsia-Treviso,12
-Tallinn,Viin,18
-Tallinn,Vilnius,47
-Tallinn,Zurich,33
+Tallinn,Viin,19
+Tallinn,Vilnius,49
+Tallinn,Zurich,34
 
 
 ```
