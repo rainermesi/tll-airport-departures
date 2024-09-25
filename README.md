@@ -19,10 +19,10 @@ xyChart:
 ---
 xychart-beta
     title "Departures by day"
-    x-axis ["2024-08-01", "2024-08-02", "2024-08-03", "2024-08-04", "2024-08-05", "2024-08-06", "2024-08-07", "2024-08-08", "2024-08-09", "2024-08-10", "2024-08-11", "2024-08-12", "2024-08-13", "2024-08-14", "2024-08-15", "2024-08-16", "2024-08-17", "2024-08-18", "2024-08-19", "2024-08-20", "2024-08-21", "2024-08-22", "2024-08-23", "2024-08-24", "2024-08-25", "2024-08-26", "2024-08-27", "2024-08-28", "2024-08-29", "2024-08-30", "2024-08-31", "2024-09-01", "2024-09-02", "2024-09-03", "2024-09-04", "2024-09-05", "2024-09-06", "2024-09-07", "2024-09-08", "2024-09-09", "2024-09-10", "2024-09-11", "2024-09-12", "2024-09-13", "2024-09-14", "2024-09-15", "2024-09-16", "2024-09-17", "2024-09-18", "2024-09-19", "2024-09-20", "2024-09-21", "2024-09-22", "2024-09-23", "2024-09-24"]
+    x-axis ["2024-08-01", "2024-08-02", "2024-08-03", "2024-08-04", "2024-08-05", "2024-08-06", "2024-08-07", "2024-08-08", "2024-08-09", "2024-08-10", "2024-08-11", "2024-08-12", "2024-08-13", "2024-08-14", "2024-08-15", "2024-08-16", "2024-08-17", "2024-08-18", "2024-08-19", "2024-08-20", "2024-08-21", "2024-08-22", "2024-08-23", "2024-08-24", "2024-08-25", "2024-08-26", "2024-08-27", "2024-08-28", "2024-08-29", "2024-08-30", "2024-08-31", "2024-09-01", "2024-09-02", "2024-09-03", "2024-09-04", "2024-09-05", "2024-09-06", "2024-09-07", "2024-09-08", "2024-09-09", "2024-09-10", "2024-09-11", "2024-09-12", "2024-09-13", "2024-09-14", "2024-09-15", "2024-09-16", "2024-09-17", "2024-09-18", "2024-09-19", "2024-09-20", "2024-09-21", "2024-09-22", "2024-09-23", "2024-09-24", "2024-09-25"]
     y-axis "# departures" 0 --> 66
-    bar [16, 51, 46, 50, 54, 46, 51, 52, 50, 44, 54, 55, 47, 56, 56, 52, 42, 55, 54, 46, 55, 56, 53, 44, 54, 58, 49, 55, 55, 52, 45, 54, 55, 47, 57, 56, 52, 45, 58, 55, 46, 58, 59, 54, 44, 60, 58, 49, 57, 59, 55, 45, 57, 57, 50]
-    line [12, 25, 21, 26, 30, 21, 26, 28, 24, 21, 26, 29, 21, 25, 28, 24, 21, 26, 30, 21, 25, 28, 25, 22, 25, 30, 21, 24, 28, 24, 22, 26, 29, 20, 25, 28, 25, 23, 30, 29, 19, 26, 27, 25, 23, 29, 29, 20, 25, 28, 25, 23, 29, 30, 21]
+    bar [16, 51, 46, 50, 54, 46, 51, 52, 50, 44, 54, 55, 47, 56, 56, 52, 42, 55, 54, 46, 55, 56, 53, 44, 54, 58, 49, 55, 55, 52, 45, 54, 55, 47, 57, 56, 52, 45, 58, 55, 46, 58, 59, 54, 44, 60, 58, 49, 57, 59, 55, 45, 57, 57, 50, 57]
+    line [12, 25, 21, 26, 30, 21, 26, 28, 24, 21, 26, 29, 21, 25, 28, 24, 21, 26, 30, 21, 25, 28, 25, 22, 25, 30, 21, 24, 28, 24, 22, 26, 29, 20, 25, 28, 25, 23, 30, 29, 19, 26, 27, 25, 23, 29, 29, 20, 25, 28, 25, 23, 29, 30, 21, 25]
 ```
 
 
@@ -41,14 +41,14 @@ config:
 ---
 sankey-beta
 %% source,target,value
-Tallinn,Amsterdam,54
-Tallinn,Antalya,109
-Tallinn,Ateena,9
+Tallinn,Amsterdam,55
+Tallinn,Antalya,111
+Tallinn,Ateena,10
 Tallinn,Barcelona,16
-Tallinn,Berliin,61
+Tallinn,Berliin,63
 Tallinn,Billund,31
 Tallinn,Bodrum,5
-Tallinn,Brussel,31
+Tallinn,Brussel,32
 Tallinn,Burgas,20
 Tallinn,Catania,2
 Tallinn,Dublin,16
@@ -56,41 +56,41 @@ Tallinn,Dubrovnik,16
 Tallinn,Enfidha,2
 Tallinn,Faro,1
 Tallinn,"Faro,Faro",1
-Tallinn,Frankfurt,148
+Tallinn,Frankfurt,151
 Tallinn,Goteborg,1
-Tallinn,Helsingi,523
-Tallinn,Heraklion,31
-Tallinn,Istanbul,55
+Tallinn,Helsingi,533
+Tallinn,Heraklion,32
+Tallinn,Istanbul,56
 Tallinn,Kerkira,4
-Tallinn,Kopenhaagen,61
+Tallinn,Kopenhaagen,62
 Tallinn,Košice,1
-Tallinn,Kuressaare,93
-Tallinn,Kardla,93
+Tallinn,Kuressaare,95
+Tallinn,Kardla,95
 Tallinn,Lamezia,1
-Tallinn,"Lamezia,Catania",1
-Tallinn,London,103
+Tallinn,"Lamezia,Catania",2
+Tallinn,London,105
 Tallinn,Malaga,23
 Tallinn,Malta,8
-Tallinn,Milano,63
-Tallinn,Munchen,78
-Tallinn,Nice,15
-Tallinn,Oslo,63
+Tallinn,Milano,66
+Tallinn,Munchen,79
+Tallinn,Nice,16
+Tallinn,Oslo,64
 Tallinn,Palma De Mallorca,10
 Tallinn,Paphos,15
-Tallinn,Pariis,52
-Tallinn,Praha,30
+Tallinn,Pariis,53
+Tallinn,Praha,31
 Tallinn,Rhodos,19
-Tallinn,Riia,217
+Tallinn,Riia,221
 Tallinn,Rooma,24
 Tallinn,Split,16
-Tallinn,Stockholm,361
+Tallinn,Stockholm,370
 Tallinn,Tampere,10
-Tallinn,Tirana,7
+Tallinn,Tirana,8
 Tallinn,Tivat,21
-Tallinn,Varssavi,175
+Tallinn,Varssavi,178
 Tallinn,Veneetsia-Treviso,16
 Tallinn,Viin,24
-Tallinn,Vilnius,61
+Tallinn,Vilnius,63
 Tallinn,Zurich,43
 
 
