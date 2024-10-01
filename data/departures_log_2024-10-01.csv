@@ -1,0 +1,50 @@
+flight_number,flight_title,service_provider_name,scheduled_time,departure_time,date
+FH 954,Bodrum,Freebird Airlines,N/A,N/A,2024-10-01
+XQ 497,Antalya,SunExpress - Günes Ekspres Havacilik,04:25,N/A,2024-10-01
+CAI 526,Antalya,Corendon Airlines,04:35,N/A,2024-10-01
+TK 3025,Antalya,Turkish Airlines,04:45,N/A,2024-10-01
+STM 3461,Antalya,Skystream Airlines,05:30,N/A,2024-10-01
+BT 362,Riia,Air Baltic Corporation,05:35,N/A,2024-10-01
+LO 792,Varssavi (Chopin),LOT - Polish Airlines,05:45,N/A,2024-10-01
+AY 1036,Helsingi,Finnair,06:00,N/A,2024-10-01
+LX 1317,Zürich,Swiss,06:05,N/A,2024-10-01
+LH 885,Frankfurt,Deutsche Lufthansa,06:10,N/A,2024-10-01
+SK 1783,Stockholm (Arlanda),Scandinavian Airlines System (SAS),06:50,N/A,2024-10-01
+AY 1012,Helsingi,Finnair,06:55,N/A,2024-10-01
+BT 847,Dubrovnik,Air Baltic Corporation,07:15,N/A,2024-10-01
+BT 823,München,Air Baltic Corporation,07:20,N/A,2024-10-01
+BT 857,Amsterdam (Schiphol),Air Baltic Corporation,07:30,N/A,2024-10-01
+OJ 223,Kärdla,Nyxair,07:30,N/A,2024-10-01
+OJ 201,Kuressaare,Nyxair,07:40,N/A,2024-10-01
+SK 1771,Stockholm (Arlanda),Scandinavian Airlines System (SAS),07:45,N/A,2024-10-01
+BT 312,Riia,Air Baltic Corporation,09:10,N/A,2024-10-01
+AY 1014,Helsingi,Finnair,09:55,N/A,2024-10-01
+FR 736,Viin,Ryanair,10:45,N/A,2024-10-01
+SK 749,Stockholm (Arlanda),Scandinavian Airlines System (SAS),10:55,N/A,2024-10-01
+AY 1016,Helsingi,Finnair,11:45,N/A,2024-10-01
+AY 1018,Helsingi,Finnair,12:55,N/A,2024-10-01
+BT 879,Malaga,Air Baltic Corporation,13:35,N/A,2024-10-01
+LH 881,Frankfurt,Deutsche Lufthansa,13:50,N/A,2024-10-01
+SK 1773,Stockholm (Arlanda),Scandinavian Airlines System (SAS),13:55,N/A,2024-10-01
+LO 786,Varssavi (Chopin),LOT - Polish Airlines,14:20,N/A,2024-10-01
+AY 1020,Helsingi,Finnair,14:55,N/A,2024-10-01
+CTM 1073,Istres Le Tubé/Istres Air Base,Commandement du Transport Aerien Militaire Francais,15:20,N/A,2024-10-01
+BT 314,Riia,Air Baltic Corporation,15:20,N/A,2024-10-01
+BT 811,Kopenhaagen,Air Baltic Corporation,15:20,N/A,2024-10-01
+BT 871,London (Gatwick),Air Baltic Corporation,15:55,N/A,2024-10-01
+HN 3471,Heraklion,Heston Airlines,16:20,N/A,2024-10-01
+SK 1745,Stockholm (Arlanda),Scandinavian Airlines System (SAS),16:35,N/A,2024-10-01
+AY 1022,Helsingi,Finnair,16:35,N/A,2024-10-01
+OJ 225,Kärdla,Nyxair,17:00,N/A,2024-10-01
+LO 788,Varssavi (Chopin),LOT - Polish Airlines,18:30,N/A,2024-10-01
+OJ 207,Kuressaare,Nyxair,18:30,N/A,2024-10-01
+LH 883,Frankfurt,Deutsche Lufthansa,18:40,N/A,2024-10-01
+LH 2405,München,Deutsche Lufthansa,19:00,N/A,2024-10-01
+TK 1424,Istanbul,Turkish Airlines,19:40,N/A,2024-10-01
+FR 330,Veneetsia-Treviso,Ryanair,19:45,N/A,2024-10-01
+BT 906,Vilnius,Air Baltic Corporation,19:45,N/A,2024-10-01
+SK 1749,Stockholm (Arlanda),Scandinavian Airlines System (SAS),19:55,N/A,2024-10-01
+AY 1028,Helsingi,Finnair,20:00,N/A,2024-10-01
+BT 318,Riia,Air Baltic Corporation,21:40,N/A,2024-10-01
+AY 1032,Helsingi,Finnair,22:20,N/A,2024-10-01
+FR 4623,Stockholm (Arlanda),Ryanair,23:50,N/A,2024-10-01
