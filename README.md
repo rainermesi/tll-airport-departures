@@ -64,7 +64,7 @@ Tallinn,Istanbul,73
 Tallinn,Istres Le TubeIstres Air Base,2
 Tallinn,Kerkira,4
 Tallinn,Kopenhaagen,81
-Tallinn,Košice,1
+Tallinn,Kosice,1
 Tallinn,Kuressaare,124
 Tallinn,Kardla,124
 Tallinn,Lamezia,1
