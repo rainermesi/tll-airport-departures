@@ -27,6 +27,7 @@ def get_chart_values(merged_df):
     result_2['flight_title'] = result_2['flight_title'].str.replace('ö', 'o', flags=re.IGNORECASE, regex=True)
     result_2['flight_title'] = result_2['flight_title'].str.replace('ü', 'u', flags=re.IGNORECASE, regex=True)
     result_2['flight_title'] = result_2['flight_title'].str.replace('é', 'e', flags=re.IGNORECASE, regex=True)
+    result_2['flight_title'] = result_2['flight_title'].str.replace('/', '', flags=re.IGNORECASE, regex=True)
 
     return result_1, result_2
 
