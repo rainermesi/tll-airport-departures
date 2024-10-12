@@ -61,7 +61,7 @@ Tallinn,Goteborg,1
 Tallinn,Helsingi,695
 Tallinn,Heraklion,41
 Tallinn,Istanbul,73
-Tallinn,Istres Le Tubé/Istres Air Base,2
+Tallinn,Istres Le TubeIstres Air Base,2
 Tallinn,Kerkira,4
 Tallinn,Kopenhaagen,81
 Tallinn,Košice,1
