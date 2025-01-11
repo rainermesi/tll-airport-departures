@@ -1,0 +1,36 @@
+flight_number,flight_title,service_provider_name,scheduled_time,departure_time,date
+BT 362,Riia,Air Baltic Corporation,05:30,N/A,2025-01-11
+LO 792,Varssavi (Chopin),LOT - Polish Airlines,05:45,N/A,2025-01-11
+AY 1036,Helsingi,Finnair,06:00,N/A,2025-01-11
+LX 1317,Zürich,Swiss,06:05,N/A,2025-01-11
+LH 885,Frankfurt,Deutsche Lufthansa,06:25,N/A,2025-01-11
+SK 1783,Stockholm (Arlanda),Scandinavian Airlines System (SAS),07:00,N/A,2025-01-11
+BT 823,München,Air Baltic Corporation,07:05,N/A,2025-01-11
+BT 857,Amsterdam (Schiphol),Air Baltic Corporation,07:35,N/A,2025-01-11
+AY 1012,Helsingi,Finnair,08:25,N/A,2025-01-11
+BT 312,Riia,Air Baltic Corporation,08:55,N/A,2025-01-11
+OJ 223,Kärdla,Nyxair,09:15,N/A,2025-01-11
+BT 835,Salzburg,Air Baltic Corporation,09:25,N/A,2025-01-11
+FR 2733,Berliin,Ryanair,09:30,N/A,2025-01-11
+TK 6922,Istanbul,Turkish Airlines,10:00,N/A,2025-01-11
+OJ 201,Kuressaare,Nyxair,10:05,N/A,2025-01-11
+AY 1014,Helsingi,Finnair,10:35,N/A,2025-01-11
+FR 2224,London (Stansted),Ryanair,11:15,N/A,2025-01-11
+BT 7783,Hurghada,Air Baltic Corporation,11:30,N/A,2025-01-11
+FR 5694,Dublin,Ryanair,11:50,N/A,2025-01-11
+HN 3481,Hurghada,Heston Airlines,12:40,N/A,2025-01-11
+BT 833,Geneva,Air Baltic Corporation,13:50,N/A,2025-01-11
+LO 786,Varssavi (Chopin),LOT - Polish Airlines,14:05,N/A,2025-01-11
+BT 1805,"Tampere,Kittilä",Air Baltic Corporation,14:30,N/A,2025-01-11
+SK 1773,Stockholm (Arlanda),Scandinavian Airlines System (SAS),14:30,N/A,2025-01-11
+AY 1020,Helsingi,Finnair,14:40,N/A,2025-01-11
+BT 316,Riia,Air Baltic Corporation,15:20,N/A,2025-01-11
+BT 871,London (Gatwick),Air Baltic Corporation,16:00,N/A,2025-01-11
+AY 1026,Helsingi,Finnair,17:20,N/A,2025-01-11
+LH 883,Frankfurt,Deutsche Lufthansa,18:05,N/A,2025-01-11
+LO 788,Varssavi (Chopin),LOT - Polish Airlines,18:20,N/A,2025-01-11
+TK 1424,Istanbul,Turkish Airlines,18:55,N/A,2025-01-11
+FR 4623,Stockholm (Arlanda),Ryanair,19:20,N/A,2025-01-11
+FR 8903,Milano (Malpensa),Ryanair,20:30,N/A,2025-01-11
+BT 318,Riia,Air Baltic Corporation,21:25,N/A,2025-01-11
+AY 1032,Helsingi,Finnair,22:20,N/A,2025-01-11
