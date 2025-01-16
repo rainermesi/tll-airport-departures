@@ -1,0 +1,34 @@
+flight_number,flight_title,service_provider_name,scheduled_time,departure_time,date
+BT 362,Riia,Air Baltic Corporation,05:30,N/A,2025-01-16
+LO 792,Varssavi (Chopin),LOT - Polish Airlines,05:45,N/A,2025-01-16
+AY 1036,Helsingi,Finnair,06:00,N/A,2025-01-16
+LH 885,Frankfurt,Deutsche Lufthansa,06:25,N/A,2025-01-16
+SK 1783,Stockholm (Arlanda),Scandinavian Airlines System (SAS),07:00,N/A,2025-01-16
+BT 823,München,Air Baltic Corporation,07:05,N/A,2025-01-16
+OJ 223,Kärdla,Nyxair,07:30,N/A,2025-01-16
+BT 857,Amsterdam (Schiphol),Air Baltic Corporation,07:35,N/A,2025-01-16
+OJ 201,Kuressaare,Nyxair,07:40,N/A,2025-01-16
+AY 1012,Helsingi,Finnair,08:25,N/A,2025-01-16
+BT 312,Riia,Air Baltic Corporation,08:55,N/A,2025-01-16
+AY 1014,Helsingi,Finnair,10:35,N/A,2025-01-16
+BT 811,Kopenhaagen,Air Baltic Corporation,13:40,N/A,2025-01-16
+LO 786,Varssavi (Chopin),LOT - Polish Airlines,14:05,N/A,2025-01-16
+AY 1020,Helsingi,Finnair,14:40,N/A,2025-01-16
+BT 316,Riia,Air Baltic Corporation,15:20,N/A,2025-01-16
+AY 1022,Helsingi,Finnair,15:35,N/A,2025-01-16
+BT 871,London (Gatwick),Air Baltic Corporation,16:00,N/A,2025-01-16
+SK 1745,Stockholm (Arlanda),Scandinavian Airlines System (SAS),16:35,N/A,2025-01-16
+BT 851,Brüssel,Air Baltic Corporation,16:45,N/A,2025-01-16
+AY 1024,Helsingi,Finnair,16:55,N/A,2025-01-16
+OJ 225,Kärdla,Nyxair,17:00,N/A,2025-01-16
+FR 5605,Rooma (Ciampino),Ryanair,17:05,N/A,2025-01-16
+AY 1026,Helsingi,Finnair,17:20,N/A,2025-01-16
+LH 883,Frankfurt,Deutsche Lufthansa,18:05,N/A,2025-01-16
+LO 788,Varssavi (Chopin),LOT - Polish Airlines,18:20,N/A,2025-01-16
+OJ 207,Kuressaare,Nyxair,18:30,N/A,2025-01-16
+BT 906,Vilnius,Air Baltic Corporation,18:30,N/A,2025-01-16
+TK 1424,Istanbul,Turkish Airlines,18:55,N/A,2025-01-16
+FR 2224,London (Stansted),Ryanair,19:35,N/A,2025-01-16
+AY 1028,Helsingi,Finnair,21:15,N/A,2025-01-16
+BT 318,Riia,Air Baltic Corporation,21:25,N/A,2025-01-16
+AY 1032,Helsingi,Finnair,22:20,N/A,2025-01-16
