@@ -1,0 +1,45 @@
+flight_number,flight_title,service_provider_name,scheduled_time,departure_time,date
+BT 362,Riia,Air Baltic Corporation,05:30,N/A,2025-02-17
+LO 792,Varssavi (Chopin),LOT - Polish Airlines,05:45,N/A,2025-02-17
+AY 1036,Helsingi,Finnair,06:00,N/A,2025-02-17
+LX 1317,Zürich,Swiss,06:05,N/A,2025-02-17
+LH 885,Frankfurt,Deutsche Lufthansa,06:25,N/A,2025-02-17
+BT 851,Brüssel,Air Baltic Corporation,06:45,N/A,2025-02-17
+BT 904,Vilnius,Air Baltic Corporation,07:00,N/A,2025-02-17
+SK 1783,Stockholm (Arlanda),Scandinavian Airlines System (SAS),07:00,N/A,2025-02-17
+BT 811,Kopenhaagen,Air Baltic Corporation,07:30,N/A,2025-02-17
+OJ 223,Kärdla,Nyxair,07:30,N/A,2025-02-17
+BT 857,Amsterdam (Schiphol),Air Baltic Corporation,07:35,N/A,2025-02-17
+OJ 201,Kuressaare,Nyxair,07:40,N/A,2025-02-17
+AY 1012,Helsingi,Finnair,08:25,N/A,2025-02-17
+BT 312,Riia,Air Baltic Corporation,08:55,N/A,2025-02-17
+FR 2733,Berliin,Ryanair,10:25,N/A,2025-02-17
+AY 1014,Helsingi,Finnair,10:35,N/A,2025-02-17
+BT 881,Tenerife (South),Air Baltic Corporation,10:40,N/A,2025-02-17
+FR 5694,Dublin,Ryanair,11:50,N/A,2025-02-17
+D8 2011,Oslo,Norwegian Air Sweden AOC,12:15,N/A,2025-02-17
+TK 1422,Istanbul,Turkish Airlines,12:20,N/A,2025-02-17
+LH 881,Frankfurt,Deutsche Lufthansa,13:45,N/A,2025-02-17
+BT 316,Riia,Air Baltic Corporation,13:50,N/A,2025-02-17
+LO 786,Varssavi (Chopin),LOT - Polish Airlines,14:05,N/A,2025-02-17
+AY 1020,Helsingi,Finnair,14:40,N/A,2025-02-17
+U5 7105,Sharm El Sheikh,SkyUp MT,N/A,N/A,2025-02-17
+AY 1022,Helsingi,Finnair,15:35,N/A,2025-02-17
+BT 861,Pariis (Charles De Gaulle),Air Baltic Corporation,15:55,N/A,2025-02-17
+AY 1024,Helsingi,Finnair,16:35,N/A,2025-02-17
+SK 1745,Stockholm (Arlanda),Scandinavian Airlines System (SAS),16:35,N/A,2025-02-17
+OJ 225,Kärdla,Nyxair,17:00,N/A,2025-02-17
+BT 859,Amsterdam (Schiphol),Air Baltic Corporation,17:05,N/A,2025-02-17
+FR 736,Viin,Ryanair,17:10,N/A,2025-02-17
+AY 1026,Helsingi,Finnair,17:20,N/A,2025-02-17
+LH 883,Frankfurt,Deutsche Lufthansa,18:05,N/A,2025-02-17
+LO 788,Varssavi (Chopin),LOT - Polish Airlines,18:20,N/A,2025-02-17
+OJ 207,Kuressaare,Nyxair,18:30,N/A,2025-02-17
+FR 4623,Stockholm (Arlanda),Ryanair,18:50,N/A,2025-02-17
+TK 1424,Istanbul,Turkish Airlines,18:55,N/A,2025-02-17
+FR 8903,Milano (Malpensa),Ryanair,20:35,N/A,2025-02-17
+FR 9641,Paphos,Ryanair,20:45,N/A,2025-02-17
+BT 318,Riia,Air Baltic Corporation,21:25,N/A,2025-02-17
+AY 1028,Helsingi,Finnair,21:30,N/A,2025-02-17
+W9 5446,London (Luton),Wizz Air UK,21:45,N/A,2025-02-17
+AY 1032,Helsingi,Finnair,22:20,N/A,2025-02-17
