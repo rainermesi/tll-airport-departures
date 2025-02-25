@@ -1,0 +1,37 @@
+flight_number,flight_title,service_provider_name,scheduled_time,departure_time,date
+BT 362,Riia,Air Baltic Corporation,05:30,N/A,2025-02-25
+LO 792,Varssavi (Chopin),LOT - Polish Airlines,05:45,N/A,2025-02-25
+LH 885,Frankfurt,Deutsche Lufthansa,05:55,N/A,2025-02-25
+AY 1036,Helsingi,Finnair,06:00,N/A,2025-02-25
+SK 1783,Stockholm (Arlanda),Scandinavian Airlines System (SAS),07:00,N/A,2025-02-25
+BT 904,Vilnius,Air Baltic Corporation,07:00,N/A,2025-02-25
+BT 823,München,Air Baltic Corporation,07:05,N/A,2025-02-25
+OJ 223,Kärdla,Nyxair,07:30,N/A,2025-02-25
+BT 857,Amsterdam (Schiphol),Air Baltic Corporation,07:35,N/A,2025-02-25
+OJ 201,Kuressaare,Nyxair,07:40,N/A,2025-02-25
+AY 1012,Helsingi,Finnair,08:25,N/A,2025-02-25
+AY 1014,Helsingi,Finnair,10:35,N/A,2025-02-25
+BT 7781,Sharm El Sheikh,Air Baltic Corporation,11:15,N/A,2025-02-25
+FR 2224,London (Stansted),Ryanair,11:25,N/A,2025-02-25
+FR 4764,Milano (Bergamo),Ryanair,11:35,N/A,2025-02-25
+HN 3481,Hurghada,Heston Airlines,12:55,N/A,2025-02-25
+PC 5962,Antalya,Pegasus Airlines,13:25,N/A,2025-02-25
+LO 786,Varssavi (Chopin),LOT - Polish Airlines,14:05,N/A,2025-02-25
+BT 1805,"Tampere,Kittilä",Air Baltic Corporation,14:30,N/A,2025-02-25
+AY 1020,Helsingi,Finnair,14:40,N/A,2025-02-25
+BT 316,Riia,Air Baltic Corporation,15:20,N/A,2025-02-25
+AY 1022,Helsingi,Finnair,15:35,N/A,2025-02-25
+BT 871,London (Gatwick),Air Baltic Corporation,16:00,N/A,2025-02-25
+AY 1024,Helsingi,Finnair,16:30,N/A,2025-02-25
+SK 1745,Stockholm (Arlanda),Scandinavian Airlines System (SAS),16:35,N/A,2025-02-25
+OJ 225,Kärdla,Nyxair,17:00,N/A,2025-02-25
+AY 1026,Helsingi,Finnair,17:20,N/A,2025-02-25
+LH 883,Frankfurt,Deutsche Lufthansa,18:05,N/A,2025-02-25
+LO 788,Varssavi (Chopin),LOT - Polish Airlines,18:20,N/A,2025-02-25
+OJ 207,Kuressaare,Nyxair,18:30,N/A,2025-02-25
+BT 906,Vilnius,Air Baltic Corporation,18:30,N/A,2025-02-25
+TK 1424,Istanbul,Turkish Airlines,18:55,N/A,2025-02-25
+AY 1028,Helsingi,Finnair,21:15,N/A,2025-02-25
+BT 318,Riia,Air Baltic Corporation,21:25,N/A,2025-02-25
+FR 9914,Barcelona,Ryanair,21:50,N/A,2025-02-25
+AY 1032,Helsingi,Finnair,22:20,N/A,2025-02-25
