@@ -1,0 +1,48 @@
+flight_number,flight_title,service_provider_name,scheduled_time,departure_time,date
+BT 362,Riia,Air Baltic Corporation,05:30,N/A,2025-03-16
+LH 885,Frankfurt,Deutsche Lufthansa,05:55,N/A,2025-03-16
+AY 1036,Helsingi,Finnair,06:00,N/A,2025-03-16
+LX 1317,Zürich,Swiss,06:05,N/A,2025-03-16
+BT 821,Berliin,Air Baltic Corporation,07:00,N/A,2025-03-16
+SK 1783,Stockholm (Arlanda),Scandinavian Airlines System (SAS),07:00,N/A,2025-03-16
+BT 893,Gran Canaria,Air Baltic Corporation,07:25,N/A,2025-03-16
+BT 857,Amsterdam (Schiphol),Air Baltic Corporation,07:35,N/A,2025-03-16
+BT 7701,Kopenhaagen,Air Baltic Corporation,07:50,N/A,2025-03-16
+HN 3453,Sharm El Sheikh,Heston Airlines,08:00,N/A,2025-03-16
+AY 1012,Helsingi,Finnair,08:25,N/A,2025-03-16
+BT 815,Oslo,Air Baltic Corporation,08:35,N/A,2025-03-16
+BT 312,Riia,Air Baltic Corporation,08:55,N/A,2025-03-16
+LO 790,Varssavi (Chopin),LOT - Polish Airlines,08:55,N/A,2025-03-16
+FR 2733,Berliin,Ryanair,09:35,N/A,2025-03-16
+AY 1014,Helsingi,Finnair,10:35,N/A,2025-03-16
+SK 749,Stockholm (Arlanda),Scandinavian Airlines System (SAS),11:00,N/A,2025-03-16
+BT 811,Kopenhaagen,Air Baltic Corporation,12:15,N/A,2025-03-16
+TK 1422,Istanbul,Turkish Airlines,12:20,N/A,2025-03-16
+FR 9914,Barcelona,Ryanair,13:00,N/A,2025-03-16
+LH 881,Frankfurt,Deutsche Lufthansa,13:45,N/A,2025-03-16
+LO 786,Varssavi (Chopin),LOT - Polish Airlines,14:05,N/A,2025-03-16
+FR 4623,Stockholm (Arlanda),Ryanair,14:25,N/A,2025-03-16
+AY 1020,Helsingi,Finnair,14:40,N/A,2025-03-16
+BT 316,Riia,Air Baltic Corporation,15:20,N/A,2025-03-16
+AY 1022,Helsingi,Finnair,15:35,N/A,2025-03-16
+BT 861,Pariis (Charles De Gaulle),Air Baltic Corporation,15:55,N/A,2025-03-16
+AY 1024,Helsingi,Finnair,16:25,N/A,2025-03-16
+SK 1745,Stockholm (Arlanda),Scandinavian Airlines System (SAS),16:40,N/A,2025-03-16
+BT 851,Brüssel,Air Baltic Corporation,16:45,N/A,2025-03-16
+OJ 225,Kärdla,Nyxair,17:00,N/A,2025-03-16
+FR 5605,Rooma (Ciampino),Ryanair,17:05,N/A,2025-03-16
+AY 1026,Helsingi,Finnair,17:40,N/A,2025-03-16
+LH 883,Frankfurt,Deutsche Lufthansa,17:55,N/A,2025-03-16
+LO 788,Varssavi (Chopin),LOT - Polish Airlines,18:20,N/A,2025-03-16
+OJ 207,Kuressaare,Nyxair,18:30,N/A,2025-03-16
+TK 1424,Istanbul,Turkish Airlines,18:55,N/A,2025-03-16
+D8 2011,Oslo,Norwegian Air Sweden AOC,19:30,N/A,2025-03-16
+FR 330,Veneetsia-Treviso,Ryanair,19:55,N/A,2025-03-16
+FR 4764,Milano (Bergamo),Ryanair,20:25,N/A,2025-03-16
+BT 906,Vilnius,Air Baltic Corporation,20:35,N/A,2025-03-16
+SK 1749,Stockholm (Arlanda),Scandinavian Airlines System (SAS),20:55,N/A,2025-03-16
+BT 318,Riia,Air Baltic Corporation,21:25,N/A,2025-03-16
+AY 1028,Helsingi,Finnair,21:30,N/A,2025-03-16
+W9 5446,London (Luton),Wizz Air UK,21:30,N/A,2025-03-16
+FR 2224,London (Stansted),Ryanair,22:00,N/A,2025-03-16
+AY 1032,Helsingi,Finnair,22:20,N/A,2025-03-16
