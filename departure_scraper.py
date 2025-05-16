@@ -2,6 +2,14 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
 import csv
+import logging
+
+# setting up logging
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
 
 url = "https://airport.ee/lennuinfo/"
 
@@ -13,11 +21,20 @@ headers = {
     "referer": "https://www.google.com/"
 }
 
-response = requests.get(url, headers=headers)
+try:
+    response = requests.get(url, headers=headers)
+    response.raise_for_status()  # Raise an error for bad responses
+    logging.info("Successfully fetched the webpage.")
+except requests.exceptions.RequestException as e:
+    logging.error(f"Error fetching the webpage: {e}")
+    exit()
 
 soup = BeautifulSoup(response.text, 'html.parser')
 
-flights_list_items = soup.find_all('li', class_='flights-list__item departures-today')
+flights_list_items = soup.find_all('li', class_='flights-list__item  departures-today')
+#flights-list__item  departures-today
+#flights_list_items = soup.find_all('li', class_=['flights-list__item departures-today', 'flights-list__item  departures-today'])
+logging.info(f"Found {len(flights_list_items)} departure items.")
 
 # Extract and save info from each list item to a list object
 departures_list = []
