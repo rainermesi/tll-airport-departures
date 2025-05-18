@@ -1,4 +1,4 @@
-import requests
+from selenium_fetch import fetch_page_html
 from bs4 import BeautifulSoup
 from datetime import datetime
 import csv
@@ -13,27 +13,15 @@ logging.basicConfig(
 
 url = "https://airport.ee/lennuinfo/"
 
-headers = {
-    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-    "accept-language": "en-US,en;q=0.9",
-    "cache-control": "max-age=0",
-    "upgrade-insecure-requests": "1",
-    "referer": "https://www.google.com/"
-}
+html = fetch_page_html(url)
 
-try:
-    response = requests.get(url, headers=headers)
-    response.raise_for_status()  # Raise an error for bad responses
-    logging.info("Successfully fetched the webpage.")
-except requests.exceptions.RequestException as e:
-    logging.error(f"Error fetching the webpage: {e}")
-    exit()
+soup = BeautifulSoup(html, 'html.parser')
 
-soup = BeautifulSoup(response.text, 'html.parser')
+# Save the soup to a file for inspection
+#with open('data/soup_inspect.html', 'w', encoding='utf-8') as f:
+#    f.write(soup.prettify())
 
-flights_list_items = soup.find_all('li', class_='flights-list__item  departures-today')
-#flights-list__item  departures-today
-#flights_list_items = soup.find_all('li', class_=['flights-list__item departures-today', 'flights-list__item  departures-today'])
+flights_list_items = soup.find_all('li', class_='flights-list__item departures-today')
 logging.info(f"Found {len(flights_list_items)} departure items.")
 
 # Extract and save info from each list item to a list object
