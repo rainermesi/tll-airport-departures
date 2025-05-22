@@ -4,7 +4,7 @@ import math
 import re
 
 def get_data_path():
-    data_path = Path('./data')
+    data_path = Path('./data/logs')
     csv_list = list(data_path.glob('*.csv'))
     return csv_list
 
@@ -12,6 +12,7 @@ def merge_csv_files(csv_files):
     dataframes = [pd.read_csv(file) for file in csv_files]
     merged_df = pd.concat(dataframes, ignore_index=True)
     merged_df['flight_title'] = merged_df['flight_title'].str.replace(r' \(.+\)', '', regex=True)
+    merged_df.to_csv('./data/all_departures_all_dates.csv', index=False)
     return merged_df
 
 def get_chart_values(merged_df):
