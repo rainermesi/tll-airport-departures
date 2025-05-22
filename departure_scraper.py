@@ -56,7 +56,7 @@ for li in flights_list_items:
         ])
 
 
-with open(f'data/departures_log_{log_date}.csv', 'w', newline='') as csvfile:
+with open(f'data/logs/departures_log_{log_date}.csv', 'w', newline='') as csvfile:
     csvwriter = csv.writer(csvfile)
     csvwriter.writerow(['flight_number','flight_title','service_provider_name','scheduled_time','departure_time','date'])
     csvwriter.writerows(departures_list)
