@@ -1,0 +1,43 @@
+flight_number,flight_title,service_provider_name,scheduled_time,departure_time,date
+XQ 497,Antalya,SunExpress - Günes Ekspres Havacilik,N/A,N/A,2025-07-05
+FH 732,Antalya,Freebird Airlines,N/A,N/A,2025-07-05
+BT 845,Burgas,Air Baltic Corporation,05:25,N/A,2025-07-05
+BT 362,Riia,Air Baltic Corporation,05:40,N/A,2025-07-05
+STM 3461,Antalya,Skystream Airlines,05:40,N/A,2025-07-05
+LO 792,Varssavi (Chopin),LOT - Polish Airlines,05:45,N/A,2025-07-05
+LH 885,Frankfurt,Deutsche Lufthansa,06:00,N/A,2025-07-05
+AY 1036,Helsingi,Finnair,06:00,N/A,2025-07-05
+BT 891,Palma De Mallorca,Air Baltic Corporation,06:00,N/A,2025-07-05
+LX 1317,Zürich,Swiss,06:00,N/A,2025-07-05
+SK 1771,Stockholm (Arlanda),Scandinavian Airlines System (SAS),06:45,N/A,2025-07-05
+AY 1012,Helsingi,Finnair,06:55,N/A,2025-07-05
+BT 857,Amsterdam,Air Baltic Corporation,07:30,N/A,2025-07-05
+BT 312,Riia,Air Baltic Corporation,08:45,N/A,2025-07-05
+BT 813,Billund,Air Baltic Corporation,09:00,N/A,2025-07-05
+OJ 223,Kärdla,Nyxair,09:15,N/A,2025-07-05
+AY 1014,Helsingi,Finnair,09:55,N/A,2025-07-05
+OJ 201,Kuressaare,Nyxair,10:05,N/A,2025-07-05
+SK 749,Stockholm (Arlanda),Scandinavian Airlines System (SAS),10:55,N/A,2025-07-05
+AY 1016,Helsingi,Finnair,11:35,N/A,2025-07-05
+FR 9914,Barcelona,Ryanair,11:45,N/A,2025-07-05
+AY 1018,Helsingi,Finnair,12:55,N/A,2025-07-05
+BT 877,Barcelona,Air Baltic Corporation,13:15,N/A,2025-07-05
+BT 316,Riia,Air Baltic Corporation,13:55,N/A,2025-07-05
+BT 859,Amsterdam,Air Baltic Corporation,14:05,N/A,2025-07-05
+LO 786,Varssavi (Chopin),LOT - Polish Airlines,14:20,N/A,2025-07-05
+LH 881,Frankfurt,Deutsche Lufthansa,14:25,N/A,2025-07-05
+FR 4623,Stockholm (Arlanda),Ryanair,14:50,N/A,2025-07-05
+AY 1020,Helsingi,Finnair,14:55,N/A,2025-07-05
+HOT 3471,Heraklion,Valletta Airlines,15:40,N/A,2025-07-05
+AY 1026,Helsingi,Finnair,16:05,N/A,2025-07-05
+SK 1745,Stockholm (Arlanda),Scandinavian Airlines System (SAS),16:30,N/A,2025-07-05
+BT 871,London (Gatwick),Air Baltic Corporation,17:00,N/A,2025-07-05
+AY 1024,Helsingi,Finnair,17:20,N/A,2025-07-05
+BT 879,Malaga,Air Baltic Corporation,18:05,N/A,2025-07-05
+LO 788,Varssavi (Chopin),LOT - Polish Airlines,18:25,N/A,2025-07-05
+LH 883,Frankfurt,Deutsche Lufthansa,18:50,N/A,2025-07-05
+TK 1424,Istanbul,Turkish Airlines,19:35,N/A,2025-07-05
+BT 889,Malta,Air Baltic Corporation,20:35,N/A,2025-07-05
+BT 318,Riia,Air Baltic Corporation,21:45,N/A,2025-07-05
+AY 1032,Helsingi,Finnair,22:20,N/A,2025-07-05
+BT 819,Reykjavik,Air Baltic Corporation,22:35,N/A,2025-07-05
