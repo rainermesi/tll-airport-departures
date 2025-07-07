@@ -1,0 +1,50 @@
+flight_number,flight_title,service_provider_name,scheduled_time,departure_time,date
+FH 732,Antalya,Freebird Airlines,N/A,N/A,2025-07-07
+U5 7103,Sharm El Sheikh,SkyUp MT,04:40,N/A,2025-07-07
+BT 362,Riia,Air Baltic Corporation,05:40,N/A,2025-07-07
+LO 792,Varssavi (Chopin),LOT - Polish Airlines,N/A,N/A,2025-07-07
+LX 1317,Zürich,Swiss,06:00,N/A,2025-07-07
+LH 885,Frankfurt,Deutsche Lufthansa,06:00,N/A,2025-07-07
+AY 1036,Helsingi,Finnair,06:00,N/A,2025-07-07
+SK 1771,Stockholm (Arlanda),Scandinavian Airlines System (SAS),06:45,N/A,2025-07-07
+BT 902,Vilnius,Air Baltic Corporation,07:00,N/A,2025-07-07
+BT 885,Rhodos,Air Baltic Corporation,07:10,N/A,2025-07-07
+BT 851,Brüssel,Air Baltic Corporation,07:20,N/A,2025-07-07
+BT 857,Amsterdam,Air Baltic Corporation,07:30,N/A,2025-07-07
+OJ 223,Kärdla,Nyxair,07:30,N/A,2025-07-07
+OJ 201,Kuressaare,Nyxair,07:40,N/A,2025-07-07
+AY 1012,Helsingi,Finnair,08:00,N/A,2025-07-07
+BT 312,Riia,Air Baltic Corporation,09:05,N/A,2025-07-07
+AY 1014,Helsingi,Finnair,10:00,N/A,2025-07-07
+HN 3411,Tivat,Heston Airlines,10:30,N/A,2025-07-07
+AY 1016,Helsingi,Finnair,11:35,N/A,2025-07-07
+D8 2011,Oslo,Norwegian Air Sweden AOC,12:15,N/A,2025-07-07
+TK 1422,Istanbul,Turkish Airlines,12:35,N/A,2025-07-07
+AY 1018,Helsingi,Finnair,12:55,N/A,2025-07-07
+BT 316,Riia,Air Baltic Corporation,13:55,N/A,2025-07-07
+BT 859,Amsterdam,Air Baltic Corporation,14:05,N/A,2025-07-07
+LO 786,Varssavi (Chopin),LOT - Polish Airlines,14:20,N/A,2025-07-07
+LH 881,Frankfurt,Deutsche Lufthansa,14:30,N/A,2025-07-07
+AY 1020,Helsingi,Finnair,14:55,N/A,2025-07-07
+FR 2733,Berliin,Ryanair,15:10,N/A,2025-07-07
+SK 1745,Stockholm (Arlanda),Scandinavian Airlines System (SAS),16:35,N/A,2025-07-07
+BT 821,Berliin,Air Baltic Corporation,16:35,N/A,2025-07-07
+AY 1022,Helsingi,Finnair,16:50,N/A,2025-07-07
+BT 861,Pariis (Charles De Gaulle),Air Baltic Corporation,16:55,N/A,2025-07-07
+OJ 225,Kärdla,Nyxair,17:00,N/A,2025-07-07
+BT 823,München,Air Baltic Corporation,17:15,N/A,2025-07-07
+AY 1024,Helsingi,Finnair,17:20,N/A,2025-07-07
+FR 4623,Stockholm (Arlanda),Ryanair,17:45,N/A,2025-07-07
+OJ 207,Kuressaare,Nyxair,18:30,N/A,2025-07-07
+LO 788,Varssavi (Chopin),LOT - Polish Airlines,18:30,N/A,2025-07-07
+LH 883,Frankfurt,Deutsche Lufthansa,18:55,N/A,2025-07-07
+LH 2405,München,Deutsche Lufthansa,19:10,N/A,2025-07-07
+TK 1424,Istanbul,Turkish Airlines,19:35,N/A,2025-07-07
+AY 1028,Helsingi,Finnair,20:00,N/A,2025-07-07
+TO 7409,Pariis (Orly),Transavia France,20:05,N/A,2025-07-07
+BT 809,Kopenhaagen,Air Baltic Corporation,20:35,N/A,2025-07-07
+W9 5446,London (Luton),Wizz Air UK,21:10,N/A,2025-07-07
+BT 318,Riia,Air Baltic Corporation,21:25,N/A,2025-07-07
+BT 906,Vilnius,Air Baltic Corporation,21:35,N/A,2025-07-07
+AY 1032,Helsingi,Finnair,22:35,N/A,2025-07-07
+BT 843,Tirana,Air Baltic Corporation,23:25,N/A,2025-07-07
