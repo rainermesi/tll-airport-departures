@@ -1,0 +1,49 @@
+flight_number,flight_title,service_provider_name,scheduled_time,departure_time,date
+XQ 497,Antalya,SunExpress - Günes Ekspres Havacilik,N/A,N/A,2025-07-31
+FH 732,Antalya,Freebird Airlines,04:40,N/A,2025-07-31
+U5 7103,Sharm El Sheikh,SkyUp MT,N/A,N/A,2025-07-31
+BT 362,Riia,Air Baltic Corporation,05:40,N/A,2025-07-31
+LO 792,Varssavi (Chopin),LOT - Polish Airlines,05:45,N/A,2025-07-31
+AY 1036,Helsingi,Finnair,06:00,N/A,2025-07-31
+LH 885,Frankfurt,Deutsche Lufthansa,06:00,N/A,2025-07-31
+LX 1317,Zürich,Swiss,06:00,N/A,2025-07-31
+SK 1771,Stockholm (Arlanda),Scandinavian Airlines System (SAS),06:45,N/A,2025-07-31
+AY 1012,Helsingi,Finnair,06:55,N/A,2025-07-31
+BT 879,Malaga,Air Baltic Corporation,07:15,N/A,2025-07-31
+BT 861,Pariis (Charles De Gaulle),Air Baltic Corporation,07:30,N/A,2025-07-31
+BT 857,Amsterdam,Air Baltic Corporation,07:30,N/A,2025-07-31
+OJ 223,Kärdla,Nyxair,N/A,N/A,2025-07-31
+OJ 201,Kuressaare,Nyxair,07:40,N/A,2025-07-31
+BT 902,Vilnius,Air Baltic Corporation,08:10,N/A,2025-07-31
+BT 312,Riia,Air Baltic Corporation,09:05,N/A,2025-07-31
+FR 4645,Stockholm (Arlanda),Ryanair,09:10,N/A,2025-07-31
+AY 1014,Helsingi,Finnair,10:00,N/A,2025-07-31
+SK 749,Stockholm (Arlanda),Scandinavian Airlines System (SAS),10:45,N/A,2025-07-31
+SK 1787,Kopenhaagen,Scandinavian Airlines System (SAS),11:05,N/A,2025-07-31
+AY 1016,Helsingi,Finnair,11:35,N/A,2025-07-31
+FR 5694,Dublin,Ryanair,11:45,N/A,2025-07-31
+BT 314,Riia,Air Baltic Corporation,12:15,N/A,2025-07-31
+FR 2224,London (Stansted),Ryanair,12:15,N/A,2025-07-31
+BT 316,Riia,Air Baltic Corporation,13:55,N/A,2025-07-31
+BT 859,Amsterdam,Air Baltic Corporation,14:05,N/A,2025-07-31
+LO 786,Varssavi (Chopin),LOT - Polish Airlines,14:20,N/A,2025-07-31
+LH 881,Frankfurt,Deutsche Lufthansa,14:40,N/A,2025-07-31
+BT 815,Oslo,Air Baltic Corporation,14:55,N/A,2025-07-31
+AY 1020,Helsingi,Finnair,14:55,N/A,2025-07-31
+HN 3415,Tivat,Heston Airlines,15:00,N/A,2025-07-31
+OJ 227,Kärdla,Nyxair,15:00,N/A,2025-07-31
+AY 1022,Helsingi,Finnair,16:35,N/A,2025-07-31
+SK 1745,Stockholm (Arlanda),Scandinavian Airlines System (SAS),16:35,N/A,2025-07-31
+OJ 225,Kärdla,Nyxair,17:00,N/A,2025-07-31
+BT 871,London (Gatwick),Air Baltic Corporation,17:00,N/A,2025-07-31
+AY 1024,Helsingi,Finnair,17:20,N/A,2025-07-31
+LO 788,Varssavi (Chopin),LOT - Polish Airlines,18:25,N/A,2025-07-31
+OJ 207,Kuressaare,Nyxair,18:30,N/A,2025-07-31
+LH 883,Frankfurt,Deutsche Lufthansa,18:45,N/A,2025-07-31
+BT 827,München,Air Baltic Corporation,19:15,N/A,2025-07-31
+TK 1424,Istanbul,Turkish Airlines,19:35,N/A,2025-07-31
+AY 1028,Helsingi,Finnair,20:00,N/A,2025-07-31
+BT 811,Kopenhaagen,Air Baltic Corporation,20:35,N/A,2025-07-31
+BT 906,Vilnius,Air Baltic Corporation,20:35,N/A,2025-07-31
+BT 318,Riia,Air Baltic Corporation,21:50,N/A,2025-07-31
+AY 1032,Helsingi,Finnair,22:20,N/A,2025-07-31
