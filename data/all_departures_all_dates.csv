@@ -1,4 +1,47 @@
 flight_number,flight_title,service_provider_name,scheduled_time,departure_time,date
+FH 966,Antalya,Freebird Airlines,04:25,,2025-09-20
+XQ 497,Antalya,SunExpress - Günes Ekspres Havacilik,04:25,,2025-09-20
+FH 732,Antalya,Freebird Airlines,04:40,,2025-09-20
+U5 7395,Sharm El Sheikh,SkyUp MT,04:40,,2025-09-20
+STM 3461,Antalya,Skystream Airlines,05:40,,2025-09-20
+BT 362,Riia,Air Baltic Corporation,05:40,,2025-09-20
+LO 792,Varssavi,LOT - Polish Airlines,05:45,,2025-09-20
+BT 891,Palma De Mallorca,Air Baltic Corporation,06:00,,2025-09-20
+LX 1317,Zürich,Swiss,06:00,,2025-09-20
+AY 1036,Helsingi,Finnair,06:00,,2025-09-20
+LH 885,Frankfurt,Deutsche Lufthansa,06:00,,2025-09-20
+SK 1771,Stockholm,Scandinavian Airlines System (SAS),06:25,,2025-09-20
+SK 1791,Kopenhaagen,Scandinavian Airlines System (SAS),06:25,,2025-09-20
+AY 1012,Helsingi,Finnair,06:55,,2025-09-20
+BT 857,Amsterdam,Air Baltic Corporation,07:30,,2025-09-20
+BT 312,Riia,Air Baltic Corporation,08:45,,2025-09-20
+BT 9802,Riia,Air Baltic Corporation,09:00,,2025-09-20
+BT 813,Billund,Air Baltic Corporation,09:00,,2025-09-20
+OJ 223,Kärdla,Nyxair,09:15,,2025-09-20
+AY 1014,Helsingi,Finnair,09:55,,2025-09-20
+OJ 201,Kuressaare,Nyxair,10:05,,2025-09-20
+AY 1016,Helsingi,Finnair,11:35,,2025-09-20
+FR 9914,Barcelona,Ryanair,11:45,,2025-09-20
+AY 1018,Helsingi,Finnair,12:55,,2025-09-20
+BT 877,Barcelona,Air Baltic Corporation,13:15,,2025-09-20
+BT 316,Riia,Air Baltic Corporation,13:55,,2025-09-20
+BT 859,Amsterdam,Air Baltic Corporation,14:05,,2025-09-20
+LO 786,Varssavi,LOT - Polish Airlines,14:20,,2025-09-20
+SK 1745,Stockholm,Scandinavian Airlines System (SAS),14:20,,2025-09-20
+LH 881,Frankfurt,Deutsche Lufthansa,14:25,,2025-09-20
+FR 4623,Stockholm,Ryanair,14:50,,2025-09-20
+AY 1020,Helsingi,Finnair,14:55,,2025-09-20
+BT 314,Riia,Air Baltic Corporation,15:35,,2025-09-20
+HOT 3471,Heraklion,Valletta Airlines,15:40,,2025-09-20
+SK 1787,Kopenhaagen,Scandinavian Airlines System (SAS),15:45,,2025-09-20
+BT 871,London,Air Baltic Corporation,17:00,,2025-09-20
+BT 879,Malaga,Air Baltic Corporation,18:05,,2025-09-20
+LO 788,Varssavi,LOT - Polish Airlines,18:25,,2025-09-20
+LH 883,Frankfurt,Deutsche Lufthansa,18:50,,2025-09-20
+TK 1424,Istanbul,Turkish Airlines,19:35,,2025-09-20
+BT 889,Malta,Air Baltic Corporation,20:35,,2025-09-20
+BT 318,Riia,Air Baltic Corporation,21:45,,2025-09-20
+AY 1032,Helsingi,Finnair,22:20,,2025-09-20
 XQ 497,Antalya,SunExpress - Günes Ekspres Havacilik,,,2025-07-12
 BT 845,Burgas,Air Baltic Corporation,05:25,,2025-07-12
 BT 362,Riia,Air Baltic Corporation,05:40,,2025-07-12
