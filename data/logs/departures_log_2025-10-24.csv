@@ -1,0 +1,58 @@
+flight_number,flight_title,service_provider_name,scheduled_time,departure_time,date
+4M 936,Antalya,Mavi Gök Airlines (MGA),N/A,N/A,2025-10-24
+XQ 497,Antalya,SunExpress - Günes Ekspres Havacilik,04:25,N/A,2025-10-24
+FH 732,Antalya,Freebird Airlines,04:40,N/A,2025-10-24
+U5 7105,Sharm El Sheikh,SkyUp MT,04:50,N/A,2025-10-24
+BT 362,Riia,Air Baltic Corporation,05:40,N/A,2025-10-24
+LO 792,Varssavi (Chopin),LOT - Polish Airlines,05:45,N/A,2025-10-24
+HOT 3491,Larnaca,Valletta Airlines,06:00,N/A,2025-10-24
+AY 1036,Helsingi,Finnair,06:00,N/A,2025-10-24
+LX 1317,Zürich,Swiss,06:00,N/A,2025-10-24
+LH 885,Frankfurt,Deutsche Lufthansa,06:00,N/A,2025-10-24
+SK 1791,Kopenhaagen,Scandinavian Airlines System (SAS),06:20,N/A,2025-10-24
+BT 861,Pariis (Charles De Gaulle),Air Baltic Corporation,06:35,N/A,2025-10-24
+AY 1012,Helsingi,Finnair,06:55,N/A,2025-10-24
+SK 1771,Stockholm (Arlanda),Scandinavian Airlines System (SAS),07:00,N/A,2025-10-24
+BT 885,Rhodos,Air Baltic Corporation,07:10,N/A,2025-10-24
+BT 823,München,Air Baltic Corporation,07:15,N/A,2025-10-24
+OJ 223,Kärdla,Nyxair,07:30,N/A,2025-10-24
+BT 857,Amsterdam,Air Baltic Corporation,07:30,N/A,2025-10-24
+OJ 201,Kuressaare,Nyxair,07:40,N/A,2025-10-24
+LO 790,Varssavi (Chopin),LOT - Polish Airlines,08:55,N/A,2025-10-24
+BT 312,Riia,Air Baltic Corporation,09:05,N/A,2025-10-24
+AY 1014,Helsingi,Finnair,10:00,N/A,2025-10-24
+QU 7221,Hurghada,Skyline Express Airline,10:40,N/A,2025-10-24
+AY 1016,Helsingi,Finnair,10:55,N/A,2025-10-24
+SK 749,Stockholm (Arlanda),Scandinavian Airlines System (SAS),11:10,N/A,2025-10-24
+FH 418,Antalya,Freebird Airlines,12:05,N/A,2025-10-24
+D8 2011,Oslo,Norwegian Air Sweden AOC,12:15,N/A,2025-10-24
+TK 1422,Istanbul,Turkish Airlines,12:35,N/A,2025-10-24
+AY 1018,Helsingi,Finnair,12:55,N/A,2025-10-24
+BT 316,Riia,Air Baltic Corporation,13:55,N/A,2025-10-24
+BT 821,Berliin,Air Baltic Corporation,14:00,N/A,2025-10-24
+BT 859,Amsterdam,Air Baltic Corporation,14:05,N/A,2025-10-24
+LH 881,Frankfurt,Deutsche Lufthansa,14:30,N/A,2025-10-24
+LO 786,Varssavi (Chopin),LOT - Polish Airlines,14:30,N/A,2025-10-24
+AY 1020,Helsingi,Finnair,14:55,N/A,2025-10-24
+SK 1787,Kopenhaagen,Scandinavian Airlines System (SAS),15:45,N/A,2025-10-24
+SK 1745,Stockholm (Arlanda),Scandinavian Airlines System (SAS),16:35,N/A,2025-10-24
+AY 1022,Helsingi,Finnair,16:45,N/A,2025-10-24
+BT 906,Vilnius,Air Baltic Corporation,17:00,N/A,2025-10-24
+STM 3463,Enfidha,Skystream Airlines,17:00,N/A,2025-10-24
+OJ 225,Kärdla,Nyxair,17:00,N/A,2025-10-24
+AY 1024,Helsingi,Finnair,17:20,N/A,2025-10-24
+BT 849,Split,Air Baltic Corporation,17:25,N/A,2025-10-24
+FR 4623,Stockholm (Arlanda),Ryanair,17:45,N/A,2025-10-24
+LO 788,Varssavi (Chopin),LOT - Polish Airlines,18:30,N/A,2025-10-24
+OJ 207,Kuressaare,Nyxair,18:30,N/A,2025-10-24
+LH 883,Frankfurt,Deutsche Lufthansa,18:50,N/A,2025-10-24
+BT 851,Brüssel,Air Baltic Corporation,19:00,N/A,2025-10-24
+LH 2405,München,Deutsche Lufthansa,19:10,N/A,2025-10-24
+TO 7401,Pariis (Orly),Transavia France,19:45,N/A,2025-10-24
+SK 1749,Stockholm (Arlanda),Scandinavian Airlines System (SAS),20:00,N/A,2025-10-24
+EW 4281,Praha,Eurowings,20:30,N/A,2025-10-24
+W9 5446,London (Luton),Wizz Air UK,21:10,N/A,2025-10-24
+BT 318,Riia,Air Baltic Corporation,21:25,N/A,2025-10-24
+FR 2733,Berliin,Ryanair,21:30,N/A,2025-10-24
+AY 1032,Helsingi,Finnair,22:20,N/A,2025-10-24
+FR 2224,London (Stansted),Ryanair,23:35,N/A,2025-10-24
