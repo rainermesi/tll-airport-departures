@@ -1,0 +1,49 @@
+flight_number,flight_title,service_provider_name,scheduled_time,departure_time,date
+U5 8903,Hurghada,SkyUp MT,02:55,N/A,2025-10-28
+XQ 497,Antalya,SunExpress - Günes Ekspres Havacilik,N/A,N/A,2025-10-28
+FH 732,Antalya,Freebird Airlines,03:40,N/A,2025-10-28
+HN 3481,Hurghada,Heston Airlines,04:00,N/A,2025-10-28
+LO 792,Varssavi (Chopin),LOT - Polish Airlines,05:40,N/A,2025-10-28
+BT 362,Riia,Air Baltic Corporation,05:40,N/A,2025-10-28
+AY 1036,Helsingi,Finnair,06:00,N/A,2025-10-28
+LH 885,Frankfurt,Deutsche Lufthansa,06:15,N/A,2025-10-28
+SK 1791,Kopenhaagen,Scandinavian Airlines System (SAS),06:25,N/A,2025-10-28
+BT 851,Brüssel,Air Baltic Corporation,06:40,N/A,2025-10-28
+BT 904,Vilnius,Air Baltic Corporation,07:00,N/A,2025-10-28
+BT 857,Amsterdam,Air Baltic Corporation,07:25,N/A,2025-10-28
+OJ 223,Kärdla,Nyxair,07:30,N/A,2025-10-28
+OJ 201,Kuressaare,Nyxair,07:40,N/A,2025-10-28
+BT 865,Nice,Air Baltic Corporation,07:55,N/A,2025-10-28
+BT 312,Riia,Air Baltic Corporation,08:55,N/A,2025-10-28
+AY 1014,Helsingi,Finnair,10:35,N/A,2025-10-28
+SK 749,Stockholm (Arlanda),Scandinavian Airlines System (SAS),11:00,N/A,2025-10-28
+SK 1797,Kopenhaagen,Scandinavian Airlines System (SAS),11:00,N/A,2025-10-28
+BT 7781,Sharm El Sheikh,Air Baltic Corporation,11:15,N/A,2025-10-28
+W9 5446,London (Luton),Wizz Air UK,11:45,N/A,2025-10-28
+TO 7401,Pariis (Orly),Transavia France,12:35,N/A,2025-10-28
+FR 4611,Stockholm (Arlanda),Ryanair,13:55,N/A,2025-10-28
+BT 859,Amsterdam,Air Baltic Corporation,14:00,N/A,2025-10-28
+LO 786,Varssavi (Chopin),LOT - Polish Airlines,14:05,N/A,2025-10-28
+BT 879,Malaga,Air Baltic Corporation,14:10,N/A,2025-10-28
+AY 1020,Helsingi,Finnair,14:40,N/A,2025-10-28
+FR 8903,Milano (Malpensa),Ryanair,15:15,N/A,2025-10-28
+SK 1745,Stockholm (Arlanda),Scandinavian Airlines System (SAS),15:40,N/A,2025-10-28
+SK 1787,Kopenhaagen,Scandinavian Airlines System (SAS),15:45,N/A,2025-10-28
+BT 871,London (Gatwick),Air Baltic Corporation,16:00,N/A,2025-10-28
+AY 1022,Helsingi,Finnair,16:20,N/A,2025-10-28
+AY 1024,Helsingi,Finnair,16:30,N/A,2025-10-28
+OJ 225,Kärdla,Nyxair,17:00,N/A,2025-10-28
+BT 316,Riia,Air Baltic Corporation,17:10,N/A,2025-10-28
+AY 1026,Helsingi,Finnair,17:20,N/A,2025-10-28
+LH 883,Frankfurt,Deutsche Lufthansa,18:05,N/A,2025-10-28
+OJ 207,Kuressaare,Nyxair,18:30,N/A,2025-10-28
+LO 788,Varssavi (Chopin),LOT - Polish Airlines,18:30,N/A,2025-10-28
+TK 1424,Istanbul,Turkish Airlines,18:55,N/A,2025-10-28
+SK 1749,Stockholm (Arlanda),Scandinavian Airlines System (SAS),20:00,N/A,2025-10-28
+FR 2224,London (Stansted),Ryanair,20:30,N/A,2025-10-28
+BT 906,Vilnius,Air Baltic Corporation,20:50,N/A,2025-10-28
+BT 318,Riia,Air Baltic Corporation,21:25,N/A,2025-10-28
+AY 1028,Helsingi,Finnair,21:30,N/A,2025-10-28
+FR 5694,Dublin,Ryanair,22:05,N/A,2025-10-28
+AY 1032,Helsingi,Finnair,22:20,N/A,2025-10-28
+FR 4623,Stockholm (Arlanda),Ryanair,23:50,N/A,2025-10-28
