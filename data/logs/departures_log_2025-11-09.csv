@@ -1,0 +1,47 @@
+flight_number,flight_title,service_provider_name,scheduled_time,departure_time,date
+QU 7221,Hurghada,Skyline Express Airline,N/A,N/A,2025-11-09
+4M 936,Antalya,Mavi Gök Airlines (MGA),N/A,N/A,2025-11-09
+XQ 497,Antalya,SunExpress - Günes Ekspres Havacilik,N/A,N/A,2025-11-09
+U5 7105,Sharm El Sheikh,SkyUp MT,03:35,N/A,2025-11-09
+BT 362,Riia,Air Baltic Corporation,05:40,N/A,2025-11-09
+AY 1036,Helsingi,Finnair,06:00,N/A,2025-11-09
+LX 1317,Zürich,Swiss,06:05,N/A,2025-11-09
+LH 885,Frankfurt,Deutsche Lufthansa,06:15,N/A,2025-11-09
+SK 1791,Kopenhaagen,Scandinavian Airlines System (SAS),06:25,N/A,2025-11-09
+SK 1783,Stockholm (Arlanda),Scandinavian Airlines System (SAS),06:50,N/A,2025-11-09
+BT 823,München,Air Baltic Corporation,07:00,N/A,2025-11-09
+BT 857,Amsterdam,Air Baltic Corporation,07:25,N/A,2025-11-09
+HN 3453,Sharm El Sheikh,Heston Airlines,07:30,N/A,2025-11-09
+BT 895,Funchal,Air Baltic Corporation,07:45,N/A,2025-11-09
+AY 1012,Helsingi,Finnair,08:25,N/A,2025-11-09
+LO 790,Varssavi (Chopin),LOT - Polish Airlines,08:35,N/A,2025-11-09
+BT 312,Riia,Air Baltic Corporation,08:55,N/A,2025-11-09
+AY 1014,Helsingi,Finnair,10:25,N/A,2025-11-09
+SK 749,Stockholm (Arlanda),Scandinavian Airlines System (SAS),11:00,N/A,2025-11-09
+SK 1797,Kopenhaagen,Scandinavian Airlines System (SAS),11:00,N/A,2025-11-09
+TK 1422,Istanbul,Turkish Airlines,11:25,N/A,2025-11-09
+FR 2224,London (Stansted),Ryanair,12:35,N/A,2025-11-09
+LH 881,Frankfurt,Deutsche Lufthansa,13:55,N/A,2025-11-09
+BT 859,Amsterdam,Air Baltic Corporation,14:00,N/A,2025-11-09
+LO 786,Varssavi (Chopin),LOT - Polish Airlines,14:05,N/A,2025-11-09
+BT 316,Riia,Air Baltic Corporation,14:10,N/A,2025-11-09
+AY 1020,Helsingi,Finnair,14:40,N/A,2025-11-09
+BT 906,Vilnius,Air Baltic Corporation,15:10,N/A,2025-11-09
+FR 4611,Stockholm (Arlanda),Ryanair,15:10,N/A,2025-11-09
+AY 1022,Helsingi,Finnair,15:40,N/A,2025-11-09
+SK 1787,Kopenhaagen,Scandinavian Airlines System (SAS),15:45,N/A,2025-11-09
+SK 1745,Stockholm (Arlanda),Scandinavian Airlines System (SAS),16:10,N/A,2025-11-09
+AY 1024,Helsingi,Finnair,16:30,N/A,2025-11-09
+OJ 225,Kärdla,Nyxair,17:00,N/A,2025-11-09
+BT 861,Pariis (Charles De Gaulle),Air Baltic Corporation,17:10,N/A,2025-11-09
+AY 1026,Helsingi,Finnair,17:40,N/A,2025-11-09
+LH 883,Frankfurt,Deutsche Lufthansa,17:55,N/A,2025-11-09
+BT 851,Brüssel,Air Baltic Corporation,18:15,N/A,2025-11-09
+LO 788,Varssavi (Chopin),LOT - Polish Airlines,18:30,N/A,2025-11-09
+OJ 207,Kuressaare,Nyxair,18:30,N/A,2025-11-09
+TK 1424,Istanbul,Turkish Airlines,18:55,N/A,2025-11-09
+D8 2011,Oslo,Norwegian Air Sweden AOC,19:30,N/A,2025-11-09
+BT 811,Kopenhaagen,Air Baltic Corporation,20:45,N/A,2025-11-09
+BT 318,Riia,Air Baltic Corporation,21:25,N/A,2025-11-09
+AY 1028,Helsingi,Finnair,21:30,N/A,2025-11-09
+AY 1032,Helsingi,Finnair,22:25,N/A,2025-11-09
