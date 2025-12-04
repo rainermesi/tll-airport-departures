@@ -1,0 +1,46 @@
+flight_number,flight_title,service_provider_name,scheduled_time,departure_time,date
+BT 362,Riia,Air Baltic Corporation,05:40,N/A,2025-12-04
+LO 792,Varssavi (Chopin),LOT - Polish Airlines,05:40,N/A,2025-12-04
+AY 1036,Helsingi,Finnair,06:00,N/A,2025-12-04
+LH 885,Frankfurt,Deutsche Lufthansa,06:20,N/A,2025-12-04
+SK 1791,Kopenhaagen,Scandinavian Airlines System (SAS),06:25,N/A,2025-12-04
+SK 1783,Stockholm (Arlanda),Scandinavian Airlines System (SAS),07:00,N/A,2025-12-04
+BT 857,Amsterdam,Air Baltic Corporation,07:25,N/A,2025-12-04
+OJ 223,Kärdla,Nyxair,07:30,N/A,2025-12-04
+OJ 201,Kuressaare,Nyxair,07:40,N/A,2025-12-04
+BT 881,Tenerife (South),Air Baltic Corporation,07:45,N/A,2025-12-04
+BT 861,Pariis (Charles De Gaulle),Air Baltic Corporation,08:00,N/A,2025-12-04
+HN 3453,Sharm El Sheikh,Heston Airlines,08:00,N/A,2025-12-04
+AY 1012,Helsingi,Finnair,08:25,N/A,2025-12-04
+BT 312,Riia,Air Baltic Corporation,08:55,N/A,2025-12-04
+AY 1014,Helsingi,Finnair,10:35,N/A,2025-12-04
+SK 749,Stockholm (Arlanda),Scandinavian Airlines System (SAS),11:00,N/A,2025-12-04
+SK 1797,Kopenhaagen,Scandinavian Airlines System (SAS),11:00,N/A,2025-12-04
+TK 1422,Istanbul,Turkish Airlines,11:25,N/A,2025-12-04
+W9 5446,London (Luton),Wizz Air UK,12:20,N/A,2025-12-04
+BT 859,Amsterdam,Air Baltic Corporation,14:00,N/A,2025-12-04
+LO 786,Varssavi (Chopin),LOT - Polish Airlines,14:05,N/A,2025-12-04
+BT 316,Riia,Air Baltic Corporation,14:10,N/A,2025-12-04
+BT 906,Vilnius,Air Baltic Corporation,14:25,N/A,2025-12-04
+AY 1020,Helsingi,Finnair,14:40,N/A,2025-12-04
+LS 756,Edinburgh,Jet2.com,15:15,N/A,2025-12-04
+AY 1022,Helsingi,Finnair,15:40,N/A,2025-12-04
+SK 1745,Stockholm (Arlanda),Scandinavian Airlines System (SAS),15:40,N/A,2025-12-04
+SK 1787,Kopenhaagen,Scandinavian Airlines System (SAS),15:45,N/A,2025-12-04
+BT 871,London (Gatwick),Air Baltic Corporation,16:00,N/A,2025-12-04
+AY 1024,Helsingi,Finnair,16:55,N/A,2025-12-04
+OJ 225,Kärdla,Nyxair,17:00,N/A,2025-12-04
+BT 1019,Gran Canaria,Air Baltic Corporation,17:05,N/A,2025-12-04
+AY 1026,Helsingi,Finnair,17:20,N/A,2025-12-04
+LH 883,Frankfurt,Deutsche Lufthansa,17:55,N/A,2025-12-04
+BT 851,Brüssel,Air Baltic Corporation,18:15,N/A,2025-12-04
+LO 788,Varssavi (Chopin),LOT - Polish Airlines,18:30,N/A,2025-12-04
+OJ 207,Kuressaare,Nyxair,18:30,N/A,2025-12-04
+FR 4611,Stockholm (Arlanda),Ryanair,18:40,N/A,2025-12-04
+TK 1424,Istanbul,Turkish Airlines,18:55,N/A,2025-12-04
+SK 1749,Stockholm (Arlanda),Scandinavian Airlines System (SAS),20:00,N/A,2025-12-04
+BT 318,Riia,Air Baltic Corporation,21:25,N/A,2025-12-04
+AY 1028,Helsingi,Finnair,21:30,N/A,2025-12-04
+FR 2224,London (Stansted),Ryanair,21:50,N/A,2025-12-04
+FR 9914,Barcelona,Ryanair,22:10,N/A,2025-12-04
+AY 1032,Helsingi,Finnair,22:20,N/A,2025-12-04
