@@ -1,0 +1,40 @@
+flight_number,flight_title,service_provider_name,scheduled_time,departure_time,date
+U5 7105,Sharm El Sheikh,SkyUp MT,N/A,N/A,2025-12-06
+BT 362,Riia,Air Baltic Corporation,05:40,N/A,2025-12-06
+LO 792,Varssavi (Chopin),LOT - Polish Airlines,05:40,N/A,2025-12-06
+AY 1036,Helsingi,Finnair,06:00,N/A,2025-12-06
+LX 1317,Zürich,Swiss,06:00,N/A,2025-12-06
+LH 885,Frankfurt,Deutsche Lufthansa,06:15,N/A,2025-12-06
+SK 1791,Kopenhaagen,Scandinavian Airlines System (SAS),06:25,N/A,2025-12-06
+BT 823,München,Air Baltic Corporation,06:40,N/A,2025-12-06
+SK 1783,Stockholm (Arlanda),Scandinavian Airlines System (SAS),07:00,N/A,2025-12-06
+BT 857,Amsterdam,Air Baltic Corporation,07:25,N/A,2025-12-06
+BT 865,Nice,Air Baltic Corporation,07:40,N/A,2025-12-06
+AY 1012,Helsingi,Finnair,08:25,N/A,2025-12-06
+BT 312,Riia,Air Baltic Corporation,08:55,N/A,2025-12-06
+OJ 223,Kärdla,Nyxair,09:15,N/A,2025-12-06
+HN 3481,Hurghada,Heston Airlines,09:50,N/A,2025-12-06
+OJ 201,Kuressaare,Nyxair,10:05,N/A,2025-12-06
+FR 8903,Milano (Malpensa),Ryanair,10:15,N/A,2025-12-06
+SK 1797,Kopenhaagen,Scandinavian Airlines System (SAS),11:00,N/A,2025-12-06
+FR 2224,London (Stansted),Ryanair,12:10,N/A,2025-12-06
+W9 5446,London (Luton),Wizz Air UK,12:30,N/A,2025-12-06
+BT 7783,Hurghada,Air Baltic Corporation,12:40,N/A,2025-12-06
+PC 5962,Antalya,Pegasus Airlines,13:25,N/A,2025-12-06
+BT 859,Amsterdam,Air Baltic Corporation,14:00,N/A,2025-12-06
+LO 786,Varssavi (Chopin),LOT - Polish Airlines,14:05,N/A,2025-12-06
+FR 2733,Berliin,Ryanair,14:30,N/A,2025-12-06
+AY 1020,Helsingi,Finnair,14:45,N/A,2025-12-06
+BT 316,Riia,Air Baltic Corporation,15:40,N/A,2025-12-06
+SK 1787,Kopenhaagen,Scandinavian Airlines System (SAS),15:45,N/A,2025-12-06
+BT 877,Barcelona,Air Baltic Corporation,15:50,N/A,2025-12-06
+BT 871,London (Gatwick),Air Baltic Corporation,16:00,N/A,2025-12-06
+SK 1773,Stockholm (Arlanda),Scandinavian Airlines System (SAS),16:20,N/A,2025-12-06
+AY 1026,Helsingi,Finnair,17:20,N/A,2025-12-06
+LH 883,Frankfurt,Deutsche Lufthansa,17:55,N/A,2025-12-06
+LO 788,Varssavi (Chopin),LOT - Polish Airlines,18:30,N/A,2025-12-06
+TK 1424,Istanbul,Turkish Airlines,18:55,N/A,2025-12-06
+FR 5694,Dublin,Ryanair,20:35,N/A,2025-12-06
+BT 318,Riia,Air Baltic Corporation,21:25,N/A,2025-12-06
+AY 1032,Helsingi,Finnair,22:20,N/A,2025-12-06
+FR 4611,Stockholm (Arlanda),Ryanair,23:15,N/A,2025-12-06
