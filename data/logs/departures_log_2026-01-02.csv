@@ -1,0 +1,42 @@
+flight_number,flight_title,service_provider_name,scheduled_time,departure_time,date
+BT 362,Riia,Air Baltic Corporation,05:40,N/A,2026-01-02
+LO 792,Varssavi (Chopin),LOT - Polish Airlines,05:40,N/A,2026-01-02
+AY 1036,Helsingi,Finnair,06:00,N/A,2026-01-02
+LX 1317,Zürich,Swiss,06:05,N/A,2026-01-02
+SK 1791,Kopenhaagen,Scandinavian Airlines System (SAS),06:25,N/A,2026-01-02
+BT 879,Malaga,Air Baltic Corporation,07:10,N/A,2026-01-02
+BT 857,Amsterdam,Air Baltic Corporation,07:25,N/A,2026-01-02
+OJ 223,Kärdla,Nyxair,07:30,N/A,2026-01-02
+OJ 201,Kuressaare,Nyxair,07:40,N/A,2026-01-02
+BT 881,Tenerife (South),Air Baltic Corporation,07:45,N/A,2026-01-02
+W6 1968,Vilnius,Wizz Air Hungary,08:00,N/A,2026-01-02
+FR 4611,Stockholm (Arlanda),Ryanair,08:15,N/A,2026-01-02
+AY 1012,Helsingi,Finnair,08:25,N/A,2026-01-02
+LO 790,Varssavi (Chopin),LOT - Polish Airlines,08:35,N/A,2026-01-02
+BT 312,Riia,Air Baltic Corporation,08:55,N/A,2026-01-02
+FR 2733,Berliin,Ryanair,09:20,N/A,2026-01-02
+SK 1797,Kopenhaagen,Scandinavian Airlines System (SAS),11:00,N/A,2026-01-02
+TK 1422,Istanbul,Turkish Airlines,11:25,N/A,2026-01-02
+D8 2011,Oslo,Norwegian Air Sweden AOC,12:15,N/A,2026-01-02
+LH 881,Frankfurt,Deutsche Lufthansa,13:35,N/A,2026-01-02
+BT 859,Amsterdam,Air Baltic Corporation,14:00,N/A,2026-01-02
+LO 786,Varssavi (Chopin),LOT - Polish Airlines,14:05,N/A,2026-01-02
+BT 316,Riia,Air Baltic Corporation,14:10,N/A,2026-01-02
+AY 1020,Helsingi,Finnair,14:40,N/A,2026-01-02
+FR 4623,Stockholm (Arlanda),Ryanair,14:55,N/A,2026-01-02
+AY 1022,Helsingi,Finnair,15:40,N/A,2026-01-02
+SK 1745,Stockholm (Arlanda),Scandinavian Airlines System (SAS),15:40,N/A,2026-01-02
+SK 1787,Kopenhaagen,Scandinavian Airlines System (SAS),15:45,N/A,2026-01-02
+AY 1040,Helsingi,Finnair,16:10,N/A,2026-01-02
+OJ 225,Kärdla,Nyxair,17:00,N/A,2026-01-02
+BT 861,Pariis (Charles De Gaulle),Air Baltic Corporation,17:10,N/A,2026-01-02
+AY 1026,Helsingi,Finnair,17:20,N/A,2026-01-02
+LH 883,Frankfurt,Deutsche Lufthansa,17:55,N/A,2026-01-02
+BT 865,Nice,Air Baltic Corporation,18:00,N/A,2026-01-02
+OJ 207,Kuressaare,Nyxair,18:30,N/A,2026-01-02
+LO 788,Varssavi (Chopin),LOT - Polish Airlines,18:30,N/A,2026-01-02
+LS 848,Manchester,Jet2.com,19:55,N/A,2026-01-02
+BT 811,Kopenhaagen,Air Baltic Corporation,20:50,N/A,2026-01-02
+AY 1028,Helsingi,Finnair,21:45,N/A,2026-01-02
+AY 1032,Helsingi,Finnair,22:20,N/A,2026-01-02
+FR 2224,London (Stansted),Ryanair,23:05,N/A,2026-01-02
