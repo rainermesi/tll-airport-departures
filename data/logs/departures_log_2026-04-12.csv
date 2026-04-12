@@ -1,0 +1,54 @@
+flight_number,flight_title,service_provider_name,scheduled_time,departure_time,date
+LX 1317,Zürich,Swiss,N/A,N/A,2026-04-12
+STM 3465,Antalya,Skystream Airlines,N/A,N/A,2026-04-12
+BT 362,Riia,Air Baltic Corporation,N/A,N/A,2026-04-12
+LO 792,Varssavi (Chopin),LOT - Polish Airlines,05:45,N/A,2026-04-12
+AY 1036,Helsingi,Finnair,06:00,N/A,2026-04-12
+LH 885,Frankfurt,Deutsche Lufthansa,06:10,N/A,2026-04-12
+SK 1791,Kopenhaagen,Scandinavian Airlines System (SAS),06:15,N/A,2026-04-12
+SK 1771,Stockholm (Arlanda),Scandinavian Airlines System (SAS),07:15,N/A,2026-04-12
+BT 877,Barcelona,Air Baltic Corporation,07:20,N/A,2026-04-12
+BT 857,Amsterdam,Air Baltic Corporation,07:30,N/A,2026-04-12
+BT 823,München,Air Baltic Corporation,07:40,N/A,2026-04-12
+W6 1968,Vilnius,Wizz Air Hungary,08:05,N/A,2026-04-12
+AY 1014,Helsingi,Finnair,08:10,N/A,2026-04-12
+FR 4623,Stockholm (Arlanda),Ryanair,08:15,N/A,2026-04-12
+LO 790,Varssavi (Chopin),LOT - Polish Airlines,08:55,N/A,2026-04-12
+BT 312,Riia,Air Baltic Corporation,09:20,N/A,2026-04-12
+AY 1016,Helsingi,Finnair,10:10,N/A,2026-04-12
+W4 6768,Veneetsia (Marco Polo),Wizz Air Malta,10:20,N/A,2026-04-12
+SK 749,Stockholm (Arlanda),Scandinavian Airlines System (SAS),10:40,N/A,2026-04-12
+TK 1422,Istanbul,Turkish Airlines,11:15,N/A,2026-04-12
+SK 1797,Kopenhaagen,Scandinavian Airlines System (SAS),11:25,N/A,2026-04-12
+W9 5446,London (Luton),Wizz Air UK,11:30,N/A,2026-04-12
+D8 2011,Oslo,Norwegian Air Sweden AOC,12:15,N/A,2026-04-12
+BT 829,Berliin,Air Baltic Corporation,12:55,N/A,2026-04-12
+AY 1018,Helsingi,Finnair,13:40,N/A,2026-04-12
+LH 881,Frankfurt,Deutsche Lufthansa,13:45,N/A,2026-04-12
+BT 809,Kopenhaagen,Air Baltic Corporation,13:55,N/A,2026-04-12
+BT 859,Amsterdam,Air Baltic Corporation,14:05,N/A,2026-04-12
+LO 786,Varssavi (Chopin),LOT - Polish Airlines,14:20,N/A,2026-04-12
+BT 314,Riia,Air Baltic Corporation,15:15,N/A,2026-04-12
+AY 1020,Helsingi,Finnair,15:35,N/A,2026-04-12
+SK 1787,Kopenhaagen,Scandinavian Airlines System (SAS),15:50,N/A,2026-04-12
+AY 1026,Helsingi,Finnair,15:55,N/A,2026-04-12
+BT 815,Oslo,Air Baltic Corporation,16:55,N/A,2026-04-12
+OJ 225,Kärdla,Nyxair,17:00,N/A,2026-04-12
+SK 1745,Stockholm (Arlanda),Scandinavian Airlines System (SAS),17:05,N/A,2026-04-12
+W6 2046,Kraków,Wizz Air Hungary,17:30,N/A,2026-04-12
+BT 863,Pariis (Charles De Gaulle),Air Baltic Corporation,17:50,N/A,2026-04-12
+AY 1022,Helsingi,Finnair,17:50,N/A,2026-04-12
+LH 883,Frankfurt,Deutsche Lufthansa,18:00,N/A,2026-04-12
+LO 788,Varssavi (Chopin),LOT - Polish Airlines,18:25,N/A,2026-04-12
+BT 853,Brüssel,Air Baltic Corporation,18:25,N/A,2026-04-12
+OJ 207,Kuressaare,Nyxair,18:30,N/A,2026-04-12
+TK 1424,Istanbul,Turkish Airlines,19:35,N/A,2026-04-12
+AY 1024,Helsingi,Finnair,19:45,N/A,2026-04-12
+SK 1749,Stockholm (Arlanda),Scandinavian Airlines System (SAS),20:50,N/A,2026-04-12
+BT 906,Vilnius,Air Baltic Corporation,21:10,N/A,2026-04-12
+W6 2424,Budapest,Wizz Air Hungary,21:30,N/A,2026-04-12
+AY 1028,Helsingi,Finnair,21:40,N/A,2026-04-12
+BT 318,Riia,Air Baltic Corporation,21:40,N/A,2026-04-12
+W6 1366,Varssavi (Chopin),Wizz Air Hungary,22:30,N/A,2026-04-12
+FR 9914,Barcelona,Ryanair,22:35,N/A,2026-04-12
+AY 1032,Helsingi,Finnair,22:45,N/A,2026-04-12
