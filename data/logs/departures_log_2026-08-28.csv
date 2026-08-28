@@ -1,0 +1,33 @@
+flight_number,flight_title,service_provider_name,scheduled_time,departure_time,date
+D8 2011,Oslo,Norwegian Air Sweden AOC,N/A,N/A,2026-08-28
+EW 9739,Düsseldorf,Eurowings,N/A,N/A,2026-08-28
+BT 821,Berliin,Air Baltic Corporation,N/A,N/A,2026-08-28
+AY 1016,Helsingi,Finnair,N/A,N/A,2026-08-28
+BT 314,Riia,Air Baltic Corporation,14:00,N/A,2026-08-28
+BT 859,Amsterdam - Schiphol,Air Baltic Corporation,14:05,N/A,2026-08-28
+LH 881,Frankfurt,Deutsche Lufthansa,14:15,N/A,2026-08-28
+LO 786,Varssavi (Chopin),LOT - Polish Airlines,14:20,N/A,2026-08-28
+AY 1018,Helsingi,Finnair,14:40,N/A,2026-08-28
+BT 815,Oslo,Air Baltic Corporation,14:50,N/A,2026-08-28
+AY 1026,Helsingi,Finnair,15:15,N/A,2026-08-28
+SK 1787,Kopenhaagen,Scandinavian Airlines System (SAS),15:50,N/A,2026-08-28
+SK 1745,Stockholm (Arlanda),Scandinavian Airlines System (SAS),16:00,N/A,2026-08-28
+AY 1024,Helsingi,Finnair,16:10,N/A,2026-08-28
+BT 904,Vilnius,Air Baltic Corporation,16:10,N/A,2026-08-28
+AY 1020,Helsingi,Finnair,16:40,N/A,2026-08-28
+BT 851,Brüssel,Air Baltic Corporation,16:55,N/A,2026-08-28
+OJ 225,Kärdla,Nyxair,17:00,N/A,2026-08-28
+AY 1022,Helsingi,Finnair,17:20,N/A,2026-08-28
+BT 849,Split,Air Baltic Corporation,17:25,N/A,2026-08-28
+FR 4611,Stockholm (Arlanda),Ryanair,17:35,N/A,2026-08-28
+BT 316,Riia,Air Baltic Corporation,17:45,N/A,2026-08-28
+LO 788,Varssavi (Chopin),LOT - Polish Airlines,18:25,N/A,2026-08-28
+BT 823,München,Air Baltic Corporation,19:10,N/A,2026-08-28
+SK 1749,Stockholm (Arlanda),Scandinavian Airlines System (SAS),20:20,N/A,2026-08-28
+BT 811,Kopenhaagen,Air Baltic Corporation,20:35,N/A,2026-08-28
+BT 318,Riia,Air Baltic Corporation,21:40,N/A,2026-08-28
+W4 6134,Rooma (Fiumicino),Wizz Air Malta,21:40,N/A,2026-08-28
+W6 1366,Varssavi (Chopin),Wizz Air Hungary,22:20,N/A,2026-08-28
+FR 5694,Dublin,Ryanair,22:20,N/A,2026-08-28
+AY 1032,Helsingi,Finnair,23:15,N/A,2026-08-28
+BT 843,Tirana,Air Baltic Corporation,23:35,N/A,2026-08-28
