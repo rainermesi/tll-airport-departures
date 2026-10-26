@@ -74,116 +74,116 @@ Hour-by-hour forecast. Quiet, steady, busy, or crowded. Each flight is spread ac
 
 ## Unique destinations and departures
 
-Airports in the same city are counted together. A longer bar means more departures.
+Number of flights since 1 Aug 2024. Airports in the same city are counted together. The second number is the average per year, and a longer bar means more departures.
 
 ```
-Helsingi                         6803  ████████████████████████████████
-Stockholm                        3229  ███████████████
-Riia                             3103  ███████████████
-Varssavi                         2522  ████████████
-Frankfurt                        1935  █████████
-Kopenhaagen                      1665  ████████
-Amsterdam                        1326  ██████
-Kardla                           1287  ██████
-London                           1282  ██████
-Kuressaare                       1261  ██████
-Vilnius                          1150  █████
-Istanbul                          934  ████
-Antalya                           781  ████
-Munchen                           656  ███
-Berliin                           654  ███
-Oslo                              605  ███
-Pariis                            571  ███
-Zurich                            495  ██
-Brussel                           454  ██
-Milano                            383  ██
-Barcelona                         377  ██
-Malaga                            276  █
-Sharm El Sheikh                   264  █
-Heraklion                         246  █
-Dublin                            219  █
-Krakow                            202  █
-Viin                              193  █
-Hurghada                          176  █
-Budapest                          175  █
-Rooma                             168  █
-Praha                             155  █
-Nice                              150  █
-Tenerife                          129  █
-Gdansk                            123  █
-Rhodos                            119  █
-Tirana                            119  █
-Tivat                             115  █
-Billund                           113  █
-Burgas                            104  █
-Split                              98  █
-Veneetsia                          93  █
-Malta                              76  █
-Veneetsia-Treviso                  67  █
-Paphos                             66  █
-Palma De Mallorca                  65  █
-Gran Canaria                       60  █
-Dusseldorf                         51  █
-Hamburg                            47  █
-Funchal                            35  █
-Enfidha                            35  █
-Salzburg                           27  █
-Genf                               26  █
-Dubrovnik                          21  █
-Tampere Kittila                    21  █
-Reykjavik                          20  █
-Tampere                            17  █
-Ateena                             16  █
-Bodrum                             16  █
-Larnaca                            15  █
-Manchester                         11  █
-Lamezia                            11  █
-Madriid                            10  █
-Birmingham                          8  █
-Edinburgh                           8  █
-Kerkira                             4  █
-Visby                               4  █
-Faro                                4  █
-Goteborg                            3  █
-Lamezia Catania                     3  █
-Kardla Kuressaare                   3  █
-Istres Le Tube Istres Air Base      2  █
-Catania                             2  █
-Tel Aviv                            2  █
-Leon                                2  █
-Tromso                              2  █
-Cagliari                            2  █
-Stockholm Pariis                    2  █
-Linz                                2  █
-Bratislava                          2  █
-Billund Pariis                      1  █
-Liverpool                           1  █
-La Rioja                            1  █
-RAF Brize Norton                    1  █
-Verona                              1  █
-Fort Worth                          1  █
-Brno                                1  █
-Pamplona                            1  █
-Craiova                             1  █
-Trieste                             1  █
-Trieste Rooma                       1  █
-Kalamata                            1  █
-Malmo                               1  █
-Bahrain Hambantota                  1  █
-Kosice                              1  █
-Farnborough                         1  █
-Riia Barcelona                      1  █
-Pardubice                           1  █
-Trondheim                           1  █
-Luxembourg                          1  █
-Tbilisi                             1  █
-Bucharest                           1  █
-Katowice                            1  █
-Szczecin-Goleniow Solidarnosc       1  █
-Pisa                                1  █
-Akureyri                            1  █
-Faro Faro                           1  █
-RzeszowJasionka                     1  █
-Debrecen                            1  █
-Bern                                1  █
+Helsingi                         6803  3048.8/yr  ████████████████████████████████
+Stockholm                        3229  1447.1/yr  ███████████████
+Riia                             3103  1390.6/yr  ███████████████
+Varssavi                         2522  1130.3/yr  ████████████
+Frankfurt                        1935   867.2/yr  █████████
+Kopenhaagen                      1665   746.2/yr  ████████
+Amsterdam                        1326   594.3/yr  ██████
+Kardla                           1287   576.8/yr  ██████
+London                           1282   574.5/yr  ██████
+Kuressaare                       1261   565.1/yr  ██████
+Vilnius                          1150   515.4/yr  █████
+Istanbul                          934   418.6/yr  ████
+Antalya                           781   350.0/yr  ████
+Munchen                           656   294.0/yr  ███
+Berliin                           654   293.1/yr  ███
+Oslo                              605   271.1/yr  ███
+Pariis                            571   255.9/yr  ███
+Zurich                            495   221.8/yr  ██
+Brussel                           454   203.5/yr  ██
+Milano                            383   171.6/yr  ██
+Barcelona                         377   169.0/yr  ██
+Malaga                            276   123.7/yr  █
+Sharm El Sheikh                   264   118.3/yr  █
+Heraklion                         246   110.2/yr  █
+Dublin                            219    98.1/yr  █
+Krakow                            202    90.5/yr  █
+Viin                              193    86.5/yr  █
+Hurghada                          176    78.9/yr  █
+Budapest                          175    78.4/yr  █
+Rooma                             168    75.3/yr  █
+Praha                             155    69.5/yr  █
+Nice                              150    67.2/yr  █
+Tenerife                          129    57.8/yr  █
+Gdansk                            123    55.1/yr  █
+Rhodos                            119    53.3/yr  █
+Tirana                            119    53.3/yr  █
+Tivat                             115    51.5/yr  █
+Billund                           113    50.6/yr  █
+Burgas                            104    46.6/yr  █
+Split                              98    43.9/yr  █
+Veneetsia                          93    41.7/yr  █
+Malta                              76    34.1/yr  █
+Veneetsia-Treviso                  67    30.0/yr  █
+Paphos                             66    29.6/yr  █
+Palma De Mallorca                  65    29.1/yr  █
+Gran Canaria                       60    26.9/yr  █
+Dusseldorf                         51    22.9/yr  █
+Hamburg                            47    21.1/yr  █
+Funchal                            35    15.7/yr  █
+Enfidha                            35    15.7/yr  █
+Salzburg                           27    12.1/yr  █
+Genf                               26    11.7/yr  █
+Dubrovnik                          21     9.4/yr  █
+Tampere Kittila                    21     9.4/yr  █
+Reykjavik                          20     9.0/yr  █
+Tampere                            17     7.6/yr  █
+Ateena                             16     7.2/yr  █
+Bodrum                             16     7.2/yr  █
+Larnaca                            15     6.7/yr  █
+Manchester                         11     4.9/yr  █
+Lamezia                            11     4.9/yr  █
+Madriid                            10     4.5/yr  █
+Birmingham                          8     3.6/yr  █
+Edinburgh                           8     3.6/yr  █
+Kerkira                             4     1.8/yr  █
+Visby                               4     1.8/yr  █
+Faro                                4     1.8/yr  █
+Goteborg                            3     1.3/yr  █
+Lamezia Catania                     3     1.3/yr  █
+Kardla Kuressaare                   3     1.3/yr  █
+Istres Le Tube Istres Air Base      2     0.9/yr  █
+Catania                             2     0.9/yr  █
+Tel Aviv                            2     0.9/yr  █
+Leon                                2     0.9/yr  █
+Tromso                              2     0.9/yr  █
+Cagliari                            2     0.9/yr  █
+Stockholm Pariis                    2     0.9/yr  █
+Linz                                2     0.9/yr  █
+Bratislava                          2     0.9/yr  █
+Billund Pariis                      1     0.4/yr  █
+Liverpool                           1     0.4/yr  █
+La Rioja                            1     0.4/yr  █
+RAF Brize Norton                    1     0.4/yr  █
+Verona                              1     0.4/yr  █
+Fort Worth                          1     0.4/yr  █
+Brno                                1     0.4/yr  █
+Pamplona                            1     0.4/yr  █
+Craiova                             1     0.4/yr  █
+Trieste                             1     0.4/yr  █
+Trieste Rooma                       1     0.4/yr  █
+Kalamata                            1     0.4/yr  █
+Malmo                               1     0.4/yr  █
+Bahrain Hambantota                  1     0.4/yr  █
+Kosice                              1     0.4/yr  █
+Farnborough                         1     0.4/yr  █
+Riia Barcelona                      1     0.4/yr  █
+Pardubice                           1     0.4/yr  █
+Trondheim                           1     0.4/yr  █
+Luxembourg                          1     0.4/yr  █
+Tbilisi                             1     0.4/yr  █
+Bucharest                           1     0.4/yr  █
+Katowice                            1     0.4/yr  █
+Szczecin-Goleniow Solidarnosc       1     0.4/yr  █
+Pisa                                1     0.4/yr  █
+Akureyri                            1     0.4/yr  █
+Faro Faro                           1     0.4/yr  █
+RzeszowJasionka                     1     0.4/yr  █
+Debrecen                            1     0.4/yr  █
+Bern                                1     0.4/yr  █
 ```

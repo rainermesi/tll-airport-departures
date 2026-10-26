@@ -115,15 +115,27 @@ def destination_counts(chart_df):
     counts = counts.drop(labels=['Tallinn', 'Unknown'], errors='ignore')
     return counts
 
-def destination_chart(counts, width=32):
+def scrape_span(chart_df):
+    parsed = pd.to_datetime(chart_df['date'])
+    start = parsed.min()
+    end = parsed.max()
+    years = max((end - start).days, 1) / 365.25
+    return start.date(), years
+
+def since_label(start):
+    months = ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec')
+    return f'{start.day} {months[start.month - 1]} {start.year}'
+
+def destination_chart(counts, years, width=32):
     if counts.empty:
         return 'No destinations yet.'
     peak = int(counts.iloc[0]) or 1
     name_width = max(len(str(name)) for name in counts.index)
     lines = ['```']
     for name, count in counts.items():
+        per_year = int(count) / years
         bar = '█' * max(1, round(width * int(count) / peak))
-        lines.append(f'{name:<{name_width}}  {int(count):>5}  {bar}')
+        lines.append(f'{name:<{name_width}}  {int(count):>5}  {per_year:>6.1f}/yr  {bar}')
     lines.append('```')
     return '\n'.join(lines)
 
@@ -172,6 +184,7 @@ def main():
     recent = daily.tail(CHART_DAYS)
     quarters = quarter_averages(daily)
     _chart_values_df, destination_df = get_chart_values(merged)
+    started, years = scrape_span(chart_df)
     today = datetime.now(ZoneInfo('Europe/Tallinn')).date()
 
     chart_data = {
@@ -185,8 +198,10 @@ def main():
         'quarter_line': number_list(quarters['avg_destinations'], 1),
         'quarter_ymax': chart_limit(quarters['avg_departures'].to_list()),
         'terminal_forecast': terminal_forecast(merged, today),
+        'since_date': since_label(started),
         'destination_chart': destination_chart(
-            destination_df.set_index('flight_title')['count']
+            destination_df.set_index('flight_title')['count'],
+            years,
         ),
     }
 
