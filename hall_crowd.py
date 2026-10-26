@@ -86,16 +86,11 @@ def clock_minutes(value):
         return None
 
 
-def morning_crowd(rows):
-    """Peak plane-loads of departing passengers in the terminal from 03:00 to 08:00.
-
-    Returns None when no row has a scheduled time. Returns 0 when flights are
-    scheduled only outside the morning.
-    """
+def crowd_bins(rows, skip_tomorrow=True):
     bins = {}
     saw_time = False
     for row in rows:
-        if str(row.get('board') or 'today') == 'tomorrow':
+        if skip_tomorrow and str(row.get('board') or 'today') == 'tomorrow':
             continue
         depart = clock_minutes(row.get('scheduled_time'))
         if depart is None:
@@ -113,9 +108,42 @@ def morning_crowd(rows):
         share = passengers(row) / len(slots)
         for minute in slots:
             bins[minute] = bins.get(minute, 0) + share
+    return bins, saw_time
+
+
+def crowd_label(plane_loads):
+    if plane_loads < 0.7:
+        return 'quiet'
+    if plane_loads < 1.1:
+        return 'steady'
+    if plane_loads < 1.5:
+        return 'busy'
+    return 'crowded'
+
+
+def morning_crowd(rows):
+    """Peak plane-loads of departing passengers in the terminal from 03:00 to 08:00.
+
+    Returns None when no row has a scheduled time. Returns 0 when flights are
+    scheduled only outside the morning.
+    """
+    bins, saw_time = crowd_bins(rows, skip_tomorrow=True)
     if not saw_time:
         return None
     morning = [load for minute, load in bins.items() if MORNING_START <= minute < MORNING_END]
     if not morning:
         return 0.0
     return max(morning) / PLANE_LOAD
+
+
+def hourly_forecast(rows):
+    """Peak plane-loads during each hour from 04:00 through 22:00."""
+    bins, saw_time = crowd_bins(rows, skip_tomorrow=False)
+    if not saw_time:
+        return []
+    hours = []
+    for hour in range(4, 23):
+        window = [bins.get(minute, 0) for minute in range(hour * 60, (hour + 1) * 60, BIN_MINUTES)]
+        peak = (max(window) / PLANE_LOAD) if window else 0.0
+        hours.append((f'{hour:02d}:00', round(peak, 1), crowd_label(peak)))
+    return hours

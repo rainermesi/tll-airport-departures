@@ -45,26 +45,13 @@ xychart-beta
 
 ## Passengers in the terminal
 
-Morning peak for the last 90 days, in plane-loads of 150 departing passengers. Each flight is spread across the two hours before departure. Holiday flights count for more. This is not a security wait time.
+Hour-by-hour forecast. Quiet, steady, busy, or crowded. Each flight is spread across the two hours before departure, and holiday flights count for more.
 
-```mermaid
----
-xyChart:
-    xAxis:
-      labelFontSize: 8
----
-xychart-beta
-    title "Passengers in the terminal"
-    x-axis [{crowd_x}]
-    y-axis "plane-loads" 0 --> {crowd_ymax}
-    bar {crowd_bar}
-```
-
+{terminal_forecast}
 
 ## Unique destinations and departures
 
 All destinations flown to from Tallinn. More departures = bigger node.
-Note that umlauts don't seem to be supported in Mermaid Sankey Diagrams (experimental diagram).
 
 ```mermaid
 ---

@@ -1,11 +1,14 @@
+from datetime import datetime
 from pathlib import Path
 import math
 import re
+import unicodedata
+from zoneinfo import ZoneInfo
 
 import pandas as pd
 
 from destinations import normalize_destination
-from hall_crowd import morning_crowd
+from hall_crowd import hourly_forecast
 
 CHART_DAYS = 90
 PLACEHOLDER_RE = re.compile(r'\{([a-z_]+)\}')
@@ -52,14 +55,54 @@ def quarter_averages(daily_df):
     grouped['_sort'] = grouped['quarter'].map(lambda label: (int(label[:4]), int(label[-1])))
     return grouped.sort_values('_sort').drop(columns='_sort')
 
-def crowd_by_date(chart_df):
-    points = []
-    for date, group in chart_df.groupby('date', sort=True):
-        value = morning_crowd(group.to_dict('records'))
-        if value is None:
-            continue
-        points.append((str(date), round(value, 2)))
-    return points
+def sankey_label(name):
+    text = str(name)
+    for source, target in (
+        ('ł', 'l'), ('Ł', 'L'), ('ø', 'o'), ('Ø', 'O'),
+        ('đ', 'd'), ('Đ', 'D'), ('æ', 'ae'), ('Æ', 'AE'),
+        ('œ', 'oe'), ('ß', 'ss'),
+    ):
+        text = text.replace(source, target)
+    text = unicodedata.normalize('NFKD', text)
+    text = ''.join(char for char in text if not unicodedata.combining(char))
+    text = text.encode('ascii', 'ignore').decode('ascii')
+    text = text.replace(',', ' / ').replace('"', '').replace('/', ' ')
+    text = re.sub(r'\s+', ' ', text).strip()
+    return text or 'Unknown'
+
+def sparse_date_labels(dates, every=7):
+    labels = []
+    for index, date in enumerate(dates):
+        if index % every == 0 or index == len(dates) - 1:
+            _year, month, day = str(date).split('-')
+            labels.append(f'{day}.{month}')
+        else:
+            labels.append(' ')
+    return ', '.join(f'"{label}"' for label in labels)
+
+def forecast_date(dates, today):
+    ordered = sorted({str(date) for date in dates})
+    if not ordered:
+        return None
+    upcoming = [date for date in ordered if date > today.isoformat()]
+    if upcoming:
+        return upcoming[0]
+    if today.isoformat() in ordered:
+        return today.isoformat()
+    return ordered[-1]
+
+def terminal_forecast(merged_df, today):
+    chosen = forecast_date(merged_df['date'], today)
+    if chosen is None:
+        return 'No scheduled flights yet.'
+    rows = merged_df[merged_df['date'].astype(str) == chosen].to_dict('records')
+    hours = hourly_forecast(rows)
+    if not hours:
+        return f'**{chosen}**\n\nNo scheduled times for this day.'
+    lines = [f'**{chosen}**', '', '| Hour | Terminal |', '| --- | --- |']
+    for hour, _plane_loads, word in hours:
+        lines.append(f'| {hour} | {word} |')
+    return '\n'.join(lines)
 
 def get_chart_values(merged_df):
     chart_df = rows_for_charts(merged_df)
@@ -67,13 +110,7 @@ def get_chart_values(merged_df):
 
     result_2 = chart_df.groupby(chart_df['flight_title']).size().reset_index(name='count')
     result_2.insert(0,'source','Tallinn')
-    result_2['flight_title'] = result_2['flight_title'].str.replace('õ', 'o', flags=re.IGNORECASE, regex=True)
-    result_2['flight_title'] = result_2['flight_title'].str.replace('ä', 'a', flags=re.IGNORECASE, regex=True)
-    result_2['flight_title'] = result_2['flight_title'].str.replace('ö', 'o', flags=re.IGNORECASE, regex=True)
-    result_2['flight_title'] = result_2['flight_title'].str.replace('ü', 'u', flags=re.IGNORECASE, regex=True)
-    result_2['flight_title'] = result_2['flight_title'].str.replace('é', 'e', flags=re.IGNORECASE, regex=True)
-    result_2['flight_title'] = result_2['flight_title'].str.replace('/', '', flags=re.IGNORECASE, regex=True)
-    result_2['flight_title'] = result_2['flight_title'].str.replace('š', 's', flags=re.IGNORECASE, regex=True)
+    result_2['flight_title'] = result_2['flight_title'].map(sankey_label)
 
     return result_1, result_2
 
@@ -92,9 +129,7 @@ def generate_readme(template_path, data, output_path):
     Path(output_path).write_text(readme_content)
 
 def create_chart_dates(dataframe, column):
-    raw_date_list = [date for date in dataframe[column]]
-    string_date_list = ', '.join(f'"{date}"' for date in raw_date_list)
-    return string_date_list
+    return sparse_date_labels(list(dataframe[column]))
 
 
 def number_list(values, digits=None):
@@ -116,10 +151,9 @@ def main():
     daily = daily_counts(chart_df)
     recent = daily.tail(CHART_DAYS)
     quarters = quarter_averages(daily)
-    crowd = crowd_by_date(chart_df)[-CHART_DAYS:]
     _chart_values_df, sankey_values_df = get_chart_values(merged)
-    sankey_csv = sankey_values_df.to_csv(index=False, header=False)
-    crowd_values = [value for _date, value in crowd]
+    sankey_csv = sankey_values_df.to_csv(index=False, header=False, lineterminator='\n')
+    today = datetime.now(ZoneInfo('Europe/Tallinn')).date()
 
     chart_data = {
         'title': 'Departures by day',
@@ -132,9 +166,7 @@ def main():
         'quarter_bar': number_list(quarters['avg_departures'], 1),
         'quarter_line': number_list(quarters['avg_destinations'], 1),
         'quarter_ymax': chart_limit(quarters['avg_departures'].to_list()),
-        'crowd_x': ', '.join(f'"{date}"' for date, _value in crowd),
-        'crowd_bar': number_list(crowd_values, 2),
-        'crowd_ymax': chart_limit(crowd_values),
+        'terminal_forecast': terminal_forecast(merged, today),
         'sankey_data': sankey_csv
     }
 
