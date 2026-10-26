@@ -1,3 +1,4 @@
+from datetime import date
 import unittest
 
 import pandas as pd
@@ -45,6 +46,29 @@ class ChartWindowTest(unittest.TestCase):
         self.assertIn('Amsterdam', titles)
         self.assertIn('Genf', titles)
         self.assertNotIn('Geneva', titles)
+        labels = readme_generator.sparse_date_labels(list(daily['date']))
+        self.assertIn('"11.01"', labels)
+        self.assertGreater(labels.count('" "'), 70)
+
+    def test_sankey_names_are_ascii(self):
+        frame = pd.DataFrame([
+            {'date': '2026-10-01', 'flight_title': 'Gdańsk', 'board': 'today'},
+            {'date': '2026-10-01', 'flight_title': 'Zürich', 'board': 'today'},
+        ])
+        _daily, sankey = readme_generator.get_chart_values(frame)
+        names = set(sankey['flight_title'])
+        self.assertIn('Gdansk', names)
+        self.assertIn('Zurich', names)
+        self.assertTrue(all(name.isascii() for name in names))
+
+    def test_forecast_uses_tomorrow_when_it_is_already_logged(self):
+        frame = pd.DataFrame([
+            {'date': '2026-10-26', 'flight_title': 'Riia', 'scheduled_time': '12:00', 'flight_number': 'BT 1', 'board': 'today'},
+            {'date': '2026-10-27', 'flight_title': 'Antalya', 'scheduled_time': '06:45', 'flight_number': 'XQ 1', 'board': 'tomorrow'},
+        ])
+        text = readme_generator.terminal_forecast(frame, date(2026, 10, 26))
+        self.assertIn('**2026-10-27**', text)
+        self.assertIn('| 05:00 |', text)
 
 
 if __name__ == '__main__':
