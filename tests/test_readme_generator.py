@@ -67,10 +67,14 @@ class ChartWindowTest(unittest.TestCase):
         self.assertEqual(counts['Stockholm'], 2)
         self.assertNotIn('Tallinn', counts)
         self.assertIn('Gdansk', counts)
-        chart = readme_generator.destination_chart(destinations.set_index('flight_title')['count'])
+        chart = readme_generator.destination_chart(
+            destinations.set_index('flight_title')['count'],
+            years=2,
+        )
         london = next(line for line in chart.splitlines() if line.startswith('London'))
         gdansk = next(line for line in chart.splitlines() if line.startswith('Gdansk'))
         self.assertGreater(london.count('█'), gdansk.count('█'))
+        self.assertIn('1.5/yr', london)
 
     def test_forecast_uses_tomorrow_when_it_is_already_logged(self):
         frame = pd.DataFrame([
