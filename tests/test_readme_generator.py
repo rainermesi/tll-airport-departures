@@ -54,11 +54,13 @@ class ChartWindowTest(unittest.TestCase):
         frame = pd.DataFrame([
             {'date': '2026-10-01', 'flight_title': 'Gdańsk', 'board': 'today'},
             {'date': '2026-10-01', 'flight_title': 'Zürich', 'board': 'today'},
+            {'date': '2026-10-01', 'flight_title': 'Tallinn (Lennart Meri)', 'board': 'today'},
         ])
         _daily, sankey = readme_generator.get_chart_values(frame)
         names = set(sankey['flight_title'])
         self.assertIn('Gdansk', names)
         self.assertIn('Zurich', names)
+        self.assertNotIn('Tallinn', names)
         self.assertTrue(all(name.isascii() for name in names))
 
     def test_forecast_uses_tomorrow_when_it_is_already_logged(self):

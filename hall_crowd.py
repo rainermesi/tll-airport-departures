@@ -136,6 +136,44 @@ def morning_crowd(rows):
     return max(morning) / PLANE_LOAD
 
 
+def flights_during(rows, hour):
+    start = hour * 60
+    end = start + 60
+    matched = []
+    for row in rows:
+        depart = clock_minutes(row.get('scheduled_time'))
+        if depart is None:
+            continue
+        window_start = depart - LEAD_MINUTES
+        window_end = window_start + SPREAD_MINUTES
+        if window_end <= start or window_start >= end:
+            continue
+        matched.append(row)
+    return matched
+
+
+def hour_reason(matched):
+    if not matched:
+        return 'no flights'
+    charters = []
+    for row in matched:
+        if not is_charter(row.get('flight_number'), row.get('flight_title')):
+            continue
+        title = normalize_destination(row.get('flight_title'))
+        if title not in charters:
+            charters.append(title)
+    flight_count = len(matched)
+    flights = 'flight' if flight_count == 1 else 'flights'
+    if not charters:
+        return f'{flight_count} {flights}'
+    charter_count = len(charters)
+    charter_word = 'charter' if charter_count == 1 else 'charters'
+    names = ', '.join(charters[:3])
+    if len(charters) > 3:
+        names = f'{names} +{len(charters) - 3}'
+    return f'{flight_count} {flights}, {charter_count} {charter_word} ({names})'
+
+
 def hourly_forecast(rows):
     """Peak plane-loads during each hour from 04:00 through 22:00."""
     bins, saw_time = crowd_bins(rows, skip_tomorrow=False)
@@ -145,5 +183,10 @@ def hourly_forecast(rows):
     for hour in range(4, 23):
         window = [bins.get(minute, 0) for minute in range(hour * 60, (hour + 1) * 60, BIN_MINUTES)]
         peak = (max(window) / PLANE_LOAD) if window else 0.0
-        hours.append((f'{hour:02d}:00', round(peak, 1), crowd_label(peak)))
+        hours.append((
+            f'{hour:02d}:00',
+            round(peak, 1),
+            crowd_label(peak),
+            hour_reason(flights_during(rows, hour)),
+        ))
     return hours

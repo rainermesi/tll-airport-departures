@@ -37,14 +37,17 @@ class MorningCrowdTest(unittest.TestCase):
 
     def test_hourly_forecast_peaks_before_a_morning_departure(self):
         hours = {
-            hour: (loads, word)
-            for hour, loads, word in hourly_forecast([
+            hour: (loads, word, reason)
+            for hour, loads, word, reason in hourly_forecast([
                 flight('XQ 499', 'Antalya', '06:45'),
                 flight('HN 3453', 'Sharm El Sheikh', '07:30'),
             ])
         }
         self.assertGreater(hours['05:00'][0], hours['12:00'][0])
         self.assertEqual(hours['12:00'][1], 'quiet')
+        self.assertEqual(hours['12:00'][2], 'no flights')
+        self.assertIn('2 charters', hours['05:00'][2])
+        self.assertIn('Antalya', hours['05:00'][2])
 
     def test_tomorrow_board_is_not_counted_twice(self):
         rows = [flight('XQ 499', 'Antalya', '06:45')]
