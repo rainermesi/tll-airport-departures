@@ -126,16 +126,26 @@ def since_label(start):
     months = ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec')
     return f'{start.day} {months[start.month - 1]} {start.year}'
 
-def destination_chart(counts, years, width=32):
+def destination_chart(counts, years, width=24):
     if counts.empty:
         return 'No destinations yet.'
     peak = int(counts.iloc[0]) or 1
+    days = years * 365.25
+    weeks = days / 7
+    months = years * 12
     name_width = max(len(str(name)) for name in counts.index)
     lines = ['```']
     for name, count in counts.items():
-        per_year = int(count) / years
-        bar = '█' * max(1, round(width * int(count) / peak))
-        lines.append(f'{name:<{name_width}}  {int(count):>5}  {per_year:>6.1f}/yr  {bar}')
+        total = int(count)
+        bar = '█' * max(1, round(width * total / peak))
+        lines.append(
+            f'{name:<{name_width}}  {total:>5}'
+            f'  {total / days:>4.1f}/day'
+            f'  {total / weeks:>5.1f}/wk'
+            f'  {total / months:>6.1f}/mo'
+            f'  {total / years:>6.1f}/yr'
+            f'  {bar}'
+        )
     lines.append('```')
     return '\n'.join(lines)
 

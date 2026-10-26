@@ -75,6 +75,9 @@ class ChartWindowTest(unittest.TestCase):
         gdansk = next(line for line in chart.splitlines() if line.startswith('Gdansk'))
         self.assertGreater(london.count('█'), gdansk.count('█'))
         self.assertIn('1.5/yr', london)
+        self.assertIn('/day', london)
+        self.assertIn('/wk', london)
+        self.assertIn('/mo', london)
 
     def test_forecast_uses_tomorrow_when_it_is_already_logged(self):
         frame = pd.DataFrame([
