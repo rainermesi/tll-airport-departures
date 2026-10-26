@@ -31,6 +31,12 @@ class ChartWindowTest(unittest.TestCase):
         )
         daily, sankey = readme_generator.get_chart_values(frame)
         self.assertEqual(len(daily), readme_generator.CHART_DAYS)
+        quarters = readme_generator.quarter_averages(
+            readme_generator.daily_counts(
+                readme_generator.rows_for_charts(frame)
+            )
+        )
+        self.assertEqual(list(quarters['quarter']), ['2026 Q1', '2026 Q2'])
         self.assertEqual(daily['date'].iloc[0], '2026-01-11')
         self.assertEqual(daily['date'].iloc[-1], '2026-04-10')
         self.assertEqual(int(daily.loc[daily['date'] == '2026-04-09', 'count'].iloc[0]), 2)
