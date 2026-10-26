@@ -1,7 +1,14 @@
 from pathlib import Path
-import pandas as pd
 import math
 import re
+
+import pandas as pd
+
+from destinations import normalize_destination
+
+CHART_DAYS = 90
+PLACEHOLDER_RE = re.compile(r'\{([a-z_]+)\}')
+
 
 def get_data_path():
     data_path = Path('./data/logs')
@@ -11,17 +18,26 @@ def get_data_path():
 def merge_csv_files(csv_files):
     dataframes = [pd.read_csv(file) for file in csv_files]
     merged_df = pd.concat(dataframes, ignore_index=True)
-    merged_df['flight_title'] = merged_df['flight_title'].str.replace(r' \(.+\)', '', regex=True)
+    merged_df['flight_title'] = merged_df['flight_title'].fillna('N/A').map(normalize_destination)
     merged_df.to_csv('./data/all_departures_all_dates.csv', index=False)
     return merged_df
 
+def rows_for_charts(merged_df):
+    chart_df = merged_df.copy()
+    if 'board' in chart_df.columns:
+        board = chart_df['board'].fillna('today')
+        chart_df = chart_df[board != 'tomorrow']
+    return chart_df
+
 def get_chart_values(merged_df):
-    result_1 = merged_df.groupby(merged_df['date']).agg(
+    chart_df = rows_for_charts(merged_df)
+    result_1 = chart_df.groupby(chart_df['date']).agg(
         count = ('date','size'),
         unique_destinations = ('flight_title','nunique')
     ).reset_index()
+    result_1 = result_1.sort_values('date').tail(CHART_DAYS)
 
-    result_2 = merged_df.groupby(merged_df['flight_title']).size().reset_index(name='count')
+    result_2 = chart_df.groupby(chart_df['flight_title']).size().reset_index(name='count')
     result_2.insert(0,'source','Tallinn')
     result_2['flight_title'] = result_2['flight_title'].str.replace('õ', 'o', flags=re.IGNORECASE, regex=True)
     result_2['flight_title'] = result_2['flight_title'].str.replace('ä', 'a', flags=re.IGNORECASE, regex=True)
@@ -33,20 +49,25 @@ def get_chart_values(merged_df):
 
     return result_1, result_2
 
+def render_template(template, data):
+    def replace(match):
+        key = match.group(1)
+        if key not in data:
+            return match.group(0)
+        return str(data[key])
+
+    return PLACEHOLDER_RE.sub(replace, template)
+
 def generate_readme(template_path, data, output_path):
-    with open(template_path,'r') as template_file:
-        template = template_file.read()
-
-    readme_content = template.format(**data)
-
-    with open(output_path, 'w') as output_file:
-        output_file.write(readme_content)
+    template = Path(template_path).read_text()
+    readme_content = render_template(template, data)
+    Path(output_path).write_text(readme_content)
 
 def create_chart_dates(dataframe, column):
     raw_date_list = [date for date in dataframe[column]]
-    string_date_list = ', '.join(f'"{date}"' for date in raw_date_list) 
+    string_date_list = ', '.join(f'"{date}"' for date in raw_date_list)
     return string_date_list
-    
+
 
 def main():
     chart_values_df, sankey_values_df = get_chart_values(merge_csv_files(get_data_path()))
