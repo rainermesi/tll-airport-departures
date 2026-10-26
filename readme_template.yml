@@ -52,6 +52,6 @@ Hour-by-hour forecast. Quiet, steady, busy, or crowded. Each flight is spread ac
 
 ## Unique destinations and departures
 
-Number of flights since {since_date}. Airports in the same city are counted together. The second number is the average per year, and a longer bar means more departures.
+Departures to each city since {since_date}. Airports in the same city are counted together. A multi-stop flight is counted once for each city on the title. The rates are averages over that whole span, and a longer bar means more departures.
 
 {destination_chart}
