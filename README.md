@@ -74,133 +74,116 @@ Hour-by-hour forecast. Quiet, steady, busy, or crowded. Each flight is spread ac
 
 ## Unique destinations and departures
 
-All destinations flown to from Tallinn. More departures = bigger node.
+Airports in the same city are counted together. A longer bar means more departures.
 
-```mermaid
----
-config:
-  sankey:
-    showValues: false
-    width: 800
-    height: 1000
----
-sankey-beta
-%% source,target,value
-Tallinn,Akureyri,1
-Tallinn,Amsterdam,1326
-Tallinn,Antalya,781
-Tallinn,Ateena,16
-Tallinn,Bahrain Hambantota,1
-Tallinn,Barcelona,377
-Tallinn,Berliin,654
-Tallinn,Bern,1
-Tallinn,Billund,113
-Tallinn,Billund Pariis (Charles De Gaulle),1
-Tallinn,Birmingham,8
-Tallinn,Bodrum,16
-Tallinn,Bratislava,2
-Tallinn,Brno,1
-Tallinn,Brussel,454
-Tallinn,Bucharest,1
-Tallinn,Budapest,175
-Tallinn,Burgas,104
-Tallinn,Cagliari,2
-Tallinn,Catania,2
-Tallinn,Craiova,1
-Tallinn,Debrecen,1
-Tallinn,Dublin,219
-Tallinn,Dubrovnik,21
-Tallinn,Dusseldorf,51
-Tallinn,Edinburgh,8
-Tallinn,Enfidha,35
-Tallinn,Farnborough,1
-Tallinn,Faro,4
-Tallinn,Faro Faro,1
-Tallinn,Fort Worth,1
-Tallinn,Frankfurt,1935
-Tallinn,Funchal,35
-Tallinn,Gdansk,123
-Tallinn,Genf,26
-Tallinn,Gran Canaria,60
-Tallinn,Goteborg,3
-Tallinn,Hamburg,47
-Tallinn,Helsingi,6803
-Tallinn,Heraklion,246
-Tallinn,Hurghada,176
-Tallinn,Istanbul,934
-Tallinn,Istres Le Tube Istres Air Base,2
-Tallinn,Kalamata,1
-Tallinn,Katowice,1
-Tallinn,Kerkira,4
-Tallinn,Kopenhaagen,1665
-Tallinn,Kosice,1
-Tallinn,Krakow,202
-Tallinn,Kuressaare,1261
-Tallinn,Kardla,1287
-Tallinn,Kardla Kuressaare,3
-Tallinn,La Rioja,1
-Tallinn,Lamezia,11
-Tallinn,Lamezia Catania,3
-Tallinn,Larnaca,15
-Tallinn,Leon,2
-Tallinn,Linz,2
-Tallinn,Liverpool,1
-Tallinn,London (Gatwick),331
-Tallinn,London (Luton),409
-Tallinn,London (Stansted),542
-Tallinn,Luxembourg,1
-Tallinn,Madriid,10
-Tallinn,Malaga,276
-Tallinn,Malmo,1
-Tallinn,Malta,76
-Tallinn,Manchester,11
-Tallinn,Milano (Bergamo),132
-Tallinn,Milano (Malpensa),251
-Tallinn,Munchen,656
-Tallinn,Nice,150
-Tallinn,Oslo,605
-Tallinn,Palma De Mallorca,65
-Tallinn,Pamplona,1
-Tallinn,Paphos,66
-Tallinn,Pardubice,1
-Tallinn,Pariis (Charles De Gaulle),499
-Tallinn,Pariis (Orly),72
-Tallinn,Pisa,1
-Tallinn,Praha,155
-Tallinn,RAF Brize Norton,1
-Tallinn,Reykjavik,20
-Tallinn,Rhodos,119
-Tallinn,Riia,3103
-Tallinn,Riia Barcelona,1
-Tallinn,Rooma (Ciampino),80
-Tallinn,Rooma (Fiumicino),88
-Tallinn,RzeszowJasionka,1
-Tallinn,Salzburg,27
-Tallinn,Sharm El Sheikh,264
-Tallinn,Split,98
-Tallinn,Stockholm (Arlanda),3228
-Tallinn,Stockholm (Arlanda) Pariis (Charles De Gaulle),2
-Tallinn,Stockholm (Bromma),1
-Tallinn,Szczecin-Goleniow Solidarnosc,1
-Tallinn,Tampere,17
-Tallinn,Tampere Kittila,21
-Tallinn,Tbilisi,1
-Tallinn,Tel Aviv,2
-Tallinn,Tenerife (South),129
-Tallinn,Tirana,119
-Tallinn,Tivat,115
-Tallinn,Trieste,1
-Tallinn,Trieste Rooma (Fiumicino),1
-Tallinn,Tromso,2
-Tallinn,Trondheim,1
-Tallinn,Varssavi,2522
-Tallinn,Veneetsia,93
-Tallinn,Veneetsia-Treviso,67
-Tallinn,Verona,1
-Tallinn,Viin,193
-Tallinn,Vilnius,1150
-Tallinn,Visby,4
-Tallinn,Zurich,495
-
-
+```
+Helsingi                         6803  ████████████████████████████████
+Stockholm                        3229  ███████████████
+Riia                             3103  ███████████████
+Varssavi                         2522  ████████████
+Frankfurt                        1935  █████████
+Kopenhaagen                      1665  ████████
+Amsterdam                        1326  ██████
+Kardla                           1287  ██████
+London                           1282  ██████
+Kuressaare                       1261  ██████
+Vilnius                          1150  █████
+Istanbul                          934  ████
+Antalya                           781  ████
+Munchen                           656  ███
+Berliin                           654  ███
+Oslo                              605  ███
+Pariis                            571  ███
+Zurich                            495  ██
+Brussel                           454  ██
+Milano                            383  ██
+Barcelona                         377  ██
+Malaga                            276  █
+Sharm El Sheikh                   264  █
+Heraklion                         246  █
+Dublin                            219  █
+Krakow                            202  █
+Viin                              193  █
+Hurghada                          176  █
+Budapest                          175  █
+Rooma                             168  █
+Praha                             155  █
+Nice                              150  █
+Tenerife                          129  █
+Gdansk                            123  █
+Rhodos                            119  █
+Tirana                            119  █
+Tivat                             115  █
+Billund                           113  █
+Burgas                            104  █
+Split                              98  █
+Veneetsia                          93  █
+Malta                              76  █
+Veneetsia-Treviso                  67  █
+Paphos                             66  █
+Palma De Mallorca                  65  █
+Gran Canaria                       60  █
+Dusseldorf                         51  █
+Hamburg                            47  █
+Funchal                            35  █
+Enfidha                            35  █
+Salzburg                           27  █
+Genf                               26  █
+Dubrovnik                          21  █
+Tampere Kittila                    21  █
+Reykjavik                          20  █
+Tampere                            17  █
+Ateena                             16  █
+Bodrum                             16  █
+Larnaca                            15  █
+Manchester                         11  █
+Lamezia                            11  █
+Madriid                            10  █
+Birmingham                          8  █
+Edinburgh                           8  █
+Kerkira                             4  █
+Visby                               4  █
+Faro                                4  █
+Goteborg                            3  █
+Lamezia Catania                     3  █
+Kardla Kuressaare                   3  █
+Istres Le Tube Istres Air Base      2  █
+Catania                             2  █
+Tel Aviv                            2  █
+Leon                                2  █
+Tromso                              2  █
+Cagliari                            2  █
+Stockholm Pariis                    2  █
+Linz                                2  █
+Bratislava                          2  █
+Billund Pariis                      1  █
+Liverpool                           1  █
+La Rioja                            1  █
+RAF Brize Norton                    1  █
+Verona                              1  █
+Fort Worth                          1  █
+Brno                                1  █
+Pamplona                            1  █
+Craiova                             1  █
+Trieste                             1  █
+Trieste Rooma                       1  █
+Kalamata                            1  █
+Malmo                               1  █
+Bahrain Hambantota                  1  █
+Kosice                              1  █
+Farnborough                         1  █
+Riia Barcelona                      1  █
+Pardubice                           1  █
+Trondheim                           1  █
+Luxembourg                          1  █
+Tbilisi                             1  █
+Bucharest                           1  █
+Katowice                            1  █
+Szczecin-Goleniow Solidarnosc       1  █
+Pisa                                1  █
+Akureyri                            1  █
+Faro Faro                           1  █
+RzeszowJasionka                     1  █
+Debrecen                            1  █
+Bern                                1  █
 ```

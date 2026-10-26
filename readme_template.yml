@@ -52,18 +52,6 @@ Hour-by-hour forecast. Quiet, steady, busy, or crowded. Each flight is spread ac
 
 ## Unique destinations and departures
 
-All destinations flown to from Tallinn. More departures = bigger node.
+Airports in the same city are counted together. A longer bar means more departures.
 
-```mermaid
----
-config:
-  sankey:
-    showValues: false
-    width: 800
-    height: 1000
----
-sankey-beta
-%% source,target,value
-{sankey_data}
-
-```
+{destination_chart}

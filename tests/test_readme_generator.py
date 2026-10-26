@@ -50,18 +50,27 @@ class ChartWindowTest(unittest.TestCase):
         self.assertIn('"11.01"', labels)
         self.assertGreater(labels.count('" "'), 70)
 
-    def test_sankey_names_are_ascii(self):
+    def test_destination_chart_groups_airports_and_scales_the_bar(self):
         frame = pd.DataFrame([
             {'date': '2026-10-01', 'flight_title': 'Gdańsk', 'board': 'today'},
             {'date': '2026-10-01', 'flight_title': 'Zürich', 'board': 'today'},
             {'date': '2026-10-01', 'flight_title': 'Tallinn (Lennart Meri)', 'board': 'today'},
+            {'date': '2026-10-01', 'flight_title': 'London (Gatwick)', 'board': 'today'},
+            {'date': '2026-10-02', 'flight_title': 'London (Luton)', 'board': 'today'},
+            {'date': '2026-10-03', 'flight_title': 'London (Stansted)', 'board': 'today'},
+            {'date': '2026-10-01', 'flight_title': 'Stockholm (Arlanda)', 'board': 'today'},
+            {'date': '2026-10-02', 'flight_title': 'Stockholm (Bromma)', 'board': 'today'},
         ])
-        _daily, sankey = readme_generator.get_chart_values(frame)
-        names = set(sankey['flight_title'])
-        self.assertIn('Gdansk', names)
-        self.assertIn('Zurich', names)
-        self.assertNotIn('Tallinn', names)
-        self.assertTrue(all(name.isascii() for name in names))
+        _daily, destinations = readme_generator.get_chart_values(frame)
+        counts = dict(zip(destinations['flight_title'], destinations['count']))
+        self.assertEqual(counts['London'], 3)
+        self.assertEqual(counts['Stockholm'], 2)
+        self.assertNotIn('Tallinn', counts)
+        self.assertIn('Gdansk', counts)
+        chart = readme_generator.destination_chart(destinations.set_index('flight_title')['count'])
+        london = next(line for line in chart.splitlines() if line.startswith('London'))
+        gdansk = next(line for line in chart.splitlines() if line.startswith('Gdansk'))
+        self.assertGreater(london.count('█'), gdansk.count('█'))
 
     def test_forecast_uses_tomorrow_when_it_is_already_logged(self):
         frame = pd.DataFrame([

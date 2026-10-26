@@ -104,15 +104,34 @@ def terminal_forecast(merged_df, today):
         lines.append(f'| {hour} | {word} | {reason} |')
     return '\n'.join(lines)
 
+def chart_city(name):
+    label = sankey_label(name).split(' / ')[0]
+    label = re.sub(r'\s*\([^)]*\)', '', label).strip()
+    return label or 'Unknown'
+
+def destination_counts(chart_df):
+    cities = chart_df['flight_title'].map(chart_city)
+    counts = cities.value_counts()
+    counts = counts.drop(labels=['Tallinn', 'Unknown'], errors='ignore')
+    return counts
+
+def destination_chart(counts, width=32):
+    if counts.empty:
+        return 'No destinations yet.'
+    peak = int(counts.iloc[0]) or 1
+    name_width = max(len(str(name)) for name in counts.index)
+    lines = ['```']
+    for name, count in counts.items():
+        bar = '█' * max(1, round(width * int(count) / peak))
+        lines.append(f'{name:<{name_width}}  {int(count):>5}  {bar}')
+    lines.append('```')
+    return '\n'.join(lines)
+
 def get_chart_values(merged_df):
     chart_df = rows_for_charts(merged_df)
     result_1 = daily_counts(chart_df).tail(CHART_DAYS)
-
-    result_2 = chart_df.groupby(chart_df['flight_title']).size().reset_index(name='count')
-    result_2.insert(0,'source','Tallinn')
-    result_2['flight_title'] = result_2['flight_title'].map(sankey_label)
-    result_2 = result_2[result_2['flight_title'] != result_2['source']]
-
+    counts = destination_counts(chart_df)
+    result_2 = counts.rename_axis('flight_title').reset_index(name='count')
     return result_1, result_2
 
 def render_template(template, data):
@@ -152,8 +171,7 @@ def main():
     daily = daily_counts(chart_df)
     recent = daily.tail(CHART_DAYS)
     quarters = quarter_averages(daily)
-    _chart_values_df, sankey_values_df = get_chart_values(merged)
-    sankey_csv = sankey_values_df.to_csv(index=False, header=False, lineterminator='\n')
+    _chart_values_df, destination_df = get_chart_values(merged)
     today = datetime.now(ZoneInfo('Europe/Tallinn')).date()
 
     chart_data = {
@@ -167,7 +185,9 @@ def main():
         'quarter_line': number_list(quarters['avg_destinations'], 1),
         'quarter_ymax': chart_limit(quarters['avg_departures'].to_list()),
         'terminal_forecast': terminal_forecast(merged, today),
-        'sankey_data': sankey_csv
+        'destination_chart': destination_chart(
+            destination_df.set_index('flight_title')['count']
+        ),
     }
 
     generate_readme('readme_template.yml', chart_data, 'README.md')
