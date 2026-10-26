@@ -99,9 +99,9 @@ def terminal_forecast(merged_df, today):
     hours = hourly_forecast(rows)
     if not hours:
         return f'**{chosen}**\n\nNo scheduled times for this day.'
-    lines = [f'**{chosen}**', '', '| Hour | Terminal |', '| --- | --- |']
-    for hour, _plane_loads, word in hours:
-        lines.append(f'| {hour} | {word} |')
+    lines = [f'**{chosen}**', '', '| Hour | Terminal | Why |', '| --- | --- | --- |']
+    for hour, _plane_loads, word, reason in hours:
+        lines.append(f'| {hour} | {word} | {reason} |')
     return '\n'.join(lines)
 
 def get_chart_values(merged_df):
@@ -111,6 +111,7 @@ def get_chart_values(merged_df):
     result_2 = chart_df.groupby(chart_df['flight_title']).size().reset_index(name='count')
     result_2.insert(0,'source','Tallinn')
     result_2['flight_title'] = result_2['flight_title'].map(sankey_label)
+    result_2 = result_2[result_2['flight_title'] != result_2['source']]
 
     return result_1, result_2
 
@@ -160,7 +161,6 @@ def main():
         'x_axis': create_chart_dates(recent, 'date'),
         'y_axis': '# departures',
         'bar_values': recent['count'].to_list(),
-        'line_values': recent['unique_destinations'].to_list(),
         'ymax': chart_limit(recent['count'].to_list()),
         'quarter_x': ', '.join(f'"{quarter}"' for quarter in quarters['quarter']),
         'quarter_bar': number_list(quarters['avg_departures'], 1),

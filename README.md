@@ -9,7 +9,7 @@ I created this repo to:
 
 ## Trend of Daily Departures
 
-Last 90 days. Bars for total number of departures. Line for unique destinations.
+Last 90 days. One bar per day.
 
 ```mermaid
 ---
@@ -22,7 +22,6 @@ xychart-beta
     x-axis ["28.07", " ", " ", " ", " ", " ", " ", "04.08", " ", " ", " ", " ", " ", " ", "11.08", " ", " ", " ", " ", " ", " ", "18.08", " ", " ", " ", " ", " ", " ", "25.08", " ", " ", " ", " ", " ", " ", "01.09", " ", " ", " ", " ", " ", " ", "08.09", " ", " ", " ", " ", " ", " ", "15.09", " ", " ", " ", " ", " ", " ", "22.09", " ", " ", " ", " ", " ", " ", "29.09", " ", " ", " ", " ", " ", " ", "06.10", " ", " ", " ", " ", " ", " ", "13.10", " ", " ", " ", " ", " ", " ", "20.10", " ", " ", " ", " ", "25.10"]
     y-axis "# departures" 0 --> 69
     bar [45, 53, 57, 60, 42, 56, 55, 44, 50, 51, 62, 45, 57, 58, 43, 53, 54, 61, 48, 57, 60, 46, 54, 55, 60, 43, 58, 58, 48, 54, 33, 32, 34, 52, 54, 45, 54, 49, 62, 42, 56, 57, 48, 53, 52, 61, 44, 54, 56, 47, 51, 52, 59, 43, 52, 55, 46, 51, 53, 57, 40, 48, 54, 42, 46, 52, 54, 40, 48, 50, 36, 45, 46, 53, 35, 49, 50, 34, 46, 52, 58, 44, 55, 56, 46, 48, 52, 57, 46, 50]
-    line [21, 25, 26, 30, 21, 29, 27, 20, 26, 23, 31, 23, 30, 27, 20, 24, 22, 29, 23, 28, 28, 20, 24, 23, 30, 22, 29, 27, 20, 24, 17, 18, 18, 26, 26, 20, 24, 22, 29, 20, 26, 26, 20, 23, 22, 29, 21, 26, 27, 21, 23, 24, 28, 21, 27, 27, 21, 21, 23, 29, 20, 26, 28, 20, 22, 25, 29, 19, 28, 27, 17, 21, 22, 27, 19, 27, 27, 18, 20, 23, 29, 21, 27, 27, 22, 21, 23, 29, 22, 25]
 ```
 
 ## Departures by quarter
@@ -31,7 +30,9 @@ Full history. Bars are the average departures per day. The line is the average n
 
 ```mermaid
 ---
-xyChart:
+config:
+  xyChart:
+    showDataLabel: true
     xAxis:
       labelFontSize: 12
 ---
@@ -49,27 +50,27 @@ Hour-by-hour forecast. Quiet, steady, busy, or crowded. Each flight is spread ac
 
 **2026-10-25**
 
-| Hour | Terminal |
-| --- | --- |
-| 04:00 | busy |
-| 05:00 | busy |
-| 06:00 | steady |
-| 07:00 | quiet |
-| 08:00 | quiet |
-| 09:00 | quiet |
-| 10:00 | quiet |
-| 11:00 | steady |
-| 12:00 | steady |
-| 13:00 | steady |
-| 14:00 | steady |
-| 15:00 | steady |
-| 16:00 | steady |
-| 17:00 | quiet |
-| 18:00 | quiet |
-| 19:00 | quiet |
-| 20:00 | quiet |
-| 21:00 | quiet |
-| 22:00 | quiet |
+| Hour | Terminal | Why |
+| --- | --- | --- |
+| 04:00 | busy | 13 flights, 4 charters (Antalya, Heraklion, Sharm El Sheikh +1) |
+| 05:00 | busy | 11 flights, 4 charters (Antalya, Heraklion, Sharm El Sheikh +1) |
+| 06:00 | steady | 7 flights, 2 charters (Sharm El Sheikh, Funchal) |
+| 07:00 | quiet | 5 flights |
+| 08:00 | quiet | 5 flights |
+| 09:00 | quiet | 5 flights |
+| 10:00 | quiet | 7 flights |
+| 11:00 | steady | 8 flights, 1 charter (Sharm El Sheikh) |
+| 12:00 | steady | 10 flights, 1 charter (Sharm El Sheikh) |
+| 13:00 | steady | 9 flights, 1 charter (Sharm El Sheikh) |
+| 14:00 | steady | 10 flights |
+| 15:00 | steady | 12 flights |
+| 16:00 | steady | 8 flights |
+| 17:00 | quiet | 4 flights |
+| 18:00 | quiet | 3 flights |
+| 19:00 | quiet | 5 flights |
+| 20:00 | quiet | 5 flights |
+| 21:00 | quiet | 2 flights |
+| 22:00 | quiet | no flights |
 
 ## Unique destinations and departures
 
@@ -181,7 +182,6 @@ Tallinn,Stockholm (Arlanda),3228
 Tallinn,Stockholm (Arlanda) Pariis (Charles De Gaulle),2
 Tallinn,Stockholm (Bromma),1
 Tallinn,Szczecin-Goleniow Solidarnosc,1
-Tallinn,Tallinn,4
 Tallinn,Tampere,17
 Tallinn,Tampere Kittila,21
 Tallinn,Tbilisi,1

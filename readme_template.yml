@@ -9,7 +9,7 @@ I created this repo to:
 
 ## Trend of Daily Departures
 
-Last 90 days. Bars for total number of departures. Line for unique destinations.
+Last 90 days. One bar per day.
 
 ```mermaid
 ---
@@ -22,7 +22,6 @@ xychart-beta
     x-axis [{x_axis}]
     y-axis "{y_axis}" 0 --> {ymax}
     bar {bar_values}
-    line {line_values}
 ```
 
 ## Departures by quarter
@@ -31,7 +30,9 @@ Full history. Bars are the average departures per day. The line is the average n
 
 ```mermaid
 ---
-xyChart:
+config:
+  xyChart:
+    showDataLabel: true
     xAxis:
       labelFontSize: 12
 ---
