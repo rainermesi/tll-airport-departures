@@ -105,15 +105,27 @@ def terminal_forecast(merged_df, today):
     return '\n'.join(lines)
 
 def chart_city(name):
-    label = sankey_label(name).split(' / ')[0]
+    label = sankey_label(name)
     label = re.sub(r'\s*\([^)]*\)', '', label).strip()
     return label or 'Unknown'
 
+def cities_in_title(name):
+    cities = []
+    for part in re.split(r'\s*,\s*', str(name)):
+        city = chart_city(part)
+        if city in ('', 'Unknown', 'Tallinn') or city in cities:
+            continue
+        cities.append(city)
+    return cities
+
 def destination_counts(chart_df):
-    cities = chart_df['flight_title'].map(chart_city)
-    counts = cities.value_counts()
-    counts = counts.drop(labels=['Tallinn', 'Unknown'], errors='ignore')
-    return counts
+    counts = {}
+    for title in chart_df['flight_title'].fillna(''):
+        for city in cities_in_title(title):
+            counts[city] = counts.get(city, 0) + 1
+    if not counts:
+        return pd.Series(dtype='int64')
+    return pd.Series(counts).sort_values(ascending=False)
 
 def scrape_span(chart_df):
     parsed = pd.to_datetime(chart_df['date'])

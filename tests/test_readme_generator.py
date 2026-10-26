@@ -60,11 +60,20 @@ class ChartWindowTest(unittest.TestCase):
             {'date': '2026-10-03', 'flight_title': 'London (Stansted)', 'board': 'today'},
             {'date': '2026-10-01', 'flight_title': 'Stockholm (Arlanda)', 'board': 'today'},
             {'date': '2026-10-02', 'flight_title': 'Stockholm (Bromma)', 'board': 'today'},
+            {'date': '2026-10-04', 'flight_title': 'Riia,Barcelona', 'board': 'today'},
+            {'date': '2026-10-04', 'flight_title': 'Faro,Faro', 'board': 'today'},
+            {'date': '2026-10-04', 'flight_title': 'Trieste,Rooma (Fiumicino)', 'board': 'today'},
         ])
         _daily, destinations = readme_generator.get_chart_values(frame)
         counts = dict(zip(destinations['flight_title'], destinations['count']))
         self.assertEqual(counts['London'], 3)
         self.assertEqual(counts['Stockholm'], 2)
+        self.assertEqual(counts['Riia'], 1)
+        self.assertEqual(counts['Barcelona'], 1)
+        self.assertEqual(counts['Faro'], 1)
+        self.assertEqual(counts['Rooma'], 1)
+        self.assertNotIn('Riia Barcelona', counts)
+        self.assertNotIn('Trieste Rooma', counts)
         self.assertNotIn('Tallinn', counts)
         self.assertIn('Gdansk', counts)
         chart = readme_generator.destination_chart(
