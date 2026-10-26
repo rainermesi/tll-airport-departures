@@ -62,6 +62,7 @@ class ParseDeparturesTest(unittest.TestCase):
                 'flight_title': 'Helsingi',
                 'service_provider_name': 'Finnair',
                 'scheduled_time': '21:45',
+                'live_time': '21:55',
                 'departure_time': '21:55',
                 'date': '2026-10-26',
                 'status': 'departed|delayed',
@@ -72,6 +73,7 @@ class ParseDeparturesTest(unittest.TestCase):
                 'flight_title': 'Amsterdam',
                 'service_provider_name': 'Air Baltic Corporation',
                 'scheduled_time': '05:40',
+                'live_time': 'N/A',
                 'departure_time': 'N/A',
                 'date': '2026-10-26',
                 'status': 'N/A',
@@ -82,6 +84,7 @@ class ParseDeparturesTest(unittest.TestCase):
                 'flight_title': 'London (Gatwick)',
                 'service_provider_name': 'Ryanair',
                 'scheduled_time': '06:10',
+                'live_time': 'N/A',
                 'departure_time': 'N/A',
                 'date': '2026-10-27',
                 'status': 'N/A',
@@ -213,9 +216,108 @@ class WriteCsvTest(unittest.TestCase):
             self.assertTrue(path.endswith('departures_log_2026-10-26.csv'))
             self.assertEqual(
                 text,
-                'flight_number,flight_title,service_provider_name,scheduled_time,departure_time,date,status,board\n'
-                'AY 1028,Helsingi,Finnair,21:45,21:55,2026-10-26,departed|delayed,today\n',
+                'flight_number,flight_title,service_provider_name,scheduled_time,first_seen_time,estimated_time,departure_time,date,status,board\n'
+                'AY 1028,Helsingi,Finnair,21:45,N/A,N/A,21:55,2026-10-26,departed|delayed,today\n',
             )
+
+
+class MergeFlightsTest(unittest.TestCase):
+    def test_first_seen_time_is_kept_and_actual_is_filled_later(self):
+        first = departure_scraper._new_record({
+            'flight_number': 'XQ 499',
+            'flight_title': 'Antalya',
+            'service_provider_name': 'SunExpress',
+            'scheduled_time': '06:45',
+            'live_time': 'N/A',
+            'date': '2026-10-27',
+            'status': 'N/A',
+            'board': 'tomorrow',
+        })
+        self.assertEqual(first['first_seen_time'], '06:45')
+        self.assertEqual(first['departure_time'], 'N/A')
+
+        revised = departure_scraper._apply_update(first, {
+            'flight_number': 'XQ 499',
+            'flight_title': 'Antalya',
+            'service_provider_name': 'SunExpress',
+            'scheduled_time': '06:45',
+            'live_time': '07:05',
+            'date': '2026-10-27',
+            'status': 'estimated|delayed',
+            'board': 'today',
+        })
+        self.assertEqual(revised['first_seen_time'], '06:45')
+        self.assertEqual(revised['estimated_time'], '07:05')
+        self.assertEqual(revised['departure_time'], 'N/A')
+
+        departed = departure_scraper._apply_update(revised, {
+            'flight_number': 'XQ 499',
+            'flight_title': 'Antalya',
+            'service_provider_name': 'SunExpress',
+            'scheduled_time': '06:45',
+            'live_time': '07:10',
+            'date': '2026-10-27',
+            'status': 'departed|delayed',
+            'board': 'today',
+        })
+        self.assertEqual(departed['first_seen_time'], '06:45')
+        self.assertEqual(departed['estimated_time'], '07:05')
+        self.assertEqual(departed['departure_time'], '07:10')
+
+    def test_already_departed_on_first_sight_has_no_baseline(self):
+        row = departure_scraper._new_record({
+            'flight_number': 'AY 1028',
+            'flight_title': 'Helsingi',
+            'service_provider_name': 'Finnair',
+            'scheduled_time': '21:45',
+            'live_time': '21:55',
+            'date': '2026-10-26',
+            'status': 'departed|delayed',
+            'board': 'today',
+        })
+        self.assertEqual(row['first_seen_time'], 'N/A')
+        self.assertEqual(row['departure_time'], '21:55')
+
+    def test_old_rows_do_not_gain_a_retroactive_baseline(self):
+        old = {
+            'flight_number': 'BT 362',
+            'flight_title': 'Riia',
+            'service_provider_name': 'Air Baltic Corporation',
+            'scheduled_time': '05:40',
+            'departure_time': 'N/A',
+            'date': '2026-10-26',
+        }
+        merged = departure_scraper.merge_flights([old], [{
+            'flight_number': 'BT 362',
+            'flight_title': 'Riia',
+            'service_provider_name': 'Air Baltic Corporation',
+            'scheduled_time': '05:40',
+            'live_time': '05:44',
+            'date': '2026-10-26',
+            'status': 'departed',
+            'board': 'today',
+        }])
+        self.assertEqual(merged[0]['first_seen_time'], 'N/A')
+        self.assertEqual(merged[0]['estimated_time'], 'N/A')
+        self.assertEqual(merged[0]['departure_time'], '05:44')
+
+    def test_save_writes_tomorrow_into_tomorrows_file(self):
+        scraped = [{
+            'flight_number': 'XQ 499',
+            'flight_title': 'Antalya',
+            'service_provider_name': 'SunExpress',
+            'scheduled_time': '06:45',
+            'live_time': 'N/A',
+            'date': '2026-10-27',
+            'status': 'N/A',
+            'board': 'tomorrow',
+        }]
+        with tempfile.TemporaryDirectory() as directory:
+            paths = departure_scraper.save_scraped_flights(scraped, directory=directory)
+            self.assertEqual(len(paths), 1)
+            self.assertTrue(paths[0].endswith('departures_log_2026-10-27.csv'))
+            stored = departure_scraper.read_departures_csv(paths[0])
+            self.assertEqual(stored[0]['first_seen_time'], '06:45')
 
 
 if __name__ == '__main__':

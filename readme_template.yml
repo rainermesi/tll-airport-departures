@@ -9,7 +9,7 @@ I created this repo to:
 
 ## Trend of Daily Departures
 
-Bars for total number of departures. Line for unique destinations.
+Last 90 days. Bars for total number of departures. Line for unique destinations.
 
 ```mermaid
 ---
@@ -23,6 +23,41 @@ xychart-beta
     y-axis "{y_axis}" 0 --> {ymax}
     bar {bar_values}
     line {line_values}
+```
+
+## Departures by quarter
+
+Full history. Bars are the average departures per day. The line is the average number of destinations per day.
+
+```mermaid
+---
+xyChart:
+    xAxis:
+      labelFontSize: 12
+---
+xychart-beta
+    title "Departures by quarter"
+    x-axis [{quarter_x}]
+    y-axis "per day" 0 --> {quarter_ymax}
+    bar {quarter_bar}
+    line {quarter_line}
+```
+
+## Passengers in the terminal
+
+Morning peak for the last 90 days, in plane-loads of 150 departing passengers. Each flight is spread across the two hours before departure. Holiday flights count for more. This is not a security wait time.
+
+```mermaid
+---
+xyChart:
+    xAxis:
+      labelFontSize: 8
+---
+xychart-beta
+    title "Passengers in the terminal"
+    x-axis [{crowd_x}]
+    y-axis "plane-loads" 0 --> {crowd_ymax}
+    bar {crowd_bar}
 ```
 
 

@@ -31,6 +31,8 @@ CSV_HEADER = [
     'flight_title',
     'service_provider_name',
     'scheduled_time',
+    'first_seen_time',
+    'estimated_time',
     'departure_time',
     'date',
     'status',
@@ -125,14 +127,18 @@ def parse_departures(html, today, tomorrow=None):
                 flight_title_text = flight_title.get_text(strip=True)
             except Exception:
                 flight_title_text = 'N/A'
+            status = card_status(li)
+            live_time = actual_time(li)
+            departed = 'departed' in status
             departures.append({
                 'flight_number': flight_numbers.get_text(strip=True),
                 'flight_title': normalize_destination(flight_title_text),
                 'service_provider_name': _text(service_providers),
                 'scheduled_time': scheduled_time(li),
-                'departure_time': actual_time(li),
+                'live_time': live_time,
+                'departure_time': live_time if departed else 'N/A',
                 'date': flight_date.isoformat(),
-                'status': card_status(li),
+                'status': status,
                 'board': board,
             })
     return departures
@@ -206,13 +212,112 @@ def departures_log_path(log_date, directory='data/logs'):
     return os.path.join(directory, f'departures_log_{log_date}.csv')
 
 
+def _blank(value):
+    return value is None or str(value).strip() in ('', 'N/A')
+
+
+def csv_row(row):
+    return {key: ('N/A' if _blank(row.get(key)) else row.get(key)) for key in CSV_HEADER}
+
+
+def read_departures_csv(path):
+    if not os.path.exists(path):
+        return []
+    with open(path, newline='') as csvfile:
+        return list(csv.DictReader(csvfile))
+
+
+def _new_record(scraped):
+    live = scraped.get('live_time') or 'N/A'
+    scheduled = scraped.get('scheduled_time') or 'N/A'
+    departed = 'departed' in (scraped.get('status') or '')
+    shown = live if not _blank(live) else scheduled
+    record = csv_row(scraped)
+    record['scheduled_time'] = scheduled
+    if departed:
+        record['first_seen_time'] = 'N/A'
+        record['estimated_time'] = 'N/A'
+        record['departure_time'] = live if not _blank(live) else 'N/A'
+    else:
+        record['first_seen_time'] = shown
+        record['estimated_time'] = live if not _blank(live) and live != scheduled else 'N/A'
+        record['departure_time'] = 'N/A'
+    return record
+
+
+def _match_existing(candidates, scraped):
+    if len(candidates) == 1:
+        return candidates[0]
+    for row in candidates:
+        if row.get('scheduled_time') == scraped.get('scheduled_time'):
+            return row
+    return None
+
+
+def _apply_update(old, scraped):
+    updated = csv_row(old)
+    for field in ('flight_title', 'service_provider_name', 'status', 'board'):
+        if not _blank(scraped.get(field)):
+            updated[field] = scraped[field]
+    if _blank(updated.get('scheduled_time')) and not _blank(scraped.get('scheduled_time')):
+        updated['scheduled_time'] = scraped['scheduled_time']
+    if _blank(old.get('first_seen_time')):
+        updated['first_seen_time'] = 'N/A'
+        updated['estimated_time'] = 'N/A'
+        live = scraped.get('live_time') or 'N/A'
+        if 'departed' in (scraped.get('status') or '') and not _blank(live):
+            updated['departure_time'] = live
+        return updated
+    live = scraped.get('live_time') or 'N/A'
+    departed = 'departed' in (scraped.get('status') or '')
+    if departed and not _blank(live):
+        updated['departure_time'] = live
+    elif not departed and not _blank(live) and live != updated.get('scheduled_time'):
+        updated['estimated_time'] = live
+    return updated
+
+
+def merge_flights(existing, scraped):
+    groups = {}
+    order = []
+    for row in existing:
+        key = (row.get('flight_number'), row.get('date'))
+        groups.setdefault(key, []).append(row)
+        order.append(row)
+    for row in scraped:
+        key = (row.get('flight_number'), row.get('date'))
+        match = _match_existing(groups.get(key, []), row)
+        if match is None:
+            created = _new_record(row)
+            groups.setdefault(key, []).append(created)
+            order.append(created)
+        else:
+            revised = _apply_update(match, row)
+            index = order.index(match)
+            order[index] = revised
+            groups[key] = [revised if item is match else item for item in groups[key]]
+    return [csv_row(row) for row in order]
+
+
 def write_departures_csv(rows, log_date, directory='data/logs'):
     path = departures_log_path(log_date, directory)
     with open(path, 'w', newline='') as csvfile:
-        csvwriter = csv.DictWriter(csvfile, fieldnames=CSV_HEADER)
+        csvwriter = csv.DictWriter(csvfile, fieldnames=CSV_HEADER, extrasaction='ignore')
         csvwriter.writeheader()
-        csvwriter.writerows(rows)
+        csvwriter.writerows(csv_row(row) for row in rows)
     return path
+
+
+def save_scraped_flights(rows, directory='data/logs'):
+    by_date = {}
+    for row in rows:
+        by_date.setdefault(row['date'], []).append(row)
+    paths = []
+    for log_date, scraped in sorted(by_date.items()):
+        path = departures_log_path(log_date, directory)
+        merged = merge_flights(read_departures_csv(path), scraped)
+        paths.append(write_departures_csv(merged, log_date, directory))
+    return paths
 
 
 def scrape_with_retries(
@@ -255,9 +360,9 @@ def scrape_with_retries(
 
 def main():
     log_date, rows = scrape_with_retries()
-    path = write_departures_csv(rows, log_date.isoformat())
+    paths = save_scraped_flights(rows)
     today_count = sum(1 for row in rows if row['board'] == 'today')
-    logging.info('Wrote %s rows (%s today) to %s', len(rows), today_count, path)
+    logging.info('Saved %s rows (%s today) for %s across %s', len(rows), today_count, log_date, paths)
 
 
 if __name__ == '__main__':
