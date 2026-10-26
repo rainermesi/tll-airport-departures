@@ -1,12 +1,16 @@
 <ul>
-  <li class="flights-list__item departures-today">
+  <li class="mb-32 mt-24 flights-list__item departures-today">
+    <h2 class="card-flight__title">26. oktoober</h2>
+  </li>
+  <li class="flights-list__item departures-history departures-today">
     <article class="card-flight">
-      <time class="card-flight__time-cont" datetime="21:45">
-        <span class="card-flight__time">21:45</span>
+      <time class="card-flight__time-cont" datetime="21:55">
+        <del class="card-flight__time card-flight__time--old">21:45</del>
+        <ins class="card-flight__time">21:55</ins>
       </time>
       <div class="card-flight__content">
         <h2 class="card-flight__title">Helsingi</h2>
-        <em class="card-flight__tag card-flight__tag--departed">Väljus 21:55</em>
+        <em class="card-flight__tag card-flight__tag--departed card-flight__tag--delayed card-flight__tag--departures">Väljus 21:55</em>
       </div>
       <p class="card-flight__service">
         <span class="card-flight__flight-numbers">AY 1028</span>
@@ -14,13 +18,13 @@
       </p>
     </article>
   </li>
-  <li class="flights-list__item departures-history departures-today">
+  <li class="flights-list__item departures-today">
     <article class="card-flight">
       <time class="card-flight__time-cont" datetime="05:40">
         <span class="card-flight__time">05:40</span>
       </time>
       <div class="card-flight__content">
-        <h2 class="card-flight__title">Riia</h2>
+        <h2 class="card-flight__title">Amsterdam - Schiphol</h2>
       </div>
       <p class="card-flight__service">
         <span class="card-flight__flight-numbers">BT 362</span>
@@ -28,16 +32,24 @@
       </p>
     </article>
   </li>
+  <li class="flights-list__item departures-tomorrow">
+    <article class="card-flight">
+      <time class="card-flight__time-cont" datetime="06:10">
+        <span class="card-flight__time">06:10</span>
+      </time>
+      <div class="card-flight__content">
+        <h2 class="card-flight__title">London (Gatwick)</h2>
+      </div>
+      <p class="card-flight__service">
+        <span class="card-flight__flight-numbers">FR 123</span>
+        <span class="card-flight__service-providers">Ryanair</span>
+      </p>
+    </article>
+  </li>
   <li class="flights-list__item arrivals-today">
     <article class="card-flight">
       <span class="card-flight__flight-numbers">XX 1</span>
       <div class="card-flight__content"><h2 class="card-flight__title">Arrival</h2></div>
-    </article>
-  </li>
-  <li class="flights-list__item departures-tomorrow">
-    <article class="card-flight">
-      <span class="card-flight__flight-numbers">XX 2</span>
-      <div class="card-flight__content"><h2 class="card-flight__title">Tomorrow</h2></div>
     </article>
   </li>
 </ul>
