@@ -2,6 +2,10 @@
 
 Tracking departures from Tallinn Airport. Data and graphs are updated daily.
 
+I created this repo to:
+- Test how to use Mermaid charting functions for basic reporting
+- Test how to use Github Actions for scheudling basic data pipelines and transformations
+- Find out where we can fly to from Tallinn
 
 ## Trend of Daily Departures
 
@@ -107,8 +111,8 @@ Praha                             155   0.2/day    1.3/wk     5.8/mo    69.5/yr 
 Nice                              150   0.2/day    1.3/wk     5.6/mo    67.2/yr  █
 Tenerife                          129   0.2/day    1.1/wk     4.8/mo    57.8/yr  █
 Gdansk                            123   0.2/day    1.1/wk     4.6/mo    55.1/yr  █
-Tirana                            119   0.1/day    1.0/wk     4.4/mo    53.3/yr  █
 Rhodos                            119   0.1/day    1.0/wk     4.4/mo    53.3/yr  █
+Tirana                            119   0.1/day    1.0/wk     4.4/mo    53.3/yr  █
 Tivat                             115   0.1/day    1.0/wk     4.3/mo    51.5/yr  █
 Billund                           114   0.1/day    1.0/wk     4.3/mo    51.1/yr  █
 Burgas                            104   0.1/day    0.9/wk     3.9/mo    46.6/yr  █
@@ -122,12 +126,12 @@ Gran Canaria                       60   0.1/day    0.5/wk     2.2/mo    26.9/yr 
 Dusseldorf                         51   0.1/day    0.4/wk     1.9/mo    22.9/yr  █
 Hamburg                            47   0.1/day    0.4/wk     1.8/mo    21.1/yr  █
 Tampere                            38   0.0/day    0.3/wk     1.4/mo    17.0/yr  █
-Funchal                            35   0.0/day    0.3/wk     1.3/mo    15.7/yr  █
 Enfidha                            35   0.0/day    0.3/wk     1.3/mo    15.7/yr  █
+Funchal                            35   0.0/day    0.3/wk     1.3/mo    15.7/yr  █
 Salzburg                           27   0.0/day    0.2/wk     1.0/mo    12.1/yr  █
 Genf                               26   0.0/day    0.2/wk     1.0/mo    11.7/yr  █
-Kittila                            21   0.0/day    0.2/wk     0.8/mo     9.4/yr  █
 Dubrovnik                          21   0.0/day    0.2/wk     0.8/mo     9.4/yr  █
+Kittila                            21   0.0/day    0.2/wk     0.8/mo     9.4/yr  █
 Reykjavik                          20   0.0/day    0.2/wk     0.7/mo     9.0/yr  █
 Ateena                             16   0.0/day    0.1/wk     0.6/mo     7.2/yr  █
 Bodrum                             16   0.0/day    0.1/wk     0.6/mo     7.2/yr  █
@@ -135,45 +139,45 @@ Larnaca                            15   0.0/day    0.1/wk     0.6/mo     6.7/yr 
 Lamezia                            14   0.0/day    0.1/wk     0.5/mo     6.3/yr  █
 Manchester                         11   0.0/day    0.1/wk     0.4/mo     4.9/yr  █
 Madriid                            10   0.0/day    0.1/wk     0.4/mo     4.5/yr  █
-Edinburgh                           8   0.0/day    0.1/wk     0.3/mo     3.6/yr  █
 Birmingham                          8   0.0/day    0.1/wk     0.3/mo     3.6/yr  █
-Faro                                5   0.0/day    0.0/wk     0.2/mo     2.2/yr  █
+Edinburgh                           8   0.0/day    0.1/wk     0.3/mo     3.6/yr  █
 Catania                             5   0.0/day    0.0/wk     0.2/mo     2.2/yr  █
-Visby                               4   0.0/day    0.0/wk     0.1/mo     1.8/yr  █
+Faro                                5   0.0/day    0.0/wk     0.2/mo     2.2/yr  █
 Kerkira                             4   0.0/day    0.0/wk     0.1/mo     1.8/yr  █
+Visby                               4   0.0/day    0.0/wk     0.1/mo     1.8/yr  █
 Goteborg                            3   0.0/day    0.0/wk     0.1/mo     1.3/yr  █
-Istres Le Tube Istres Air Base      2   0.0/day    0.0/wk     0.1/mo     0.9/yr  █
-Leon                                2   0.0/day    0.0/wk     0.1/mo     0.9/yr  █
-Linz                                2   0.0/day    0.0/wk     0.1/mo     0.9/yr  █
-Cagliari                            2   0.0/day    0.0/wk     0.1/mo     0.9/yr  █
-Tromso                              2   0.0/day    0.0/wk     0.1/mo     0.9/yr  █
-Tel Aviv                            2   0.0/day    0.0/wk     0.1/mo     0.9/yr  █
 Trieste                             2   0.0/day    0.0/wk     0.1/mo     0.9/yr  █
+Tel Aviv                            2   0.0/day    0.0/wk     0.1/mo     0.9/yr  █
+Tromso                              2   0.0/day    0.0/wk     0.1/mo     0.9/yr  █
+Linz                                2   0.0/day    0.0/wk     0.1/mo     0.9/yr  █
 Bratislava                          2   0.0/day    0.0/wk     0.1/mo     0.9/yr  █
-La Rioja                            1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
-Liverpool                           1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
-RAF Brize Norton                    1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
-Brno                                1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
-Pamplona                            1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
+Leon                                2   0.0/day    0.0/wk     0.1/mo     0.9/yr  █
+Istres Le Tube Istres Air Base      2   0.0/day    0.0/wk     0.1/mo     0.9/yr  █
+Cagliari                            2   0.0/day    0.0/wk     0.1/mo     0.9/yr  █
 Craiova                             1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
-Kalamata                            1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
-Malmo                               1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
-Verona                              1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
-Fort Worth                          1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
-Hambantota                          1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
-Bahrain                             1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
-Kosice                              1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
-Farnborough                         1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
+La Rioja                            1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
+Pamplona                            1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
 Luxembourg                          1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
-Tbilisi                             1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
-Pardubice                           1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
-Trondheim                           1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
-Katowice                            1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
-Bucharest                           1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
-Pisa                                1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
-Szczecin-Goleniow Solidarnosc       1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
-Akureyri                            1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
-RzeszowJasionka                     1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
-Debrecen                            1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
 Bern                                1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
+Katowice                            1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
+Malmo                               1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
+Tbilisi                             1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
+Liverpool                           1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
+Brno                                1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
+Pardubice                           1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
+Bucharest                           1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
+Bahrain                             1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
+Pisa                                1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
+Hambantota                          1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
+Fort Worth                          1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
+Kalamata                            1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
+RAF Brize Norton                    1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
+Szczecin-Goleniow Solidarnosc       1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
+Debrecen                            1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
+Trondheim                           1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
+RzeszowJasionka                     1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
+Verona                              1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
+Farnborough                         1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
+Akureyri                            1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
+Kosice                              1   0.0/day    0.0/wk     0.0/mo     0.4/yr  █
 ```
