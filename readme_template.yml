@@ -2,10 +2,11 @@
 
 Tracking departures from Tallinn Airport. Data and graphs are updated daily.
 
-I created this repo to:
-- Test how to use Mermaid charting functions for basic reporting
-- Test how to use Github Actions for scheudling basic data pipelines and transformations
-- Find out where we can fly to from Tallinn
+## Passengers in the terminal
+
+Hour-by-hour forecast. Quiet, steady, busy, or crowded. Each flight is spread across the two hours before departure, and holiday flights count for more.
+
+{terminal_forecast}
 
 ## Trend of Daily Departures
 
@@ -43,12 +44,6 @@ xychart-beta
     bar {quarter_bar}
     line {quarter_line}
 ```
-
-## Passengers in the terminal
-
-Hour-by-hour forecast. Quiet, steady, busy, or crowded. Each flight is spread across the two hours before departure, and holiday flights count for more.
-
-{terminal_forecast}
 
 ## Unique destinations and departures
 

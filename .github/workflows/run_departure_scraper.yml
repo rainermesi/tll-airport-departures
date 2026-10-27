@@ -3,6 +3,7 @@ on:
   schedule:
     # 06:00, 14:00, and 22:00 Europe/Tallinn. Both UTC hours are listed so the
     # job still lands on those local hours when Estonia is on summer time.
+    # scrape_schedule.py keeps a start that Actions delays by up to five hours.
     - cron: '0 3,4,11,12,19,20 * * *'
   workflow_dispatch:
 
@@ -10,32 +11,30 @@ jobs:
   scrape:
     runs-on: ubuntu-24.04
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
       - name: Check Tallinn scrape window
         id: window
         if: github.event_name == 'schedule'
         run: |
-          hour=$(TZ=Europe/Tallinn date +%H)
-          if [ "$hour" != "06" ] && [ "$hour" != "14" ] && [ "$hour" != "22" ]; then
-            echo "skip=true" >> "$GITHUB_OUTPUT"
-            echo "Skipping scrape at Europe/Tallinn hour $hour"
-          else
+          if python scrape_schedule.py; then
             echo "skip=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=true" >> "$GITHUB_OUTPUT"
           fi
-
-      - name: Checkout repository
-        if: steps.window.outputs.skip != 'true'
-        uses: actions/checkout@v5
-      - name: Set up Python
-        if: steps.window.outputs.skip != 'true'
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
       - name: Install dependencies
         if: steps.window.outputs.skip != 'true'
         run: pip install requests beautifulsoup4 pandas selenium webdriver_manager
       - name: Run scrape script
         if: steps.window.outputs.skip != 'true'
         run: python departure_scraper.py
+      - name: Update readme
+        if: steps.window.outputs.skip != 'true'
+        run: python readme_generator.py
       - name: Commit and push changes
         if: steps.window.outputs.skip != 'true'
         env:
