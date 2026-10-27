@@ -1,5 +1,5 @@
 flight_number,flight_title,service_provider_name,scheduled_time,first_seen_time,estimated_time,departure_time,date,status,board
-XQ 497,Antalya,SunExpress - Günes Ekspres Havacilik,03:25,03:25,N/A,N/A,2026-10-28,N/A,tomorrow
+XQ 497,Antalya,SunExpress - Günes Ekspres Havacilik,03:25,03:25,N/A,03:43,2026-10-28,departed|delayed,today
 FH 966,Antalya,Freebird Airlines,03:25,03:25,N/A,N/A,2026-10-28,N/A,tomorrow
 FH 732,Antalya,Freebird Airlines,03:40,03:40,N/A,N/A,2026-10-28,N/A,tomorrow
 U5 7101,Sharm El Sheikh,SkyUp MT,04:00,04:00,N/A,N/A,2026-10-28,N/A,tomorrow
@@ -17,7 +17,7 @@ BT 857,Amsterdam,Air Baltic Corporation,07:25,07:25,N/A,N/A,2026-10-28,N/A,tomor
 OJ 223,Kärdla,Nyxair,07:30,07:30,N/A,N/A,2026-10-28,N/A,tomorrow
 OJ 201,Kuressaare,Nyxair,07:40,07:40,N/A,N/A,2026-10-28,N/A,tomorrow
 AY 1012,Helsingi,Finnair,08:05,08:05,N/A,N/A,2026-10-28,N/A,tomorrow
-BT 312,Riia,Air Baltic Corporation,09:10,09:10,N/A,N/A,2026-10-28,N/A,tomorrow
+BT 312,Riia,Air Baltic Corporation,09:10,09:10,N/A,11:23,2026-10-28,departed|delayed,today
 W6 1726,Gdańsk,Wizz Air Hungary,09:30,09:30,N/A,N/A,2026-10-28,N/A,tomorrow
 W6 1366,Varssavi,Wizz Air Hungary,09:40,09:40,N/A,N/A,2026-10-28,N/A,tomorrow
 AY 1014,Helsingi,Finnair,10:05,10:05,N/A,N/A,2026-10-28,N/A,tomorrow
@@ -28,25 +28,33 @@ TK 1422,Istanbul,Turkish Airlines,12:00,12:00,N/A,N/A,2026-10-28,N/A,tomorrow
 D8 2011,Oslo,Norwegian Air Sweden AOC,12:20,12:20,N/A,N/A,2026-10-28,N/A,tomorrow
 PC 5962,Antalya,Pegasus Airlines,13:30,13:30,N/A,N/A,2026-10-28,N/A,tomorrow
 BT 859,Amsterdam,Air Baltic Corporation,14:00,14:00,N/A,N/A,2026-10-28,N/A,tomorrow
-FR 4611,Stockholm (Arlanda),Ryanair,14:30,14:30,N/A,N/A,2026-10-28,N/A,tomorrow
-AY 1022,Helsingi,Finnair,14:35,14:35,N/A,N/A,2026-10-28,N/A,tomorrow
-SK 1745,Stockholm (Arlanda),Scandinavian Airlines System (SAS),14:35,14:35,N/A,N/A,2026-10-28,N/A,tomorrow
-BT 316,Riia,Air Baltic Corporation,15:15,15:15,N/A,N/A,2026-10-28,N/A,tomorrow
-SK 1789,Kopenhaagen,Scandinavian Airlines System (SAS),15:55,15:55,N/A,N/A,2026-10-28,N/A,tomorrow
-AY 1024,Helsingi,Finnair,16:50,16:50,N/A,N/A,2026-10-28,N/A,tomorrow
-OJ 225,Kärdla,Nyxair,17:00,17:00,N/A,N/A,2026-10-28,N/A,tomorrow
+FR 4611,Stockholm (Arlanda),Ryanair,14:30,14:30,N/A,18:37,2026-10-28,departed|delayed,today
+AY 1022,Helsingi,Finnair,14:35,14:35,N/A,14:36,2026-10-28,departed|delayed,today
+SK 1745,Stockholm (Arlanda),Scandinavian Airlines System (SAS),14:35,14:35,N/A,14:32,2026-10-28,departed|early,today
+BT 316,Riia,Air Baltic Corporation,15:15,15:15,N/A,15:21,2026-10-28,departed|delayed,today
+SK 1789,Kopenhaagen,Scandinavian Airlines System (SAS),15:55,15:55,N/A,16:02,2026-10-28,departed|delayed,today
+AY 1024,Helsingi,Finnair,16:50,16:50,N/A,16:48,2026-10-28,departed|delayed,today
+OJ 225,Kärdla,Nyxair,17:00,17:00,N/A,16:56,2026-10-28,departed|early,today
 BT 863,Pariis (Charles De Gaulle),Air Baltic Corporation,17:10,17:10,N/A,N/A,2026-10-28,N/A,tomorrow
-AY 1026,Helsingi,Finnair,17:20,17:20,N/A,N/A,2026-10-28,N/A,tomorrow
-LH 883,Frankfurt,Deutsche Lufthansa,17:55,17:55,N/A,N/A,2026-10-28,N/A,tomorrow
+AY 1026,Helsingi,Finnair,17:20,17:20,N/A,17:50,2026-10-28,departed|delayed,today
+LH 883,Frankfurt,Deutsche Lufthansa,17:55,17:55,N/A,18:18,2026-10-28,departed|delayed,today
 BT 906,Vilnius,Air Baltic Corporation,18:00,18:00,N/A,N/A,2026-10-28,N/A,tomorrow
-LO 788,Varssavi,LOT - Polish Airlines,18:25,18:25,N/A,N/A,2026-10-28,N/A,tomorrow
-OJ 207,Kuressaare,Nyxair,18:30,18:30,N/A,N/A,2026-10-28,N/A,tomorrow
-AEG 7003,Helsingi,Airest,19:40,19:40,N/A,N/A,2026-10-28,N/A,tomorrow
+LO 788,Varssavi,LOT - Polish Airlines,18:25,18:25,N/A,19:01,2026-10-28,departed|delayed,today
+OJ 207,Kuressaare,Nyxair,18:30,18:30,N/A,18:40,2026-10-28,departed|delayed,today
+AEG 7003,Helsingi,Airest,19:40,19:40,N/A,19:34,2026-10-28,departed|early,today
 3V 4367,"Stockholm (Arlanda),Pariis (Charles De Gaulle)",ASL Airlines Belgium,20:15,20:15,N/A,N/A,2026-10-28,N/A,tomorrow
-FR 2733,Berliin,Ryanair,20:25,20:25,N/A,N/A,2026-10-28,N/A,tomorrow
-SK 1749,Stockholm (Arlanda),Scandinavian Airlines System (SAS),20:35,20:35,N/A,N/A,2026-10-28,N/A,tomorrow
+FR 2733,Berliin,Ryanair,20:25,20:25,N/A,19:25,2026-10-28,departed|delayed,today
+SK 1749,Stockholm (Arlanda),Scandinavian Airlines System (SAS),20:35,20:35,N/A,20:28,2026-10-28,departed|early,today
 FR 9914,Barcelona,Ryanair,20:55,20:55,N/A,N/A,2026-10-28,N/A,tomorrow
 QY 3789,Kopenhaagen,European Air Transport,20:55,20:55,N/A,N/A,2026-10-28,N/A,tomorrow
 FR 8903,Milano (Malpensa),Ryanair,21:05,21:05,N/A,N/A,2026-10-28,N/A,tomorrow
-AY 1028,Helsingi,Finnair,21:45,21:45,N/A,N/A,2026-10-28,N/A,tomorrow
-AY 1032,Helsingi,Finnair,22:40,22:40,N/A,N/A,2026-10-28,N/A,tomorrow
+AY 1028,Helsingi,Finnair,21:45,21:45,N/A,21:02,2026-10-28,departed|early,today
+AY 1032,Helsingi,Finnair,22:40,22:40,N/A,22:29,2026-10-28,departed|early,today
+W9 5446,London (Luton),Wizz Air UK,13:10,N/A,N/A,13:12,2026-10-28,departed|delayed,today
+BT 881,Tenerife (South),Air Baltic Corporation,13:30,N/A,N/A,14:12,2026-10-28,departed|delayed,today
+LO 786,Varssavi,LOT - Polish Airlines,14:05,N/A,N/A,14:24,2026-10-28,departed|delayed,today
+W6 2046,Kraków,Wizz Air Hungary,16:45,N/A,N/A,17:00,2026-10-28,departed|delayed,today
+BT 865,Nice,Air Baltic Corporation,17:10,N/A,N/A,17:08,2026-10-28,departed|early,today
+TK 1424,Istanbul,Turkish Airlines,18:55,N/A,N/A,18:59,2026-10-28,departed|delayed,today
+W6 2424,Budapest,Wizz Air Hungary,21:30,N/A,N/A,21:34,2026-10-28,departed|delayed,today
+BT 318,Riia,Air Baltic Corporation,21:35,N/A,N/A,21:43,2026-10-28,departed|delayed,today
