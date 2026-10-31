@@ -2,11 +2,11 @@
 
 Tracking departures from Tallinn Airport. Data and graphs are updated daily.
 
-## Passengers in the terminal
-
-Hour-by-hour forecast. Quiet, steady, busy, or crowded. Each flight is spread across the two hours before departure, and holiday flights count for more.
+## Flights in the terminal
 
 {terminal_forecast}
+
+Each flight is counted in the two hours before it leaves.
 
 ## Trend of Daily Departures
 
