@@ -80,25 +80,131 @@ def sparse_date_labels(dates, every=7):
             labels.append(' ')
     return ', '.join(f'"{label}"' for label in labels)
 
-def terminal_day(rows, day):
+TERMINAL_HOURS = [f'{hour:02d}:00' for hour in range(4, 23)]
+WEEKDAYS = ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')
+MONTHS = ('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December')
+
+
+def short_date(day):
+    return f'{day.day} {MONTHS[day.month - 1][:3]}'
+
+def rows_on(merged_df, day):
+    if merged_df.empty or 'date' not in merged_df.columns:
+        return []
+    key = day.isoformat()
+    matched = merged_df[merged_df['date'].astype(str).str.slice(0, 10) == key]
+    return matched.to_dict('records')
+
+def counts_for(rows):
     hours = hourly_flight_counts(rows)
     if not hours:
-        return f'**{day}**\n\nNo scheduled times for this day.'
-    lines = [f'**{day}**', '', '| Hour | Flights |', '| --- | ---: |']
-    for hour, count in hours:
-        lines.append(f'| {hour} | {count} |')
-    return '\n'.join(lines)
+        return None
+    return dict(hours)
+
+def flight_cell(counts, hour):
+    if counts is None:
+        return '—'
+    return str(counts.get(hour, 0))
 
 def terminal_forecast(merged_df, today):
-    sections = []
-    for day in (today, today + timedelta(days=1)):
-        key = day.isoformat()
-        if merged_df.empty or 'date' not in merged_df.columns:
-            rows = []
-        else:
-            rows = merged_df[merged_df['date'].astype(str) == key].to_dict('records')
-        sections.append(terminal_day(rows, key))
-    return '\n\n'.join(sections)
+    tomorrow = today + timedelta(days=1)
+    today_counts = counts_for(rows_on(merged_df, today))
+    tomorrow_counts = counts_for(rows_on(merged_df, tomorrow))
+    today_label = short_date(today)
+    tomorrow_label = short_date(tomorrow)
+    lines = [
+        f'| Hour | {today_label} | Flights | | {tomorrow_label} | Flights |',
+        '| --- | --- | ---: | --- | --- | ---: |',
+    ]
+    for hour in TERMINAL_HOURS:
+        lines.append(
+            f'| {hour} | {today_label} | {flight_cell(today_counts, hour)}'
+            f' | | {tomorrow_label} | {flight_cell(tomorrow_counts, hour)} |'
+        )
+    return '\n'.join(lines)
+
+def _average(values):
+    return sum(values) / len(values)
+
+def _named_extreme(pairs):
+    busiest_at = max(range(len(pairs)), key=lambda index: (pairs[index][1], -index))
+    quietest_at = min(range(len(pairs)), key=lambda index: (pairs[index][1], index))
+    return pairs[busiest_at], pairs[quietest_at]
+
+def _one_decimal(value):
+    return f'{value:.1f}'
+
+def terminal_history(merged_df, today):
+    if merged_df.empty or 'date' not in merged_df.columns:
+        return 'No history yet.'
+    frame = merged_df.copy()
+    frame['day'] = frame['date'].astype(str).str.slice(0, 10)
+    frame = frame[frame['day'] <= today.isoformat()]
+    by_day = {}
+    for day, group in frame.groupby('day'):
+        counts = counts_for(group.to_dict('records'))
+        if counts is None:
+            continue
+        by_day[day] = counts
+    if not by_day:
+        return 'No history yet.'
+
+    hour_pairs = [
+        (hour, _average([counts[hour] for counts in by_day.values()]))
+        for hour in TERMINAL_HOURS
+    ]
+    weekday_peaks = {name: [] for name in WEEKDAYS}
+    month_peaks = {name: [] for name in MONTHS}
+    for day, counts in by_day.items():
+        parsed = datetime.strptime(day, '%Y-%m-%d')
+        peak = max(counts.values())
+        weekday_peaks[WEEKDAYS[parsed.weekday()]].append(peak)
+        month_peaks[MONTHS[parsed.month - 1]].append(peak)
+    weekday_pairs = [
+        (name, _average(peaks))
+        for name, peaks in weekday_peaks.items()
+        if peaks
+    ]
+    month_pairs = [
+        (name, _average(peaks))
+        for name, peaks in month_peaks.items()
+        if peaks
+    ]
+    busiest_hour, quietest_hour = _named_extreme(hour_pairs)
+    busiest_weekday, quietest_weekday = _named_extreme(weekday_pairs)
+    busiest_month, quietest_month = _named_extreme(month_pairs)
+    first = min(by_day)
+    last = max(by_day)
+    lines = [
+        (
+            f'Averages from {since_label(datetime.strptime(first, "%Y-%m-%d").date())}'
+            f' through {since_label(datetime.strptime(last, "%Y-%m-%d").date())},'
+            f' {len(by_day)} days.'
+            ' Weekday and month numbers are the average of that day’s busiest hour.'
+        ),
+        '',
+        (
+            f'{busiest_hour[0]} is the busiest hour ({_one_decimal(busiest_hour[1])} flights).'
+            f' {quietest_hour[0]} is the quietest ({_one_decimal(quietest_hour[1])}).'
+        ),
+        (
+            f'{busiest_weekday[0]} is the busiest weekday ({_one_decimal(busiest_weekday[1])}).'
+            f' {quietest_weekday[0]} is the quietest ({_one_decimal(quietest_weekday[1])}).'
+        ),
+        (
+            f'{busiest_month[0]} is the busiest month ({_one_decimal(busiest_month[1])}).'
+            f' {quietest_month[0]} is the quietest ({_one_decimal(quietest_month[1])}).'
+        ),
+        '',
+        '| Hour | Avg flights |',
+        '| --- | ---: |',
+    ]
+    lines.extend(f'| {hour} | {_one_decimal(average)} |' for hour, average in hour_pairs)
+    lines.extend(['', '| Weekday | Avg peak |', '| --- | ---: |'])
+    lines.extend(f'| {name} | {_one_decimal(average)} |' for name, average in weekday_pairs)
+    lines.extend(['', '| Month | Avg peak |', '| --- | ---: |'])
+    lines.extend(f'| {name} | {_one_decimal(average)} |' for name, average in month_pairs)
+    return '\n'.join(lines)
 
 def chart_city(name):
     label = sankey_label(name)
@@ -216,6 +322,7 @@ def main():
         'quarter_line': number_list(quarters['avg_destinations'], 1),
         'quarter_ymax': chart_limit(quarters['avg_departures'].to_list()),
         'terminal_forecast': terminal_forecast(merged, today),
+        'terminal_history': terminal_history(chart_df, today),
         'since_date': since_label(started),
         'destination_chart': destination_chart(
             destination_df.set_index('flight_title')['count'],

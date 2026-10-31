@@ -4,55 +4,84 @@ Tracking departures from Tallinn Airport. Data and graphs are updated daily.
 
 ## Flights in the terminal
 
-**2026-10-31**
-
-| Hour | Flights |
-| --- | ---: |
-| 04:00 | 8 |
-| 05:00 | 15 |
-| 06:00 | 15 |
-| 07:00 | 13 |
-| 08:00 | 9 |
-| 09:00 | 9 |
-| 10:00 | 7 |
-| 11:00 | 8 |
-| 12:00 | 8 |
-| 13:00 | 12 |
-| 14:00 | 10 |
-| 15:00 | 9 |
-| 16:00 | 9 |
-| 17:00 | 6 |
-| 18:00 | 5 |
-| 19:00 | 5 |
-| 20:00 | 6 |
-| 21:00 | 5 |
-| 22:00 | 2 |
-
-**2026-11-01**
-
-| Hour | Flights |
-| --- | ---: |
-| 04:00 | 7 |
-| 05:00 | 10 |
-| 06:00 | 9 |
-| 07:00 | 7 |
-| 08:00 | 10 |
-| 09:00 | 9 |
-| 10:00 | 7 |
-| 11:00 | 3 |
-| 12:00 | 5 |
-| 13:00 | 9 |
-| 14:00 | 10 |
-| 15:00 | 8 |
-| 16:00 | 6 |
-| 17:00 | 4 |
-| 18:00 | 2 |
-| 19:00 | 1 |
-| 20:00 | 3 |
-| 21:00 | 3 |
-| 22:00 | 2 |
+| Hour | 31 Oct | Flights | | 1 Nov | Flights |
+| --- | --- | ---: | --- | --- | ---: |
+| 04:00 | 31 Oct | 8 | | 1 Nov | 7 |
+| 05:00 | 31 Oct | 15 | | 1 Nov | 10 |
+| 06:00 | 31 Oct | 15 | | 1 Nov | 9 |
+| 07:00 | 31 Oct | 13 | | 1 Nov | 7 |
+| 08:00 | 31 Oct | 9 | | 1 Nov | 10 |
+| 09:00 | 31 Oct | 9 | | 1 Nov | 9 |
+| 10:00 | 31 Oct | 7 | | 1 Nov | 7 |
+| 11:00 | 31 Oct | 8 | | 1 Nov | 3 |
+| 12:00 | 31 Oct | 8 | | 1 Nov | 5 |
+| 13:00 | 31 Oct | 12 | | 1 Nov | 9 |
+| 14:00 | 31 Oct | 10 | | 1 Nov | 10 |
+| 15:00 | 31 Oct | 9 | | 1 Nov | 8 |
+| 16:00 | 31 Oct | 9 | | 1 Nov | 6 |
+| 17:00 | 31 Oct | 6 | | 1 Nov | 4 |
+| 18:00 | 31 Oct | 5 | | 1 Nov | 2 |
+| 19:00 | 31 Oct | 5 | | 1 Nov | 1 |
+| 20:00 | 31 Oct | 6 | | 1 Nov | 3 |
+| 21:00 | 31 Oct | 5 | | 1 Nov | 3 |
+| 22:00 | 31 Oct | 2 | | 1 Nov | 2 |
 
 Each flight is counted in the two hours before it leaves.
+
+## When the terminal is busiest
+
+Averages from 1 Aug 2024 through 31 Oct 2026, 758 days. Weekday and month numbers are the average of that day’s busiest hour.
+
+05:00 is the busiest hour (10.3 flights). 22:00 is the quietest (1.9).
+Friday is the busiest weekday (13.2). Saturday is the quietest (10.2).
+September is the busiest month (12.7). January is the quietest (10.8).
+
+| Hour | Avg flights |
+| --- | ---: |
+| 04:00 | 5.7 |
+| 05:00 | 10.3 |
+| 06:00 | 9.2 |
+| 07:00 | 7.8 |
+| 08:00 | 5.2 |
+| 09:00 | 5.6 |
+| 10:00 | 6.0 |
+| 11:00 | 5.4 |
+| 12:00 | 7.5 |
+| 13:00 | 8.2 |
+| 14:00 | 8.9 |
+| 15:00 | 8.8 |
+| 16:00 | 9.3 |
+| 17:00 | 7.0 |
+| 18:00 | 6.2 |
+| 19:00 | 5.1 |
+| 20:00 | 5.0 |
+| 21:00 | 4.3 |
+| 22:00 | 1.9 |
+
+| Weekday | Avg peak |
+| --- | ---: |
+| Monday | 12.4 |
+| Tuesday | 12.0 |
+| Wednesday | 11.5 |
+| Thursday | 11.9 |
+| Friday | 13.2 |
+| Saturday | 10.2 |
+| Sunday | 11.4 |
+
+| Month | Avg peak |
+| --- | ---: |
+| January | 10.8 |
+| February | 11.1 |
+| March | 11.5 |
+| April | 11.6 |
+| May | 11.9 |
+| June | 12.1 |
+| July | 12.1 |
+| August | 12.5 |
+| September | 12.7 |
+| October | 12.2 |
+| November | 11.2 |
+| December | 11.1 |
 
 ## Trend of Daily Departures
 
