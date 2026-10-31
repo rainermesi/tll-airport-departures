@@ -36,52 +36,27 @@ Averages from 1 Aug 2024 through 31 Oct 2026, 758 days. Weekday and month number
 Friday is the busiest weekday (13.2). Saturday is the quietest (10.2).
 September is the busiest month (12.7). January is the quietest (10.8).
 
-| Hour | Avg flights |
-| --- | ---: |
-| 04:00 | 5.7 |
-| 05:00 | 10.3 |
-| 06:00 | 9.2 |
-| 07:00 | 7.8 |
-| 08:00 | 5.2 |
-| 09:00 | 5.6 |
-| 10:00 | 6.0 |
-| 11:00 | 5.4 |
-| 12:00 | 7.5 |
-| 13:00 | 8.2 |
-| 14:00 | 8.9 |
-| 15:00 | 8.8 |
-| 16:00 | 9.3 |
-| 17:00 | 7.0 |
-| 18:00 | 6.2 |
-| 19:00 | 5.1 |
-| 20:00 | 5.0 |
-| 21:00 | 4.3 |
-| 22:00 | 1.9 |
-
-| Weekday | Avg peak |
-| --- | ---: |
-| Monday | 12.4 |
-| Tuesday | 12.0 |
-| Wednesday | 11.5 |
-| Thursday | 11.9 |
-| Friday | 13.2 |
-| Saturday | 10.2 |
-| Sunday | 11.4 |
-
-| Month | Avg peak |
-| --- | ---: |
-| January | 10.8 |
-| February | 11.1 |
-| March | 11.5 |
-| April | 11.6 |
-| May | 11.9 |
-| June | 12.1 |
-| July | 12.1 |
-| August | 12.5 |
-| September | 12.7 |
-| October | 12.2 |
-| November | 11.2 |
-| December | 11.1 |
+| Hour | Avg flights | | Weekday | Avg peak | | Month | Avg peak |
+| --- | ---: | --- | --- | ---: | --- | --- | ---: |
+| 04:00 | 5.7 | | Monday | 12.4 | | January | 10.8 |
+| 05:00 | 10.3 | | Tuesday | 12.0 | | February | 11.1 |
+| 06:00 | 9.2 | | Wednesday | 11.5 | | March | 11.5 |
+| 07:00 | 7.8 | | Thursday | 11.9 | | April | 11.6 |
+| 08:00 | 5.2 | | Friday | 13.2 | | May | 11.9 |
+| 09:00 | 5.6 | | Saturday | 10.2 | | June | 12.1 |
+| 10:00 | 6.0 | | Sunday | 11.4 | | July | 12.1 |
+| 11:00 | 5.4 | |  |  | | August | 12.5 |
+| 12:00 | 7.5 | |  |  | | September | 12.7 |
+| 13:00 | 8.2 | |  |  | | October | 12.2 |
+| 14:00 | 8.9 | |  |  | | November | 11.2 |
+| 15:00 | 8.8 | |  |  | | December | 11.1 |
+| 16:00 | 9.3 | |  |  | |  |  |
+| 17:00 | 7.0 | |  |  | |  |  |
+| 18:00 | 6.2 | |  |  | |  |  |
+| 19:00 | 5.1 | |  |  | |  |  |
+| 20:00 | 5.0 | |  |  | |  |  |
+| 21:00 | 4.3 | |  |  | |  |  |
+| 22:00 | 1.9 | |  |  | |  |  |
 
 ## Trend of Daily Departures
 
