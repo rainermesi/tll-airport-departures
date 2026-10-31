@@ -94,14 +94,34 @@ class ChartWindowTest(unittest.TestCase):
             {'date': '2026-10-27', 'flight_title': 'Antalya', 'scheduled_time': '06:45', 'flight_number': 'XQ 1', 'board': 'tomorrow'},
         ])
         text = readme_generator.terminal_forecast(frame, date(2026, 10, 26))
-        self.assertLess(text.index('**2026-10-26**'), text.index('**2026-10-27**'))
-        self.assertIn('| Hour | Flights |', text)
+        self.assertIn('| Hour | 26 Oct | Flights | | 27 Oct | Flights |', text)
         self.assertNotIn('quiet', text)
-        self.assertNotIn('Terminal', text)
-        today, tomorrow = text.split('**2026-10-27**')
-        self.assertIn('| 10:00 | 1 |', today)
-        self.assertIn('| 11:00 | 1 |', today)
-        self.assertIn('| 05:00 | 1 |', tomorrow)
+        self.assertIn('| 10:00 | 26 Oct | 1 | | 27 Oct | 0 |', text)
+        self.assertIn('| 11:00 | 26 Oct | 1 | | 27 Oct | 0 |', text)
+        self.assertIn('| 05:00 | 26 Oct | 0 | | 27 Oct | 1 |', text)
+
+    def test_history_names_busiest_hour_weekday_and_month(self):
+        rows = []
+        for index in range(5):
+            rows.append({
+                'date': '2026-10-05',
+                'scheduled_time': '06:00',
+                'flight_number': f'BT {index}',
+                'flight_title': 'Riia',
+                'board': 'today',
+            })
+        rows.append({
+            'date': '2026-10-06',
+            'scheduled_time': '18:00',
+            'flight_number': 'BT 9',
+            'flight_title': 'Riia',
+            'board': 'today',
+        })
+        text = readme_generator.terminal_history(pd.DataFrame(rows), date(2026, 10, 31))
+        self.assertIn('04:00 is the busiest hour', text)
+        self.assertIn('Monday is the busiest weekday', text)
+        self.assertIn('October is the busiest month', text)
+        self.assertIn('| Monday | 5.0 |', text)
 
 
 if __name__ == '__main__':

@@ -8,6 +8,10 @@ Tracking departures from Tallinn Airport. Data and graphs are updated daily.
 
 Each flight is counted in the two hours before it leaves.
 
+## When the terminal is busiest
+
+{terminal_history}
+
 ## Trend of Daily Departures
 
 Last 90 days. One bar per day.
