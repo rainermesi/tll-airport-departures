@@ -2,33 +2,57 @@
 
 Tracking departures from Tallinn Airport. Data and graphs are updated daily.
 
-## Passengers in the terminal
+## Flights in the terminal
 
-Hour-by-hour forecast. Quiet, steady, busy, or crowded. Each flight is spread across the two hours before departure, and holiday flights count for more.
+**2026-10-31**
+
+| Hour | Flights |
+| --- | ---: |
+| 04:00 | 8 |
+| 05:00 | 15 |
+| 06:00 | 15 |
+| 07:00 | 13 |
+| 08:00 | 9 |
+| 09:00 | 9 |
+| 10:00 | 7 |
+| 11:00 | 8 |
+| 12:00 | 8 |
+| 13:00 | 12 |
+| 14:00 | 10 |
+| 15:00 | 9 |
+| 16:00 | 9 |
+| 17:00 | 6 |
+| 18:00 | 5 |
+| 19:00 | 5 |
+| 20:00 | 6 |
+| 21:00 | 5 |
+| 22:00 | 2 |
 
 **2026-11-01**
 
-| Hour | Terminal | Why |
-| --- | --- | --- |
-| 04:00 | steady | 10 flights |
-| 05:00 | steady | 9 flights |
-| 06:00 | quiet | 7 flights |
-| 07:00 | steady | 10 flights |
-| 08:00 | steady | 9 flights |
-| 09:00 | quiet | 7 flights |
-| 10:00 | quiet | 3 flights |
-| 11:00 | quiet | 5 flights |
-| 12:00 | steady | 9 flights, 1 charter (Antalya) |
-| 13:00 | steady | 10 flights, 1 charter (Antalya) |
-| 14:00 | quiet | 8 flights, 1 charter (Antalya) |
-| 15:00 | quiet | 6 flights |
-| 16:00 | quiet | 4 flights |
-| 17:00 | quiet | 2 flights |
-| 18:00 | quiet | 1 flight |
-| 19:00 | quiet | 3 flights |
-| 20:00 | quiet | 3 flights |
-| 21:00 | quiet | 2 flights |
-| 22:00 | quiet | no flights |
+| Hour | Flights |
+| --- | ---: |
+| 04:00 | 7 |
+| 05:00 | 10 |
+| 06:00 | 9 |
+| 07:00 | 7 |
+| 08:00 | 10 |
+| 09:00 | 9 |
+| 10:00 | 7 |
+| 11:00 | 3 |
+| 12:00 | 5 |
+| 13:00 | 9 |
+| 14:00 | 10 |
+| 15:00 | 8 |
+| 16:00 | 6 |
+| 17:00 | 4 |
+| 18:00 | 2 |
+| 19:00 | 1 |
+| 20:00 | 3 |
+| 21:00 | 3 |
+| 22:00 | 2 |
+
+Each flight is counted in the two hours before it leaves.
 
 ## Trend of Daily Departures
 

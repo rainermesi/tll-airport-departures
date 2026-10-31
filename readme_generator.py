@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 import math
 import re
@@ -8,7 +8,7 @@ from zoneinfo import ZoneInfo
 import pandas as pd
 
 from destinations import normalize_destination
-from hall_crowd import hourly_forecast
+from hall_crowd import hourly_flight_counts
 
 CHART_DAYS = 90
 PLACEHOLDER_RE = re.compile(r'\{([a-z_]+)\}')
@@ -80,29 +80,25 @@ def sparse_date_labels(dates, every=7):
             labels.append(' ')
     return ', '.join(f'"{label}"' for label in labels)
 
-def forecast_date(dates, today):
-    ordered = sorted({str(date) for date in dates})
-    if not ordered:
-        return None
-    upcoming = [date for date in ordered if date > today.isoformat()]
-    if upcoming:
-        return upcoming[0]
-    if today.isoformat() in ordered:
-        return today.isoformat()
-    return ordered[-1]
+def terminal_day(rows, day):
+    hours = hourly_flight_counts(rows)
+    if not hours:
+        return f'**{day}**\n\nNo scheduled times for this day.'
+    lines = [f'**{day}**', '', '| Hour | Flights |', '| --- | ---: |']
+    for hour, count in hours:
+        lines.append(f'| {hour} | {count} |')
+    return '\n'.join(lines)
 
 def terminal_forecast(merged_df, today):
-    chosen = forecast_date(merged_df['date'], today)
-    if chosen is None:
-        return 'No scheduled flights yet.'
-    rows = merged_df[merged_df['date'].astype(str) == chosen].to_dict('records')
-    hours = hourly_forecast(rows)
-    if not hours:
-        return f'**{chosen}**\n\nNo scheduled times for this day.'
-    lines = [f'**{chosen}**', '', '| Hour | Terminal | Why |', '| --- | --- | --- |']
-    for hour, _plane_loads, word, reason in hours:
-        lines.append(f'| {hour} | {word} | {reason} |')
-    return '\n'.join(lines)
+    sections = []
+    for day in (today, today + timedelta(days=1)):
+        key = day.isoformat()
+        if merged_df.empty or 'date' not in merged_df.columns:
+            rows = []
+        else:
+            rows = merged_df[merged_df['date'].astype(str) == key].to_dict('records')
+        sections.append(terminal_day(rows, key))
+    return '\n\n'.join(sections)
 
 def chart_city(name):
     label = sankey_label(name)

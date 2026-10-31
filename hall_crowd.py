@@ -174,6 +174,37 @@ def hour_reason(matched):
     return f'{flight_count} {flights}, {charter_count} {charter_word} ({names})'
 
 
+COUNT_MINUTES = 120
+
+
+def hourly_flight_counts(rows):
+    """Flights counted in each hour from 04:00 through 22:00.
+
+    A flight is included from two hours before its scheduled departure until
+    it leaves.
+    """
+    departures = []
+    for row in rows:
+        depart = clock_minutes(row.get('scheduled_time'))
+        if depart is None:
+            continue
+        departures.append(depart)
+    if not departures:
+        return []
+    hours = []
+    for hour in range(4, 23):
+        start = hour * 60
+        end = start + 60
+        count = 0
+        for depart in departures:
+            window_start = depart - COUNT_MINUTES
+            if depart <= start or window_start >= end:
+                continue
+            count += 1
+        hours.append((f'{hour:02d}:00', count))
+    return hours
+
+
 def hourly_forecast(rows):
     """Peak plane-loads during each hour from 04:00 through 22:00."""
     bins, saw_time = crowd_bins(rows, skip_tomorrow=False)

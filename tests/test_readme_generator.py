@@ -88,14 +88,20 @@ class ChartWindowTest(unittest.TestCase):
         self.assertIn('/wk', london)
         self.assertIn('/mo', london)
 
-    def test_forecast_uses_tomorrow_when_it_is_already_logged(self):
+    def test_forecast_shows_today_and_tomorrow_flight_counts(self):
         frame = pd.DataFrame([
             {'date': '2026-10-26', 'flight_title': 'Riia', 'scheduled_time': '12:00', 'flight_number': 'BT 1', 'board': 'today'},
             {'date': '2026-10-27', 'flight_title': 'Antalya', 'scheduled_time': '06:45', 'flight_number': 'XQ 1', 'board': 'tomorrow'},
         ])
         text = readme_generator.terminal_forecast(frame, date(2026, 10, 26))
-        self.assertIn('**2026-10-27**', text)
-        self.assertIn('| 05:00 |', text)
+        self.assertLess(text.index('**2026-10-26**'), text.index('**2026-10-27**'))
+        self.assertIn('| Hour | Flights |', text)
+        self.assertNotIn('quiet', text)
+        self.assertNotIn('Terminal', text)
+        today, tomorrow = text.split('**2026-10-27**')
+        self.assertIn('| 10:00 | 1 |', today)
+        self.assertIn('| 11:00 | 1 |', today)
+        self.assertIn('| 05:00 | 1 |', tomorrow)
 
 
 if __name__ == '__main__':

@@ -1,6 +1,6 @@
 import unittest
 
-from hall_crowd import hourly_forecast, morning_crowd
+from hall_crowd import hourly_flight_counts, hourly_forecast, morning_crowd
 
 
 def flight(number, title, scheduled):
@@ -48,6 +48,13 @@ class MorningCrowdTest(unittest.TestCase):
         self.assertEqual(hours['12:00'][2], 'no flights')
         self.assertIn('2 charters', hours['05:00'][2])
         self.assertIn('Antalya', hours['05:00'][2])
+
+    def test_flight_is_counted_in_the_two_hours_before_departure(self):
+        counts = dict(hourly_flight_counts([flight('BT 1', 'Riia', '12:00')]))
+        self.assertEqual(counts['10:00'], 1)
+        self.assertEqual(counts['11:00'], 1)
+        self.assertEqual(counts['12:00'], 0)
+        self.assertEqual(counts['09:00'], 0)
 
     def test_tomorrow_board_is_not_counted_twice(self):
         rows = [flight('XQ 499', 'Antalya', '06:45')]
