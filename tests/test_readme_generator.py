@@ -121,7 +121,8 @@ class ChartWindowTest(unittest.TestCase):
         self.assertIn('04:00 is the busiest hour', text)
         self.assertIn('Monday is the busiest weekday', text)
         self.assertIn('October is the busiest month', text)
-        self.assertIn('| Monday | 5.0 |', text)
+        self.assertIn('| Hour | Avg flights | | Weekday | Avg peak | | Month | Avg peak |', text)
+        self.assertIn('| 04:00 | 2.5 | | Monday | 5.0 | | October | 3.0 |', text)
 
 
 if __name__ == '__main__':

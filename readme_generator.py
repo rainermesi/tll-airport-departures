@@ -196,15 +196,29 @@ def terminal_history(merged_df, today):
             f' {quietest_month[0]} is the quietest ({_one_decimal(quietest_month[1])}).'
         ),
         '',
-        '| Hour | Avg flights |',
-        '| --- | ---: |',
     ]
-    lines.extend(f'| {hour} | {_one_decimal(average)} |' for hour, average in hour_pairs)
-    lines.extend(['', '| Weekday | Avg peak |', '| --- | ---: |'])
-    lines.extend(f'| {name} | {_one_decimal(average)} |' for name, average in weekday_pairs)
-    lines.extend(['', '| Month | Avg peak |', '| --- | ---: |'])
-    lines.extend(f'| {name} | {_one_decimal(average)} |' for name, average in month_pairs)
+    lines.extend(_side_by_side(hour_pairs, weekday_pairs, month_pairs))
     return '\n'.join(lines)
+
+def _side_cells(pairs, index):
+    if index >= len(pairs):
+        return ' | '
+    label, value = pairs[index]
+    return f'{label} | {_one_decimal(value)}'
+
+def _side_by_side(hour_pairs, weekday_pairs, month_pairs):
+    lines = [
+        '| Hour | Avg flights | | Weekday | Avg peak | | Month | Avg peak |',
+        '| --- | ---: | --- | --- | ---: | --- | --- | ---: |',
+    ]
+    rows = max(len(hour_pairs), len(weekday_pairs), len(month_pairs))
+    for index in range(rows):
+        lines.append(
+            f'| {_side_cells(hour_pairs, index)}'
+            f' | | {_side_cells(weekday_pairs, index)}'
+            f' | | {_side_cells(month_pairs, index)} |'
+        )
+    return lines
 
 def chart_city(name):
     label = sankey_label(name)
