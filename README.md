@@ -6,31 +6,31 @@ Tracking departures from Tallinn Airport. Data and graphs are updated daily.
 
 | Hour | 17 Nov | Flights | | 18 Nov | Flights |
 | --- | --- | ---: | --- | --- | ---: |
-| 04:00 | 17 Nov | 7 | | 18 Nov | — |
-| 05:00 | 17 Nov | 12 | | 18 Nov | — |
-| 06:00 | 17 Nov | 11 | | 18 Nov | — |
-| 07:00 | 17 Nov | 10 | | 18 Nov | — |
-| 08:00 | 17 Nov | 8 | | 18 Nov | — |
-| 09:00 | 17 Nov | 9 | | 18 Nov | — |
-| 10:00 | 17 Nov | 7 | | 18 Nov | — |
-| 11:00 | 17 Nov | 7 | | 18 Nov | — |
-| 12:00 | 17 Nov | 8 | | 18 Nov | — |
-| 13:00 | 17 Nov | 9 | | 18 Nov | — |
-| 14:00 | 17 Nov | 8 | | 18 Nov | — |
-| 15:00 | 17 Nov | 8 | | 18 Nov | — |
-| 16:00 | 17 Nov | 10 | | 18 Nov | — |
-| 17:00 | 17 Nov | 7 | | 18 Nov | — |
-| 18:00 | 17 Nov | 5 | | 18 Nov | — |
-| 19:00 | 17 Nov | 4 | | 18 Nov | — |
-| 20:00 | 17 Nov | 5 | | 18 Nov | — |
-| 21:00 | 17 Nov | 6 | | 18 Nov | — |
-| 22:00 | 17 Nov | 3 | | 18 Nov | — |
+| 04:00 | 17 Nov | 7 | | 18 Nov | 5 |
+| 05:00 | 17 Nov | 12 | | 18 Nov | 10 |
+| 06:00 | 17 Nov | 11 | | 18 Nov | 8 |
+| 07:00 | 17 Nov | 10 | | 18 Nov | 6 |
+| 08:00 | 17 Nov | 8 | | 18 Nov | 3 |
+| 09:00 | 17 Nov | 9 | | 18 Nov | 5 |
+| 10:00 | 17 Nov | 7 | | 18 Nov | 5 |
+| 11:00 | 17 Nov | 7 | | 18 Nov | 5 |
+| 12:00 | 17 Nov | 8 | | 18 Nov | 4 |
+| 13:00 | 17 Nov | 9 | | 18 Nov | 6 |
+| 14:00 | 17 Nov | 8 | | 18 Nov | 5 |
+| 15:00 | 17 Nov | 8 | | 18 Nov | 6 |
+| 16:00 | 17 Nov | 10 | | 18 Nov | 7 |
+| 17:00 | 17 Nov | 7 | | 18 Nov | 5 |
+| 18:00 | 17 Nov | 5 | | 18 Nov | 3 |
+| 19:00 | 17 Nov | 4 | | 18 Nov | 3 |
+| 20:00 | 17 Nov | 5 | | 18 Nov | 4 |
+| 21:00 | 17 Nov | 6 | | 18 Nov | 3 |
+| 22:00 | 17 Nov | 3 | | 18 Nov | 1 |
 
 Each flight is counted in the two hours before it leaves.
 
 ## When the terminal is busiest
 
-Averages from 1 Aug 2024 through 16 Nov 2026, 771 days. Weekday and month numbers are the average of that day’s busiest hour.
+Averages from 1 Aug 2024 through 17 Nov 2026, 772 days. Weekday and month numbers are the average of that day’s busiest hour.
 
 05:00 is the busiest hour (10.1 flights). 22:00 is the quietest (1.9).
 Friday is the busiest weekday (13.2). Saturday is the quietest (10.2).
@@ -48,7 +48,7 @@ September is the busiest month (12.7). January is the quietest (10.8).
 | 11:00 | 5.3 | |  |  | | August | 12.5 |
 | 12:00 | 7.4 | |  |  | | September | 12.7 |
 | 13:00 | 8.2 | |  |  | | October | 12.1 |
-| 14:00 | 8.9 | |  |  | | November | 11.2 |
+| 14:00 | 8.9 | |  |  | | November | 11.1 |
 | 15:00 | 8.8 | |  |  | | December | 11.1 |
 | 16:00 | 9.3 | |  |  | |  |  |
 | 17:00 | 7.0 | |  |  | |  |  |
@@ -70,9 +70,9 @@ xyChart:
 ---
 xychart-beta
     title "Departures by day"
-    x-axis ["15.08", " ", " ", " ", " ", " ", " ", "22.08", " ", " ", " ", " ", " ", " ", "29.08", " ", " ", " ", " ", " ", " ", "05.09", " ", " ", " ", " ", " ", " ", "12.09", " ", " ", " ", " ", " ", " ", "19.09", " ", " ", " ", " ", " ", " ", "26.09", " ", " ", " ", " ", " ", " ", "03.10", " ", " ", " ", " ", " ", " ", "10.10", " ", " ", " ", " ", " ", " ", "17.10", " ", " ", " ", " ", " ", " ", "24.10", " ", " ", " ", " ", " ", " ", "01.11", " ", " ", " ", " ", " ", " ", "09.11", " ", " ", " ", " ", "16.11"]
+    x-axis ["16.08", " ", " ", " ", " ", " ", " ", "23.08", " ", " ", " ", " ", " ", " ", "30.08", " ", " ", " ", " ", " ", " ", "06.09", " ", " ", " ", " ", " ", " ", "13.09", " ", " ", " ", " ", " ", " ", "20.09", " ", " ", " ", " ", " ", " ", "27.09", " ", " ", " ", " ", " ", " ", "04.10", " ", " ", " ", " ", " ", " ", "11.10", " ", " ", " ", " ", " ", " ", "18.10", " ", " ", " ", " ", " ", " ", "25.10", " ", " ", " ", " ", " ", " ", "02.11", " ", " ", " ", " ", " ", " ", "11.11", " ", " ", " ", " ", "17.11"]
     y-axis "# departures" 0 --> 69
-    bar [48, 57, 60, 46, 54, 55, 60, 43, 58, 58, 48, 54, 33, 32, 34, 52, 54, 45, 54, 49, 62, 42, 56, 57, 48, 53, 52, 61, 44, 54, 56, 47, 51, 52, 59, 43, 52, 55, 46, 51, 53, 57, 40, 48, 54, 42, 46, 52, 54, 40, 48, 50, 36, 45, 46, 53, 35, 49, 50, 34, 46, 52, 58, 44, 55, 56, 46, 48, 52, 57, 46, 50, 46, 51, 27, 49, 49, 50, 44, 20, 43, 24, 45, 47, 38, 20, 23, 41, 22, 37]
+    bar [57, 60, 46, 54, 55, 60, 43, 58, 58, 48, 54, 33, 32, 34, 52, 54, 45, 54, 49, 62, 42, 56, 57, 48, 53, 52, 61, 44, 54, 56, 47, 51, 52, 59, 43, 52, 55, 46, 51, 53, 57, 40, 48, 54, 42, 46, 52, 54, 40, 48, 50, 36, 45, 46, 53, 35, 49, 50, 34, 46, 52, 58, 44, 55, 56, 46, 48, 52, 57, 46, 50, 46, 51, 27, 49, 49, 50, 44, 20, 43, 24, 45, 47, 38, 20, 23, 41, 22, 37, 24]
 ```
 
 ## Departures by quarter
@@ -91,8 +91,8 @@ xychart-beta
     title "Departures by quarter"
     x-axis ["2024 Q3", "2024 Q4", "2025 Q1", "2025 Q2", "2025 Q3", "2025 Q4", "2026 Q1", "2026 Q2", "2026 Q3", "2026 Q4"]
     y-axis "per day" 0 --> 58
-    bar [51.9, 43.6, 40.5, 49.4, 48.6, 46.7, 44.3, 50.0, 51.4, 43.7]
-    line [26.6, 22.5, 21.3, 23.1, 23.1, 22.1, 20.9, 23.4, 24.5, 22.4]
+    bar [51.9, 43.6, 40.5, 49.4, 48.6, 46.7, 44.3, 50.0, 51.4, 43.2]
+    line [26.6, 22.5, 21.3, 23.1, 23.1, 22.1, 20.9, 23.4, 24.5, 22.2]
 ```
 
 ## Unique destinations and departures
@@ -100,51 +100,51 @@ xychart-beta
 Departures to each city since 1 Aug 2024. Airports in the same city are counted together. A multi-stop flight is counted once for each city on the title. The rates are averages over that whole span, and a longer bar means more departures.
 
 ```
-Helsingi                         6937   8.3/day   58.0/wk   252.3/mo  3027.2/yr  ████████████████████████
-Stockholm                        3283   3.9/day   27.5/wk   119.4/mo  1432.6/yr  ███████████
-Riia                             3149   3.8/day   26.3/wk   114.5/mo  1374.2/yr  ███████████
-Varssavi                         2578   3.1/day   21.6/wk    93.7/mo  1125.0/yr  █████████
-Frankfurt                        1969   2.4/day   16.5/wk    71.6/mo   859.2/yr  ███████
-Kopenhaagen                      1697   2.0/day   14.2/wk    61.7/mo   740.5/yr  ██████
-Amsterdam                        1347   1.6/day   11.3/wk    49.0/mo   587.8/yr  █████
-Kardla                           1313   1.6/day   11.0/wk    47.7/mo   573.0/yr  █████
-London                           1303   1.6/day   10.9/wk    47.4/mo   568.6/yr  █████
-Kuressaare                       1287   1.5/day   10.8/wk    46.8/mo   561.6/yr  ████
-Vilnius                          1175   1.4/day    9.8/wk    42.7/mo   512.7/yr  ████
-Istanbul                          956   1.1/day    8.0/wk    34.8/mo   417.2/yr  ███
-Antalya                           812   1.0/day    6.8/wk    29.5/mo   354.3/yr  ███
-Munchen                           662   0.8/day    5.5/wk    24.1/mo   288.9/yr  ██
-Berliin                           658   0.8/day    5.5/wk    23.9/mo   287.1/yr  ██
-Oslo                              614   0.7/day    5.1/wk    22.3/mo   267.9/yr  ██
-Pariis                            584   0.7/day    4.9/wk    21.2/mo   254.8/yr  ██
-Zurich                            498   0.6/day    4.2/wk    18.1/mo   217.3/yr  ██
-Brussel                           464   0.6/day    3.9/wk    16.9/mo   202.5/yr  ██
-Milano                            391   0.5/day    3.3/wk    14.2/mo   170.6/yr  █
-Barcelona                         386   0.5/day    3.2/wk    14.0/mo   168.4/yr  █
-Malaga                            283   0.3/day    2.4/wk    10.3/mo   123.5/yr  █
-Sharm El Sheikh                   274   0.3/day    2.3/wk    10.0/mo   119.6/yr  █
-Heraklion                         246   0.3/day    2.1/wk     8.9/mo   107.3/yr  █
-Dublin                            228   0.3/day    1.9/wk     8.3/mo    99.5/yr  █
-Krakow                            219   0.3/day    1.8/wk     8.0/mo    95.6/yr  █
-Viin                              196   0.2/day    1.6/wk     7.1/mo    85.5/yr  █
-Budapest                          186   0.2/day    1.6/wk     6.8/mo    81.2/yr  █
-Hurghada                          184   0.2/day    1.5/wk     6.7/mo    80.3/yr  █
-Rooma                             174   0.2/day    1.5/wk     6.3/mo    75.9/yr  █
+Helsingi                         6944   8.3/day   58.0/wk   252.2/mo  3026.6/yr  ████████████████████████
+Stockholm                        3285   3.9/day   27.4/wk   119.3/mo  1431.8/yr  ███████████
+Riia                             3151   3.8/day   26.3/wk   114.4/mo  1373.4/yr  ███████████
+Varssavi                         2580   3.1/day   21.6/wk    93.7/mo  1124.5/yr  █████████
+Frankfurt                        1970   2.4/day   16.5/wk    71.6/mo   858.6/yr  ███████
+Kopenhaagen                      1699   2.0/day   14.2/wk    61.7/mo   740.5/yr  ██████
+Amsterdam                        1347   1.6/day   11.3/wk    48.9/mo   587.1/yr  █████
+Kardla                           1314   1.6/day   11.0/wk    47.7/mo   572.7/yr  █████
+London                           1303   1.6/day   10.9/wk    47.3/mo   567.9/yr  █████
+Kuressaare                       1288   1.5/day   10.8/wk    46.8/mo   561.4/yr  ████
+Vilnius                          1175   1.4/day    9.8/wk    42.7/mo   512.1/yr  ████
+Istanbul                          957   1.1/day    8.0/wk    34.8/mo   417.1/yr  ███
+Antalya                           813   1.0/day    6.8/wk    29.5/mo   354.4/yr  ███
+Munchen                           662   0.8/day    5.5/wk    24.0/mo   288.5/yr  ██
+Berliin                           658   0.8/day    5.5/wk    23.9/mo   286.8/yr  ██
+Oslo                              614   0.7/day    5.1/wk    22.3/mo   267.6/yr  ██
+Pariis                            584   0.7/day    4.9/wk    21.2/mo   254.5/yr  ██
+Zurich                            498   0.6/day    4.2/wk    18.1/mo   217.1/yr  ██
+Brussel                           464   0.6/day    3.9/wk    16.9/mo   202.2/yr  ██
+Milano                            391   0.5/day    3.3/wk    14.2/mo   170.4/yr  █
+Barcelona                         386   0.5/day    3.2/wk    14.0/mo   168.2/yr  █
+Malaga                            283   0.3/day    2.4/wk    10.3/mo   123.3/yr  █
+Sharm El Sheikh                   275   0.3/day    2.3/wk    10.0/mo   119.9/yr  █
+Heraklion                         246   0.3/day    2.1/wk     8.9/mo   107.2/yr  █
+Dublin                            228   0.3/day    1.9/wk     8.3/mo    99.4/yr  █
+Krakow                            220   0.3/day    1.8/wk     8.0/mo    95.9/yr  █
+Viin                              196   0.2/day    1.6/wk     7.1/mo    85.4/yr  █
+Budapest                          187   0.2/day    1.6/wk     6.8/mo    81.5/yr  █
+Hurghada                          184   0.2/day    1.5/wk     6.7/mo    80.2/yr  █
+Rooma                             174   0.2/day    1.5/wk     6.3/mo    75.8/yr  █
 Praha                             155   0.2/day    1.3/wk     5.6/mo    67.6/yr  █
-Nice                              154   0.2/day    1.3/wk     5.6/mo    67.2/yr  █
-Tenerife                          133   0.2/day    1.1/wk     4.8/mo    58.0/yr  █
+Nice                              154   0.2/day    1.3/wk     5.6/mo    67.1/yr  █
+Tenerife                          134   0.2/day    1.1/wk     4.9/mo    58.4/yr  █
 Gdansk                            130   0.2/day    1.1/wk     4.7/mo    56.7/yr  █
 Tirana                            119   0.1/day    1.0/wk     4.3/mo    51.9/yr  █
 Rhodos                            119   0.1/day    1.0/wk     4.3/mo    51.9/yr  █
-Tivat                             115   0.1/day    1.0/wk     4.2/mo    50.2/yr  █
+Tivat                             115   0.1/day    1.0/wk     4.2/mo    50.1/yr  █
 Billund                           114   0.1/day    1.0/wk     4.1/mo    49.7/yr  █
-Burgas                            104   0.1/day    0.9/wk     3.8/mo    45.4/yr  █
-Split                              98   0.1/day    0.8/wk     3.6/mo    42.8/yr  █
-Veneetsia                          96   0.1/day    0.8/wk     3.5/mo    41.9/yr  █
+Burgas                            104   0.1/day    0.9/wk     3.8/mo    45.3/yr  █
+Split                              98   0.1/day    0.8/wk     3.6/mo    42.7/yr  █
+Veneetsia                          96   0.1/day    0.8/wk     3.5/mo    41.8/yr  █
 Malta                              78   0.1/day    0.7/wk     2.8/mo    34.0/yr  █
 Veneetsia-Treviso                  67   0.1/day    0.6/wk     2.4/mo    29.2/yr  █
 Paphos                             66   0.1/day    0.6/wk     2.4/mo    28.8/yr  █
-Palma De Mallorca                  65   0.1/day    0.5/wk     2.4/mo    28.4/yr  █
+Palma De Mallorca                  65   0.1/day    0.5/wk     2.4/mo    28.3/yr  █
 Gran Canaria                       60   0.1/day    0.5/wk     2.2/mo    26.2/yr  █
 Dusseldorf                         56   0.1/day    0.5/wk     2.0/mo    24.4/yr  █
 Hamburg                            47   0.1/day    0.4/wk     1.7/mo    20.5/yr  █
