@@ -4,27 +4,27 @@ Tracking departures from Tallinn Airport. Data and graphs are updated daily.
 
 ## Flights in the terminal
 
-| Hour | 24 Nov | Flights | | 25 Nov | Flights |
+| Hour | 25 Nov | Flights | | 26 Nov | Flights |
 | --- | --- | ---: | --- | --- | ---: |
-| 04:00 | 24 Nov | 6 | | 25 Nov | 5 |
-| 05:00 | 24 Nov | 12 | | 25 Nov | 12 |
-| 06:00 | 24 Nov | 11 | | 25 Nov | 11 |
-| 07:00 | 24 Nov | 10 | | 25 Nov | 9 |
-| 08:00 | 24 Nov | 8 | | 25 Nov | 4 |
-| 09:00 | 24 Nov | 9 | | 25 Nov | 5 |
-| 10:00 | 24 Nov | 9 | | 25 Nov | 5 |
-| 11:00 | 24 Nov | 9 | | 25 Nov | 5 |
-| 12:00 | 24 Nov | 10 | | 25 Nov | 6 |
-| 13:00 | 24 Nov | 9 | | 25 Nov | 8 |
-| 14:00 | 24 Nov | 8 | | 25 Nov | 8 |
-| 15:00 | 24 Nov | 8 | | 25 Nov | 7 |
-| 16:00 | 24 Nov | 10 | | 25 Nov | 9 |
-| 17:00 | 24 Nov | 7 | | 25 Nov | 6 |
-| 18:00 | 24 Nov | 6 | | 25 Nov | 4 |
-| 19:00 | 24 Nov | 5 | | 25 Nov | 5 |
-| 20:00 | 24 Nov | 6 | | 25 Nov | 6 |
-| 21:00 | 24 Nov | 5 | | 25 Nov | 5 |
-| 22:00 | 24 Nov | 2 | | 25 Nov | 1 |
+| 04:00 | 25 Nov | 5 | | 26 Nov | — |
+| 05:00 | 25 Nov | 12 | | 26 Nov | — |
+| 06:00 | 25 Nov | 11 | | 26 Nov | — |
+| 07:00 | 25 Nov | 9 | | 26 Nov | — |
+| 08:00 | 25 Nov | 4 | | 26 Nov | — |
+| 09:00 | 25 Nov | 5 | | 26 Nov | — |
+| 10:00 | 25 Nov | 5 | | 26 Nov | — |
+| 11:00 | 25 Nov | 5 | | 26 Nov | — |
+| 12:00 | 25 Nov | 6 | | 26 Nov | — |
+| 13:00 | 25 Nov | 8 | | 26 Nov | — |
+| 14:00 | 25 Nov | 8 | | 26 Nov | — |
+| 15:00 | 25 Nov | 7 | | 26 Nov | — |
+| 16:00 | 25 Nov | 9 | | 26 Nov | — |
+| 17:00 | 25 Nov | 6 | | 26 Nov | — |
+| 18:00 | 25 Nov | 4 | | 26 Nov | — |
+| 19:00 | 25 Nov | 5 | | 26 Nov | — |
+| 20:00 | 25 Nov | 6 | | 26 Nov | — |
+| 21:00 | 25 Nov | 5 | | 26 Nov | — |
+| 22:00 | 25 Nov | 1 | | 26 Nov | — |
 
 Each flight is counted in the two hours before it leaves.
 
